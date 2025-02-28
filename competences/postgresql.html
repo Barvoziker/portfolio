@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compétence PostgreSQL - Mathis Buchet</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="competences.css">
+</head>
+<body class="postgresql-theme">
+    <header>
+        <nav class="menu">
+            <div class="logo">Mathis Buchet</div>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="../presentation.html">Présentation</a></li>
+                <li class="has-submenu">
+                    <a href="../index.html#competences">Compétences</a>
+                    <ul class="submenu">
+                        <li class="has-submenu">
+                            <a href="../index.html#competences">Techniques</a>
+                            <ul class="submenu">
+                                <li><a href="php.html">PHP</a></li>
+                                <li><a href="postgresql.html">PostgreSQL</a></li>
+                                <li><a href="javascript.html">JavaScript</a></li>
+                                <li><a href="arduino.html">Arduino</a></li>
+                                <li><a href="git.html">Git</a></li>
+                                <li><a href="websocket.html">WebSockets</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu">
+                            <a href="../index.html#competences">Humaines</a>
+                            <ul class="submenu">
+                                <li><a href="../index.html#competences">Communication</a></li>
+                                <li><a href="../index.html#competences">Gestion de projet</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="../index.html#realisations">Réalisations</a>
+                    <ul class="submenu">
+                        <li><a href="../realisations/easy-monitor.html">Easy-Monithor</a></li>
+                        <li><a href="../index.html#projets-web">Projets Web</a></li>
+                        <li><a href="../index.html#applications">Applications</a></li>
+                        <li><a href="../index.html#autres-projets">Autres Projets</a></li>
+                    </ul>
+                </li>
+                <li><a href="../parcours.html">Parcours</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Compétence PostgreSQL</h1>
+        
+        <section class="competence-detail-section">
+            <div class="competence-detail-header">
+                <div class="competence-detail-icon">🗃️</div>
+                <h2>Ma définition</h2>
+            </div>
+            <div class="competence-detail-content">
+                <p>
+                    PostgreSQL est un système de gestion de bases de données relationnelles (SGBDR) avancé, robuste et performant. Il se distingue par sa conformité aux standards SQL, sa capacité à gérer de grandes quantités de données et son extensibilité grâce à son écosystème de modules et extensions. Il est particulièrement adapté aux applications nécessitant une forte cohérence, une scalabilité efficace et des fonctionnalités avancées comme la gestion des types JSONB, la réplication et le partitionnement.
+                </p>
+                <p>
+                    PostgreSQL est donc bien plus qu'un simple SGBDR : c'est un environnement complet qui permet d'optimiser la gestion des données dans les applications modernes. Son utilisation s'étend à divers domaines, tels que le développement web, les systèmes embarqués et l'analyse de données.
+                </p>
+                <p>
+                    En entreprise, PostgreSQL est un choix stratégique pour assurer la fiabilité et la sécurité des données. Il est utilisé dans des architectures complexes où la performance et l'intégrité des données sont primordiales. Sa flexibilité permet de l'adapter à des besoins spécifiques tout en respectant les meilleures pratiques du développement logiciel.
+                </p>
+            </div>
+        </section>
+        
+        <section class="competence-detail-section">
+            <div class="competence-detail-header">
+                <div class="competence-detail-icon">📊</div>
+                <h2>Mes éléments de preuve</h2>
+            </div>
+            <div class="competence-detail-content">
+                <p>
+                    J'ai commencé à utiliser PostgreSQL dans mes projets professionnels et personnels, notamment dans le cadre de mes applications Symfony et mes expérimentations en développement embarqué.
+                </p>
+                <p>
+                    Trois projets significatifs illustrent mon expérience avec PostgreSQL :
+                </p>
+                
+                <div class="project-highlight">
+                    <h3><a href="../realisations/easy-monitor.html">Projet Easy-Monitor (Sudalys)</a></h3>
+                    <p>
+                        Easy-Monitor est une application de <strong>supervision en temps réel</strong> des capteurs réseau, qui permet de collecter et d'analyser des données techniques en continu. Ce projet repose sur <strong>PostgreSQL</strong> pour assurer le stockage et le traitement efficace d'un volume important de données générées par les capteurs. Pour garantir des performances optimales, j'ai mis en place plusieurs stratégies d'optimisation : utilisation des <strong>Common Table Expressions (CTE)</strong> pour structurer et améliorer la lisibilité des requêtes complexes, exploitation des <strong>fonctions fenêtrées</strong> pour calculer les moyennes et détecter les anomalies sans exécuter plusieurs sous-requêtes coûteuses, définition d'<strong>index spécifiques</strong> (BTREE, HASH, GIN) en fonction des types de requêtes les plus fréquentes, et mise en place d'un <strong>partitionnement par plage de temps</strong> pour faciliter l'archivage et améliorer les performances des requêtes ciblées. Grâce à ces optimisations, l'application est capable de récupérer et d'afficher les données des capteurs en <strong>temps réel</strong>, tout en maintenant une excellente fluidité et réactivité.
+                    </p>
+                </div>
+                
+                <div class="project-highlight">
+                    <h3>Projet Easy-Check (Sudalys)</h3>
+                    <p>
+                        Easy-Check est un logiciel de <strong>gestion d'audits pour les infrastructures télécoms</strong>, où chaque campagne d'audit comprend un grand volume de données à structurer et analyser. PostgreSQL a été choisi pour assurer <strong>l'intégrité et la scalabilité</strong> de la base de données, en garantissant une gestion rigoureuse des informations. Les améliorations techniques que j'ai mises en place incluent l'utilisation de <strong>contraintes d'intégrité</strong> (clés étrangères, contraintes CHECK et déclencheurs) pour garantir la validité et la cohérence des données stockées, la définition d'<strong>index multi-colonnes</strong> et d'<strong>index GIN</strong> pour les recherches textuelles afin d'optimiser les performances des filtres avancés, l'ajout de <strong>transactions ACID</strong> pour s'assurer que les mises à jour de données sont effectuées sans risque d'incohérence, et la structuration de la base de données avec des <strong>relations bien normalisées</strong> pour réduire la redondance des données. Grâce à ces optimisations, Easy-Check est capable de gérer un grand nombre d'audits simultanément sans ralentir, tout en garantissant une grande fiabilité des informations.
+                    </p>
+                </div>
+                
+                <div class="project-highlight">
+                    <h3>Projet personnel de suivi GPS</h3>
+                    <p>
+                        Dans ce projet, j'ai développé un <strong>système de suivi GPS en temps réel</strong> à l'aide d'un <strong>Arduino</strong>, d'un <strong>module GPS Grove 109020022</strong> et d'un <strong>module Bluetooth HC-05</strong>. Les coordonnées GPS sont envoyées vers une application mobile via Bluetooth, puis stockées dans <strong>PostgreSQL</strong> via une API. L'architecture mise en place repose sur <strong>PostGIS</strong>, une extension de PostgreSQL dédiée à la gestion de données géospatiales. Pour améliorer les performances et la précision des analyses, j'ai mis en place plusieurs optimisations : stockage des coordonnées sous forme de géométries avec le type de données <code>geom</code> pour effectuer des requêtes spatiales avancées directement dans la base de données, utilisation des <strong>fonctions spatiales de PostGIS</strong> pour mettre en place un système de suivi précis permettant de calculer les distances parcourues et gérer les alertes en cas de sortie d'un périmètre défini (géofencing), mise en place d'un <strong>index GiST</strong> sur le champ <code>geom</code> pour accélérer les requêtes de recherche géographique, et implémentation d'un <strong>système de purge automatique</strong> des anciennes positions pour éviter une surcharge de la base de données. Ces choix techniques permettent d'assurer un <strong>suivi GPS en temps réel</strong> fluide, fiable et optimisé, adapté à des applications nécessitant une gestion efficace des données géolocalisées.
+                    </p>
+                </div>
+                
+                <p>
+                    Ces expériences m'ont permis d'exploiter pleinement les fonctionnalités de PostgreSQL et de comprendre comment optimiser son utilisation dans des environnements exigeants.
+                </p>
+            </div>
+        </section>
+        
+        <section class="competence-detail-section">
+            <div class="competence-detail-header">
+                <div class="competence-detail-icon">🔍</div>
+                <h2>Mon autocritique</h2>
+            </div>
+            <div class="competence-detail-content">
+                <p>
+                    Grâce à ces projets, j'ai acquis un niveau confirmé en PostgreSQL. Je maîtrise la structuration des bases, l'optimisation des requêtes, la gestion des index et l'utilisation d'extensions avancées comme PostGIS.
+                </p>
+                <p>
+                    Cependant, il me reste encore des aspects à approfondir, notamment la gestion fine de la réplication, l'optimisation des performances sur de très gros volumes de données et l'exploitation avancée des triggers et procédures stockées. L'apprentissage continu et la mise en pratique restent essentiels pour maîtriser pleinement PostgreSQL.
+                </p>
+            </div>
+        </section>
+        
+        <section class="competence-detail-section">
+            <div class="competence-detail-header">
+                <div class="competence-detail-icon">📈</div>
+                <h2>Mon évolution dans cette compétence</h2>
+            </div>
+            <div class="competence-detail-content">
+                <p>
+                    Dans les prochaines années, je souhaite approfondir mes compétences en administration et optimisation de bases PostgreSQL. J'aimerais explorer davantage la réplication et la distribution des données, notamment pour améliorer la résilience des systèmes en production.
+                </p>
+                <p>
+                    Je compte également approfondir mes connaissances en tuning PostgreSQL (paramétrage du postgresql.conf, analyse des plans d'exécution avec EXPLAIN ANALYZE), ainsi que l'automatisation des tâches d'administration via des scripts SQL et des outils comme pg_partman pour la gestion des partitions.
+                </p>
+                <p>
+                    Enfin, je souhaite continuer à expérimenter PostgreSQL dans des contextes variés, notamment pour des applications embarquées ou des systèmes à haute disponibilité, afin de renforcer mon expertise sur ce SGBDR incontournable.
+                </p>
+            </div>
+        </section>
+        
+        <a href="../index.html#competences" class="back-button">Retour aux compétences</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Mathis Buchet - Portfolio</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Monithor - Mathis Buchet</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .realisation-container {
+            max-width: 1200px;
+            margin: 100px auto 50px;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .realisation-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 20px;
+        }
+        
+        .realisation-logo {
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+        }
+        
+        .realisation-title {
+            flex: 1;
+        }
+        
+        .realisation-title h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .realisation-title p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+        
+        .realisation-section {
+            margin-bottom: 40px;
+        }
+        
+        .realisation-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+            color: #444;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .tech-item {
+            background-color: #f5f5f5;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+        
+        .objectives-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .objectives-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .objectives-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <div class="logo">Mathis Buchet</div>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="../presentation.html">Présentation</a></li>
+                <li class="has-submenu">
+                    <a href="../index.html#competences">Compétences</a>
+                    <ul class="submenu">
+                        <li class="has-submenu">
+                            <a href="../index.html#competences">Techniques</a>
+                            <ul class="submenu">
+                                <li><a href="../competences/php.html">PHP</a></li>
+                                <li><a href="../competences/postgresql.html">PostgreSQL</a></li>
+                                <li><a href="../competences/javascript.html">JavaScript</a></li>
+                                <li><a href="../competences/arduino.html">Arduino</a></li>
+                                <li><a href="../competences/git.html">Git</a></li>
+                                <li><a href="../competences/websocket.html">WebSockets</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu">
+                            <a href="../index.html#competences">Humaines</a>
+                            <ul class="submenu">
+                                <li><a href="../index.html#competences">Communication</a></li>
+                                <li><a href="../index.html#competences">Gestion de projet</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="../index.html#realisations">Réalisations</a>
+                    <ul class="submenu">
+                        <li><a href="../realisations/easy-monitor.html">Easy-Monithor</a></li>
+                        <li><a href="../index.html#projets-web">Projets Web</a></li>
+                        <li><a href="../index.html#applications">Applications</a></li>
+                        <li><a href="../index.html#autres-projets">Autres Projets</a></li>
+                    </ul>
+                </li>
+                <li><a href="../parcours.html">Parcours</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="realisation-container">
+        <div class="realisation-header">
+            <img src="../easy-monitor-1.svg" alt="Logo Easy Monithor" class="realisation-logo">
+            <div class="realisation-title">
+                <h1>Easy Monithor</h1>
+                <p>Application de supervision et diagnostic des infrastructures télécoms</p>
+            </div>
+        </div>
+
+        <div class="realisation-section">
+            <h2>Introduction</h2>
+            <p>Dans le cadre de ma première année d'alternance durant mes études à l'ESIEA, afin d'obtenir le titre d'expert en ingénierie logicielle, j'ai réalisé cette alternance au sein de l'entreprise Sudalys, une société spécialisée dans le conseil, l'audit et le contrôle des infrastructures télécoms pour le compte des collectivités locales et des opérateurs.</p>
+            <p>Sudalys se définit par son expertise dans la gestion des infrastructures télécoms et ses services dédiés aux collectivités locales et aux opérateurs. L'objectif principal de Sudalys est d'améliorer la fiabilité et l'efficacité des infrastructures de télécommunication grâce à des audits et des contrôles rigoureux.</p>
+            <p>Le projet Easy-Monithor est une application développée en utilisant le framework Symfony 6, avec PHP, JavaScript et Twig, et une base de données PostgreSQL. Ce projet a été conçu pour répondre à des problématiques spécifiques rencontrées par Sudalys dans la supervision et le diagnostic des infrastructures télécoms.</p>
+        </div>
+
+        <div class="realisation-section" style="text-align: center;">
+            <div style="margin: 30px auto; max-width: 300px;">
+                <img src="../easy-monitor-1.svg" alt="Logo Easy Monithor" style="width: 100%; height: auto;">
+            </div>
+            <p style="font-style: italic; color: #666;">Logo de l'application Easy-Monithor développée pour Sudalys</p>
+        </div>
+
+        <div class="realisation-section">
+            <h2>Contexte du projet</h2>
+            <p>Il arrive que des équipements cessent de fonctionner sans que nous sachions réellement pourquoi. Cela peut venir d'un problème électrique chez le client ou d'un cheminement de fibre sectionné, par exemple. L'application EasyExploit, utilisée jusqu'à présent, ne permet pas de faire des diagnostics ou de visualiser des équipements présentant une panne ou une anomalie sur les cheminements ou points techniques.</p>
+            <p>En permettant d'avoir les détails sur un équipement actif d'un client, Easy-Monithor permet à Sudalys Service de proposer aux futurs clients une supervision déjà fonctionnelle.</p>
+        </div>
+
+        <div class="realisation-section">
+            <h2>Objectifs techniques</h2>
+            <ul class="objectives-list">
+                <li><strong>Réception et interprétation des données des capteurs et équipements</strong> - Collecte automatisée des données en temps réel et analyse des anomalies pour détecter les pannes et dysfonctionnements.</li>
+                <li><strong>Affichage des données sur une carte interactive</strong> - Visualisation géographique pour localiser précisément les équipements supervisés et identification dynamique des pannes.</li>
+                <li><strong>Système de recherche et de corrélation des données</strong> - Moteur de recherche avancé permettant de filtrer les équipements par critères et analyse des causes récurrentes.</li>
+                <li><strong>Interopérabilité avec EasyExploit</strong> - Intégration transparente avec l'application existante et harmonisation des outils.</li>
+                <li><strong>Performances et évolutivité</strong> - Optimisation pour traiter de grandes quantités de données en temps réel et architecture modulaire permettant l'ajout de nouvelles fonctionnalités.</li>
+                <li><strong>Sécurité et fiabilité</strong> - Mise en place de systèmes d'authentification renforcée et tests automatisés pour garantir la fiabilité.</li>
+            </ul>
+        </div>
+
+        <div class="realisation-section">
+            <h2>Objectifs humains</h2>
+            <ul class="objectives-list">
+                <li><strong>Découverte et compréhension du domaine des télécoms</strong> - Immersion métier et traduction des besoins en solutions techniques.</li>
+                <li><strong>Développement de compétences techniques</strong> - Maîtrise des outils modernes comme Symfony 6, PostgreSQL et technologies de cartographie interactive.</li>
+                <li><strong>Gestion de projet et travail en équipe</strong> - Planification des tâches et communication interdisciplinaire.</li>
+                <li><strong>Prise en compte des retours utilisateurs</strong> - Tests utilisateurs et amélioration continue des fonctionnalités.</li>
+                <li><strong>Développement sous pression</strong> - Gestion des contraintes temporelles et résolution proactive des problèmes.</li>
+            </ul>
+        </div>
+
+        <div class="realisation-section">
+            <h2>Contexte technique</h2>
+            <p>Pour réaliser Easy-Monithor, nous avons utilisé le framework Symfony 6, intégrant PHP pour le backend, JavaScript pour les interactions frontend et Twig pour le rendu des templates. La base de données utilisée était PostgreSQL, choisie pour sa robustesse et ses performances en traitement de données.</p>
+            <p>Le développement s'est concentré sur la mise en place d'une architecture modulaire et évolutive, capable de traiter un grand volume de données en temps réel. Les données des capteurs et des équipements étaient collectées via des API et stockées dans la base de données PostgreSQL pour un accès rapide et efficace.</p>
+            
+            <div class="tech-stack">
+                <div class="tech-item">Symfony 6</div>
+                <div class="tech-item">PHP</div>
+                <div class="tech-item">JavaScript</div>
+                <div class="tech-item">Twig</div>
+                <div class="tech-item">PostgreSQL</div>
+                <div class="tech-item">PRTG</div>
+                <div class="tech-item">Zabbix</div>
+            </div>
+            
+            <h3 style="margin-top: 30px;">Fonctionnalités développées</h3>
+            <ul class="objectives-list">
+                <li><strong>Collecte de données</strong> - Réception et traitement des données provenant des capteurs et des équipements.</li>
+                <li><strong>Visualisation des données</strong> - Affichage des données sur une carte interactive dans l'application.</li>
+                <li><strong>Recherche et affichage de points communs</strong> - Identification et affichage des équipements en panne dans le même secteur.</li>
+                <li><strong>Intégration avec PRTG, Zabbix</strong> - Pour une supervision complète et une visualisation avancée des données de monitoring.</li>
+            </ul>
+        </div>
+
+        <div class="realisation-section">
+            <h2>Développement du projet</h2>
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+                <div>
+                    <h3>Étape 1 : Analyse des besoins</h3>
+                    <p>La première étape a consisté en une analyse approfondie des besoins de Sudalys. Cela a impliqué des réunions avec les équipes techniques et les responsables de projets pour comprendre les exigences spécifiques en matière de supervision et de diagnostic des infrastructures télécoms.</p>
+                </div>
+                <div>
+                    <h3>Étape 2 : Conception de l'architecture</h3>
+                    <p>La conception de l'architecture a été réalisée en tenant compte des besoins identifiés. Une attention particulière a été portée à la modularité et à l'évolutivité de la solution pour assurer sa pérennité et sa capacité à évoluer avec les besoins futurs.</p>
+                </div>
+                <div>
+                    <h3>Étape 3 : Développement et intégration</h3>
+                    <p>Le développement a été effectué en utilisant Symfony 6 pour la structure backend, PHP pour la logique métier, JavaScript pour les interactions frontend, et Twig pour le rendu des templates. La base de données PostgreSQL a été configurée pour gérer les données collectées.</p>
+                </div>
+                <div>
+                    <h3>Étape 4 : Tests et validation</h3>
+                    <p>Des tests rigoureux ont été réalisés pour garantir la fiabilité et la performance de l'application. Les données des capteurs ont été simulées pour valider les capacités de collecte et d'interprétation de l'application.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="realisation-section">
+            <h2>Conclusion</h2>
+            <p>Le projet Easy-Monithor a permis de mettre en place une solution de supervision efficace pour Sudalys, répondant aux besoins de diagnostic et de visualisation des pannes des équipements télécoms.</p>
+            <p>L'intégration de PRTG et Zabbix a permis d'améliorer la surveillance et la gestion des infrastructures, offrant une vision globale et détaillée des performances et des éventuelles anomalies.</p>
+            <p>La réalisation de ce projet a été une expérience très enrichissante, me permettant de combiner des compétences en développement logiciel avec une compréhension approfondie des enjeux liés à la supervision des infrastructures télécoms.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Mathis Buchet - Portfolio</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compétence WebSockets - Mathis Buchet</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="competences.css">
+</head>
+<body class="websocket-theme">
+    <header>
+        <nav class="menu">
+            <div class="logo">Mathis Buchet</div>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="../presentation.html">Présentation</a></li>
+                <li class="has-submenu">
+                    <a href="../index.html#competences">Compétences</a>
+                    <ul class="submenu">
+                        <li class="has-submenu">
+                            <a href="../index.html#competences">Techniques</a>
+                            <ul class="submenu">
+                                <li><a href="php.html">PHP</a></li>
+                                <li><a href="postgresql.html">PostgreSQL</a></li>
+                                <li><a href="javascript.html">JavaScript</a></li>
+                                <li><a href="arduino.html">Arduino</a></li>
+                                <li><a href="git.html">Git</a></li>
+                                <li><a href="websocket.html">WebSockets</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu">
+                            <a href="../index.html#competences">Humaines</a>
+                            <ul class="submenu">
+                                <li><a href="../index.html#competences">Communication</a></li>
+                                <li><a href="../index.html#competences">Gestion de projet</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="../index.html#realisations">Réalisations</a>
+                    <ul class="submenu">
+                        <li><a href="../realisations/easy-monitor.html">Easy-Monithor</a></li>
+                        <li><a href="../index.html#projets-web">Projets Web</a></li>
+                        <li><a href="../index.html#applications">Applications</a></li>
+                        <li><a href="../index.html#autres-projets">Autres Projets</a></li>
+                    </ul>
+                </li>
+                <li><a href="../parcours.html">Parcours</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Compétence WebSockets</h1>
+        
+        <section class="competence-detail-section">
+            <div class="competence-detail-header">
+                <div class="competence-detail-icon">⚡</div>
+                <h2>Ma définition</h2>
+            </div>
+            <div class="competence-detail-content">
+                <p>
+                    Les WebSockets sont un protocole de communication bidirectionnel qui permet d'établir une connexion persistante entre un client et un serveur. Contrairement aux requêtes HTTP classiques, qui nécessitent une ouverture et une fermeture de connexion à chaque échange, les WebSockets maintiennent une connexion ouverte, permettant un échange fluide et en temps réel des données.
+                </p>
+                <p>
+                    Cette technologie est particulièrement utile pour les applications nécessitant des mises à jour en temps réel, comme la supervision de données, les chats en ligne, les notifications instantanées, ou encore les tableaux de bord interactifs.
+                </p>
+                <p>
+                    En entreprise, l'utilisation des WebSockets améliore l'expérience utilisateur en réduisant la latence et en rendant les interfaces plus réactives. Elle est souvent couplée à des outils comme Mercure, Socket.IO ou des solutions basées sur WebRTC pour des communications plus avancées.
+                </p>
+            </div>
+        </section>
+        
+        <section class="competence-detail-section">
+            <div class="competence-detail-header">
+                <div class="competence-detail-icon">📊</div>
+                <h2>Mes éléments de preuve</h2>
+            </div>
+            <div class="competence-detail-content">
+                <p>
+                    J'ai eu l'occasion d'exploiter les WebSockets et le temps réel dans plusieurs projets professionnels et personnels :
+                </p>
+                
+                <div class="project-highlight">
+                    <h3><a href="../realisations/easy-monitor.html">Projet Easy-Monitor (Sudalys)</a></h3>
+                    <p>
+                        J'ai utilisé <strong>WebSockets</strong> pour afficher en <strong>temps réel</strong> les données de supervision des capteurs. L'objectif était de permettre aux utilisateurs de visualiser instantanément les mesures collectées, sans avoir à recharger la page. L'implémentation a nécessité l'intégration de <strong>Mercure</strong> pour assurer une diffusion efficace des événements depuis le serveur <strong>Symfony</strong> vers le front-end <strong>JavaScript</strong>. Cette solution a permis de réduire considérablement la latence entre l'acquisition des données et leur affichage, offrant ainsi une expérience utilisateur plus fluide et réactive. Les tableaux de bord de supervision ont gagné en pertinence, permettant aux opérateurs de prendre des décisions plus rapidement face aux anomalies détectées.
+                    </p>
+                </div>
+                
+                <div class="project-highlight">
+                    <h3>Projet Easy-Check (Sudalys)</h3>
+                    <p>
+                        J'ai mis en place un système de <strong>mise à jour en temps réel</strong> des statuts d'audits, permettant aux utilisateurs de voir immédiatement les modifications effectuées par d'autres membres de l'équipe. Cette fonctionnalité a amélioré la <strong>collaboration</strong> et la fluidité du travail. L'implémentation a impliqué la création d'un système d'<strong>événements</strong> côté serveur qui, lors de la modification d'un audit, déclenche l'envoi de notifications via WebSockets aux clients connectés. Cette approche a considérablement réduit les risques de travail en doublon et a permis aux équipes d'audit de coordonner leurs actions plus efficacement sur le terrain.
+                    </p>
+                </div>
+                
+                <div class="project-highlight">
+                    <h3>Projets personnels</h3>
+                    <p>
+                        J'utilise <strong>WebSockets</strong> pour expérimenter des systèmes de <strong>tracking en temps réel</strong>, notamment dans mon projet de suivi GPS. L'idée est d'envoyer régulièrement les coordonnées d'un capteur GPS vers un serveur, puis de les afficher dynamiquement sur une carte sans délai perceptible. Cette approche permet de suivre avec précision les déplacements d'objets ou de personnes, avec une latence minimale. J'ai également exploré l'optimisation de la <strong>consommation de bande passante</strong> en implémentant des mécanismes de compression des données et en ajustant la fréquence d'envoi en fonction du contexte (par exemple, réduction de la fréquence lorsque l'objet est immobile).
+                    </p>
+                </div>
+                
+                <p>
+                    Ces expériences m'ont permis de mieux comprendre les défis liés au temps réel, notamment en matière de <strong>gestion de la charge serveur</strong>, d'<strong>optimisation des performances réseau</strong> et de <strong>sécurisation des connexions WebSockets</strong>.
+                </p>
+            </div>
+        </section>
+        
+        <section class="competence-detail-section">
+            <div class="competence-detail-header">
+                <div class="competence-detail-icon">🔍</div>
+                <h2>Mon autocritique</h2>
+            </div>
+            <div class="competence-detail-content">
+                <p>
+                    Je maîtrise bien l'utilisation des WebSockets dans des applications nécessitant du temps réel, en particulier avec Symfony et Mercure. J'ai su optimiser leur intégration pour garantir une communication fluide et efficace entre le client et le serveur.
+                </p>
+                <p>
+                    Cependant, il me reste encore à explorer des aspects plus avancés comme :
+                </p>
+                <ul>
+                    <li>La scalabilité des WebSockets dans des applications à forte charge (ex. utilisation de Redis ou d'un message broker pour la gestion des connexions massives).</li>
+                    <li>L'optimisation des performances réseau, notamment en limitant la consommation de bande passante avec des stratégies de compression et de mise en cache.</li>
+                    <li>L'intégration avec WebRTC pour aller plus loin dans les interactions temps réel (ex. streaming vidéo, communication peer-to-peer).</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section class="competence-detail-section">
+            <div class="competence-detail-header">
+                <div class="competence-detail-icon">📈</div>
+                <h2>Mon évolution dans cette compétence</h2>
+            </div>
+            <div class="competence-detail-content">
+                <p>
+                    À l'avenir, je souhaite approfondir mes compétences en scalabilité des WebSockets, notamment en testant des architectures distribuées avec Redis Pub/Sub ou Kafka pour gérer un grand nombre de connexions simultanées.
+                </p>
+                <p>
+                    Je veux également explorer l'optimisation des protocoles temps réel, comme HTTP/2, WebRTC et QUIC, pour rendre les échanges plus performants et mieux adaptés aux contraintes des applications embarquées et mobiles.
+                </p>
+                <p>
+                    Enfin, je compte intégrer davantage ces technologies dans mes projets de suivi en temps réel, afin de rendre mes applications encore plus interactives et réactives.
+                </p>
+            </div>
+        </section>
+        
+        <a href="../index.html#competences" class="back-button">Retour aux compétences</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Mathis Buchet - Portfolio</p>
+    </footer>
+</body>
+</html>

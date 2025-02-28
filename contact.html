@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Mathis Buchet</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <div class="logo">Mathis Buchet</div>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="presentation.html">Présentation</a></li>
+                <li class="has-submenu">
+                    <a href="index.html#competences">Compétences</a>
+                    <ul class="submenu">
+                        <li class="has-submenu">
+                            <a href="index.html#competences">Techniques</a>
+                            <ul class="submenu">
+                                <li><a href="competences/php.html">PHP</a></li>
+                                <li><a href="competences/postgresql.html">PostgreSQL</a></li>
+                                <li><a href="competences/javascript.html">JavaScript</a></li>
+                                <li><a href="competences/arduino.html">Arduino</a></li>
+                                <li><a href="competences/git.html">Git</a></li>
+                                <li><a href="competences/websocket.html">WebSockets</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu">
+                            <a href="index.html#competences">Humaines</a>
+                            <ul class="submenu">
+                                <li><a href="index.html#competences">Communication</a></li>
+                                <li><a href="index.html#competences">Gestion de projet</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="index.html#realisations">Réalisations</a>
+                    <ul class="submenu">
+                        <li><a href="realisations/easy-monitor.html">Easy-Monithor</a></li>
+                        <li><a href="index.html#projets-web">Projets Web</a></li>
+                        <li><a href="index.html#applications">Applications</a></li>
+                        <li><a href="index.html#autres-projets">Autres Projets</a></li>
+                    </ul>
+                </li>
+                <li><a href="parcours.html">Parcours</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Contact</h1>
+        <p class="section-description">
+            N'hésitez pas à me contacter pour discuter de vos projets ou pour toute autre information.
+        </p>
+        
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="contact-icon">📧</i>
+                    <h3>Email</h3>
+                    <p>mathis.buchet@example.com</p>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="contact-icon">📱</i>
+                    <h3>Téléphone</h3>
+                    <p>+33 6 12 34 56 78</p>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="contact-icon">🔗</i>
+                    <h3>LinkedIn</h3>
+                    <p><a href="https://linkedin.com/in/mathisbuchet" target="_blank">linkedin.com/in/mathisbuchet</a></p>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="name">Nom</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Sujet</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Mathis Buchet - Portfolio</p>
+    </footer>
+</body>
+</html>

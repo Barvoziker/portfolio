@@ -1,0 +1,218 @@
+/* Styles communs pour les pages de compétences détaillées */
+.competence-detail-section {
+    margin-bottom: 40px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.competence-detail-section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.competence-detail-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 15px;
+}
+
+.competence-detail-icon {
+    font-size: 2.5rem;
+    margin-right: 20px;
+    color: white;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.competence-detail-section h2 {
+    color: #333;
+    margin-bottom: 0;
+    font-size: 26px;
+    position: relative;
+    padding-bottom: 0;
+    flex-grow: 1;
+}
+
+.competence-detail-content {
+    text-align: left;
+}
+
+.competence-detail-content p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: #555;
+    font-size: 16px;
+}
+
+.competence-detail-content ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.competence-detail-content li {
+    margin-bottom: 10px;
+    line-height: 1.7;
+    color: #555;
+}
+
+.project-highlight {
+    background-color: #f8f9fa;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 0 5px 5px 0;
+}
+
+.project-highlight h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.back-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Styles spécifiques pour PHP */
+.php-theme .competence-detail-icon {
+    background: linear-gradient(135deg, #8892bf, #4F5B93);
+    box-shadow: 0 4px 10px rgba(79, 91, 147, 0.3);
+}
+
+.php-theme .back-button {
+    background: linear-gradient(135deg, #8892bf, #4F5B93);
+}
+
+.php-theme .project-highlight {
+    border-left: 4px solid #4F5B93;
+}
+
+.php-theme .project-highlight h3 {
+    color: #4F5B93;
+}
+
+/* Styles spécifiques pour Arduino */
+.arduino-theme .competence-detail-icon {
+    background: linear-gradient(135deg, #00aaff, #0077cc);
+    box-shadow: 0 4px 10px rgba(0, 170, 255, 0.3);
+}
+
+.arduino-theme .back-button {
+    background: linear-gradient(135deg, #00aaff, #0077cc);
+}
+
+.arduino-theme .project-highlight {
+    border-left: 4px solid #00aaff;
+}
+
+.arduino-theme .project-highlight h3 {
+    color: #0077cc;
+}
+
+/* Styles spécifiques pour PostgreSQL */
+.postgresql-theme .competence-detail-icon {
+    background: linear-gradient(135deg, #336791, #0F4374);
+    box-shadow: 0 4px 10px rgba(51, 103, 145, 0.3);
+}
+
+.postgresql-theme .back-button {
+    background: linear-gradient(135deg, #336791, #0F4374);
+}
+
+.postgresql-theme .project-highlight {
+    border-left: 4px solid #336791;
+}
+
+.postgresql-theme .project-highlight h3 {
+    color: #336791;
+}
+
+/* Styles spécifiques pour JavaScript */
+.javascript-theme .competence-detail-icon {
+    background: linear-gradient(135deg, #F7DF1E, #E8C012);
+    box-shadow: 0 4px 10px rgba(247, 223, 30, 0.3);
+}
+
+.javascript-theme .back-button {
+    background: linear-gradient(135deg, #F7DF1E, #E8C012);
+    color: #333;
+}
+
+.javascript-theme .back-button:hover {
+    background: linear-gradient(135deg, #E8C012, #D4AF00);
+}
+
+.javascript-theme .project-highlight {
+    border-left: 4px solid #F7DF1E;
+}
+
+.javascript-theme .project-highlight h3 {
+    color: #333;
+}
+
+/* Styles spécifiques pour Git */
+.git-theme .competence-detail-icon {
+    background: linear-gradient(135deg, #F05033, #BD2C00);
+    box-shadow: 0 4px 10px rgba(240, 80, 51, 0.3);
+}
+
+.git-theme .back-button {
+    background: linear-gradient(135deg, #F05033, #BD2C00);
+    color: #fff;
+}
+
+.git-theme .back-button:hover {
+    background: linear-gradient(135deg, #BD2C00, #9E2500);
+}
+
+.git-theme .project-highlight {
+    border-left: 4px solid #F05033;
+}
+
+.git-theme .project-highlight h3 {
+    color: #BD2C00;
+}
+
+/* Styles spécifiques pour WebSocket */
+.websocket-theme .competence-detail-icon {
+    background: linear-gradient(135deg, #4B32C3, #2E1A75);
+    box-shadow: 0 4px 10px rgba(75, 50, 195, 0.3);
+}
+
+.websocket-theme .back-button {
+    background: linear-gradient(135deg, #4B32C3, #2E1A75);
+    color: #fff;
+}
+
+.websocket-theme .back-button:hover {
+    background: linear-gradient(135deg, #2E1A75, #1E0F55);
+}
+
+.websocket-theme .project-highlight {
+    border-left: 4px solid #4B32C3;
+}
+
+.websocket-theme .project-highlight h3 {
+    color: #4B32C3;
+}

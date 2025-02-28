@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Mathis Buchet</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <div class="logo">Mathis Buchet</div>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="presentation.html">Présentation</a></li>
+                <li class="has-submenu">
+                    <a href="#competences">Compétences</a>
+                    <ul class="submenu">
+                        <li class="has-submenu">
+                            <a href="#">Techniques</a>
+                            <ul class="submenu">
+                                <li><a href="competences/php.html">PHP</a></li>
+                                <li><a href="competences/postgresql.html">PostgreSQL</a></li>
+                                <li><a href="competences/javascript.html">JavaScript</a></li>
+                                <li><a href="competences/arduino.html">Arduino</a></li>
+                                <li><a href="competences/git.html">Git</a></li>
+                                <li><a href="competences/websocket.html">WebSockets</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu">
+                            <a href="#">Humaines</a>
+                            <ul class="submenu">
+                                <li><a href="#">Communication</a></li>
+                                <li><a href="#">Gestion de projet</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="#realisations">Réalisations</a>
+                    <ul class="submenu">
+                        <li><a href="realisations/easy-monitor.html">Easy-Monithor</a></li>
+                        <li><a href="#projets-web">Projets Web</a></li>
+                        <li><a href="#applications">Applications</a></li>
+                        <li><a href="#autres-projets">Autres Projets</a></li>
+                    </ul>
+                </li>
+                <li><a href="parcours.html">Parcours</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <h1>Bienvenue sur mon portfolio</h1>
+            <p class="hero-subtitle">Ingénieur logiciel passionné par l'automobile et les systèmes embarqués.</p>
+            <div class="hero-description">
+                <p>Je conçois et développe des solutions innovantes qui combinent performance et expérience utilisateur.</p>
+            </div>
+            <div class="hero-buttons">
+                <a href="#realisations" class="btn btn-primary">Découvrir mes projets</a>
+                <a href="contact.html" class="btn btn-secondary">Me contacter</a>
+            </div>
+            <div class="hero-scroll-indicator">
+                <span>Découvrir</span>
+                <i class="scroll-arrow">↓</i>
+            </div>
+        </div>
+        <div class="hero-background">
+            <div class="hero-shape shape-1"></div>
+            <div class="hero-shape shape-2"></div>
+            <div class="hero-shape shape-3"></div>
+        </div>
+    </section>
+
+    <section id="competences" class="section">
+        <div class="container">
+            <h2>Mes Compétences</h2>
+            <p class="section-description">
+                Fort de mon expérience et de ma formation, j'ai développé un ensemble de compétences techniques et humaines 
+                qui me permettent de mener à bien des projets complexes et de travailler efficacement en équipe.
+            </p>
+            
+            <div class="competences-container">
+                <div class="competence-category">
+                    <h3><i class="competence-icon tech-icon">💻</i> Compétences Techniques</h3>
+                    <div class="competence-grid">
+                        <div class="competence-item">
+                            <div class="competence-header">
+                                <span class="competence-name">PHP</span>
+                                <a href="competences/php.html" class="competence-link" title="Voir les détails">→</a>
+                            </div>
+                            <p class="competence-description">Développement backend, API RESTful, frameworks PHP</p>
+                        </div>
+                        
+                        <div class="competence-item">
+                            <div class="competence-header">
+                                <span class="competence-name">PostgreSQL</span>
+                                <a href="competences/postgresql.html" class="competence-link" title="Voir les détails">→</a>
+                            </div>
+                            <p class="competence-description">Conception de bases de données, optimisation de requêtes, gestion de données</p>
+                        </div>
+                        
+                        <div class="competence-item">
+                            <div class="competence-header">
+                                <span class="competence-name">JavaScript</span>
+                                <a href="competences/javascript.html" class="competence-link" title="Voir les détails">→</a>
+                            </div>
+                            <p class="competence-description">Développement front-end, interfaces interactives, applications web dynamiques</p>
+                        </div>
+                        
+                        <div class="competence-item">
+                            <div class="competence-header">
+                                <span class="competence-name">Arduino</span>
+                                <a href="competences/arduino.html" class="competence-link" title="Voir les détails">→</a>
+                            </div>
+                            <p class="competence-description">Programmation de microcontrôleurs, systèmes embarqués, IoT</p>
+                        </div>
+                        
+                        <div class="competence-item">
+                            <div class="competence-header">
+                                <span class="competence-name">Git</span>
+                                <a href="competences/git.html" class="competence-link" title="Voir les détails">→</a>
+                            </div>
+                            <p class="competence-description">Gestion de versions, workflow collaboratif, intégration continue</p>
+                        </div>
+                        
+                        <div class="competence-item">
+                            <div class="competence-header">
+                                <span class="competence-name">WebSockets & temps réel</span>
+                                <a href="competences/websocket.html" class="competence-link" title="Voir les détails">→</a>
+                            </div>
+                            <p class="competence-description">Applications en temps réel, communication bidirectionnelle, notifications instantanées</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="competence-category">
+                    <h3><i class="competence-icon soft-icon">🤝</i> Compétences Humaines</h3>
+                    <div class="competence-grid">
+                        <div class="competence-item">
+                            <div class="competence-header">
+                                <span class="competence-name">Communication</span>
+                            </div>
+                            <p class="competence-description">Présentation de projets, documentation technique, communication d'équipe</p>
+                        </div>
+                        
+                        <div class="competence-item">
+                            <div class="competence-header">
+                                <span class="competence-name">Gestion de projet</span>
+                            </div>
+                            <p class="competence-description">Planification, suivi des tâches, méthodologies agiles (Scrum, Kanban)</p>
+                        </div>
+                        
+                        <div class="competence-item">
+                            <div class="competence-header">
+                                <span class="competence-name">Travail d'équipe</span>
+                            </div>
+                            <p class="competence-description">Collaboration, partage de connaissances, revue de code</p>
+                        </div>
+                        
+                        <div class="competence-item">
+                            <div class="competence-header">
+                                <span class="competence-name">Résolution de problèmes</span>
+                            </div>
+                            <p class="competence-description">Analyse critique, débogage, optimisation de performances</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="realisations" class="section">
+        <div class="container">
+            <h2>Mes Réalisations</h2>
+            <p class="section-description">
+                Voici une sélection de projets sur lesquels j'ai travaillé, démontrant mes compétences techniques et ma capacité à résoudre des problèmes complexes.
+            </p>
+            
+            <div id="projets-web" class="realisation-category">
+                <h3>Projets Web</h3>
+                <div class="realisations-grid">
+                    <div class="realisation-item">
+                        <div class="realisation-image">
+                            <img src="easy-monitor-1.svg" alt="Easy Monithor">
+                        </div>
+                        <div class="realisation-content">
+                            <h4>Easy Monithor</h4>
+                            <p>Application de supervision et diagnostic des infrastructures télécoms développée pour Sudalys avec Symfony 6, PHP, JavaScript et PostgreSQL.</p>
+                            <a href="realisations/easy-monitor.html" class="btn-more">En savoir plus</a>
+                        </div>
+                    </div>
+                    <div class="realisation-item">
+                        <div class="realisation-image">
+                            <img src="https://via.placeholder.com/300x200" alt="Projet Web 1">
+                        </div>
+                        <div class="realisation-content">
+                            <h4>Projet Web 1</h4>
+                            <p>Description du projet web avec les technologies utilisées et les défis relevés.</p>
+                            <a href="#" class="btn-more">En savoir plus</a>
+                        </div>
+                    </div>
+                    <div class="realisation-item">
+                        <div class="realisation-image">
+                            <img src="https://via.placeholder.com/300x200" alt="Projet Web 2">
+                        </div>
+                        <div class="realisation-content">
+                            <h4>Projet Web 2</h4>
+                            <p>Description du projet web avec les technologies utilisées et les défis relevés.</p>
+                            <a href="#" class="btn-more">En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="applications" class="realisation-category">
+                <h3>Applications</h3>
+                <div class="realisations-grid">
+                    <div class="realisation-item">
+                        <div class="realisation-image">
+                            <img src="https://via.placeholder.com/300x200" alt="Application 1">
+                        </div>
+                        <div class="realisation-content">
+                            <h4>Application 1</h4>
+                            <p>Description de l'application avec les technologies utilisées et les défis relevés.</p>
+                            <a href="#" class="btn-more">En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="autres-projets" class="realisation-category">
+                <h3>Autres Projets</h3>
+                <div class="realisations-grid">
+                    <div class="realisation-item">
+                        <div class="realisation-image">
+                            <img src="https://via.placeholder.com/300x200" alt="Autre Projet">
+                        </div>
+                        <div class="realisation-content">
+                            <h4>Autre Projet</h4>
+                            <p>Description du projet avec les technologies utilisées et les défis relevés.</p>
+                            <a href="#" class="btn-more">En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Mathis Buchet - Portfolio</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
