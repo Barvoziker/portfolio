@@ -904,6 +904,38 @@ html {
     background: #0088cc;
 }
 
+/* Styles pour les messages de statut du formulaire de contact */
+.form-status {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+}
+
+.form-status .sending {
+    color: #0056b3;
+    background-color: #e6f7ff;
+    padding: 10px;
+    border-radius: 5px;
+    border-left: 4px solid #0056b3;
+}
+
+.form-status .success {
+    color: #28a745;
+    background-color: #e8f5e9;
+    padding: 10px;
+    border-radius: 5px;
+    border-left: 4px solid #28a745;
+}
+
+.form-status .error {
+    color: #dc3545;
+    background-color: #fff5f5;
+    padding: 10px;
+    border-radius: 5px;
+    border-left: 4px solid #dc3545;
+}
+
 /* Footer toujours en bas */
 footer {
     background: #222;

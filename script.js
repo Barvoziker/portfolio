@@ -151,3 +151,76 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// Gestion du formulaire de contact avec EmailJS
+document.addEventListener('DOMContentLoaded', function() {
+    // Récupérer le formulaire et l'élément de statut
+    const contactForm = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formStatus');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Afficher un message de chargement
+            formStatus.innerHTML = '<p class="sending">Envoi en cours...</p>';
+            formStatus.style.display = 'block';
+            
+            // Récupérer les valeurs du formulaire
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Préparer les paramètres pour EmailJS
+            const templateParams = {
+                from_name: name,
+                from_email: email,
+                date: new Date().toLocaleDateString(),
+                subject: subject,
+                message: message,
+                to_email: 'buchet@et.esiea.fr' // L'email de destination (votre email)
+            };
+            
+            // Envoyer l'email via EmailJS avec les identifiants directs
+            emailjs.send('service_52t3ksp', 'template_9nrzpnl', templateParams)
+                .then(function(response) {
+                    console.log('Email principal envoyé avec succès:', response.status, response.text);
+                    formStatus.innerHTML = '<p class="success">Votre message a été envoyé avec succès!</p>';
+                    
+                    // Réinitialiser le formulaire
+                    contactForm.reset();
+                    
+                    // Masquer le message de succès après 5 secondes
+                    setTimeout(function() {
+                        formStatus.style.display = 'none';
+                    }, 5000);
+                    
+                    // Envoyer un email de confirmation à l'expéditeur
+                    const autoReplyParams = {
+                        to_name: name,
+                        from_name: 'Mathis Buchet',
+                        message: message,
+                        subject: subject,
+                        date: new Date().toLocaleDateString(),
+                        email: email
+                    };
+                    
+                    console.log('Paramètres de réponse automatique:', autoReplyParams);
+                    
+                    // Envoyer l'email de réponse automatique avec le template spécifique
+                    emailjs.send('service_52t3ksp', 'template_5nzmbdd', autoReplyParams)
+                        .then(function(response) {
+                            console.log('Réponse automatique envoyée avec succès:', response.status, response.text);
+                        })
+                        .catch(function(error) {
+                            console.log('Erreur lors de l\'envoi de la réponse automatique:', error);
+                        });
+                })
+                .catch(function(error) {
+                    console.log('FAILED...', error);
+                    formStatus.innerHTML = '<p class="error">Une erreur s\'est produite. Veuillez réessayer.</p>';
+                });
+        });
+    }
+});

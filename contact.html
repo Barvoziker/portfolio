@@ -47,9 +47,8 @@
                     <a href="index.html#realisations">Réalisations</a>
                     <ul class="submenu">
                         <li><a href="realisations/easy-monitor.html">Easy-Monithor</a></li>
-                        <li><a href="index.html#projets-web">Projets Web</a></li>
-                        <li><a href="index.html#applications">Applications</a></li>
-                        <li><a href="index.html#autres-projets">Autres Projets</a></li>
+                        <li><a href="realisations/easy-check.html">Easy-Check</a></li>
+                        <li><a href="realisations/tracker-gps.html">Tracker GPS</a></li>
                     </ul>
                 </li>
                 <li><a href="parcours.html">Parcours</a></li>
@@ -69,24 +68,24 @@
                 <div class="contact-item">
                     <i class="contact-icon">📧</i>
                     <h3>Email</h3>
-                    <p>mathis.buchet@example.com</p>
+                    <p>buchet@et.esiea.fr</p>
                 </div>
                 
                 <div class="contact-item">
                     <i class="contact-icon">📱</i>
                     <h3>Téléphone</h3>
-                    <p>+33 6 12 34 56 78</p>
+                    <p>+33 6 78 48 03 66</p>
                 </div>
                 
                 <div class="contact-item">
                     <i class="contact-icon">🔗</i>
                     <h3>LinkedIn</h3>
-                    <p><a href="https://linkedin.com/in/mathisbuchet" target="_blank">linkedin.com/in/mathisbuchet</a></p>
+                    <p><a href="https://linkedin.com/in/mathis-buchet" target="_blank">linkedin.com/in/mathisbuchet</a></p>
                 </div>
             </div>
             
             <div class="contact-form">
-                <form action="#" method="post">
+                <form id="contactForm">
                     <div class="form-group">
                         <label for="name">Nom</label>
                         <input type="text" id="name" name="name" required>
@@ -109,6 +108,7 @@
                     
                     <button type="submit" class="btn-submit">Envoyer</button>
                 </form>
+                <div id="formStatus" class="form-status"></div>
             </div>
         </div>
     </div>
@@ -116,6 +116,17 @@
     <footer>
         <p>&copy; 2025 Mathis Buchet - Portfolio</p>
     </footer>
+    
+    <!-- EmailJS pour l'envoi d'emails -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // Initialisation d'EmailJS avec la clé publique
+            emailjs.init("pol67UkKm78BRwfms");
+            console.log("EmailJS initialisé avec succès");
+        })();
+    </script>
+    
     <script src="script.js"></script>
 </body>
 </html>
