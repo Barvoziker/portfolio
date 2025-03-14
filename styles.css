@@ -1144,6 +1144,24 @@ footer {
     color: #27ae60;
 }
 
+/* Styles spécifiques pour Gestion de Projet */
+.gestion-projet-theme .competence-detail-icon {
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+    box-shadow: 0 4px 10px rgba(155, 89, 182, 0.3);
+}
+
+.gestion-projet-theme .back-button {
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+}
+
+.gestion-projet-theme .project-highlight {
+    border-left: 4px solid #8e44ad;
+}
+
+.gestion-projet-theme .project-highlight h3 {
+    color: #8e44ad;
+}
+
 /* Style commun pour les icônes et boutons */
 .competence-detail-icon {
     font-size: 2.5rem;
@@ -1288,6 +1306,33 @@ footer {
     font-size: 14px;
     color: #666;
     line-height: 1.4;
+}
+
+.competence-item-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.competence-item-link:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.competence-item-link .competence-item:after {
+    content: "→";
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #00aaff;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.competence-item-link:hover .competence-item:after {
+    transform: translateX(3px);
+    color: #0077cc;
 }
 
 /* Styles pour les anciennes listes de compétences (à conserver pour compatibilité) */
