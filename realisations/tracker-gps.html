@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracker GPS - Mathis Buchet</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .realisation-container {
+            max-width: 1200px;
+            margin: 100px auto 50px;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .realisation-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 20px;
+        }
+        
+        .realisation-logo {
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+        }
+        
+        .realisation-title {
+            flex: 1;
+        }
+        
+        .realisation-title h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .realisation-title p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+        
+        .realisation-section {
+            margin-bottom: 40px;
+        }
+        
+        .realisation-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+            color: #444;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .tech-item {
+            background-color: #f5f5f5;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+        
+        .objectives-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .objectives-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .objectives-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <div class="logo">Mathis Buchet</div>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="../presentation.html">Présentation</a></li>
+                <li class="has-submenu">
+                    <a href="../index.html#competences">Compétences</a>
+                    <ul class="submenu">
+                        <li class="has-submenu">
+                            <a href="../index.html#competences">Techniques</a>
+                            <ul class="submenu">
+                                <li><a href="../competences/php.html">PHP</a></li>
+                                <li><a href="../competences/postgresql.html">PostgreSQL</a></li>
+                                <li><a href="../competences/javascript.html">JavaScript</a></li>
+                                <li><a href="../competences/arduino.html">Arduino</a></li>
+                                <li><a href="../competences/git.html">Git</a></li>
+                                <li><a href="../competences/websocket.html">WebSockets</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu">
+                            <a href="../index.html#competences">Humaines</a>
+                            <ul class="submenu">
+                                <li><a href="../competences/communication.html">Communication</a></li>
+                                <li><a href="../competences/gestion-projet.html">Gestion de projet</a></li>
+                                <li><a href="../index.html#competences">Travail d'équipe</a></li>
+                                <li><a href="../index.html#competences">Résolution de problèmes</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="../index.html#realisations">Réalisations</a>
+                    <ul class="submenu">
+                        <li><a href="../realisations/easy-monitor.html">Easy-Monithor</a></li>
+                        <li><a href="../realisations/easy-check.html">Easy-Check</a></li>
+                        <li><a href="../realisations/tracker-gps.html">Tracker GPS</a></li>
+                        <li><a href="../index.html#projets-web">Projets Web</a></li>
+                        <li><a href="../index.html#applications">Applications</a></li>
+                        <li><a href="../index.html#autres-projets">Autres Projets</a></li>
+                    </ul>
+                </li>
+                <li><a href="../parcours.html">Parcours</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="realisation-container">
+        <div class="realisation-header">
+            <img src="../images/tracker-gps-icon.svg" alt="Logo Tracker GPS" class="realisation-logo">
+            <div class="realisation-title">
+                <h1>Tracker GPS</h1>
+                <p>Système de géolocalisation en temps réel avec Arduino, Flutter et Symfony</p>
+            </div>
+        </div>
+
+        <div class="realisation-section">
+            <h2>Introduction</h2>
+            <p>Dans le cadre de mes projets personnels et de mon intérêt pour les systèmes embarqués et l'automobile, j'ai développé un tracker GPS permettant de collecter et transmettre des données de géolocalisation en temps réel.</p>
+            <p>Ce projet repose sur l'intégration d'un module GPS Grove 109020022, d'un module Bluetooth HC-05 et d'un <a href="../competences/arduino.html">Arduino</a>, afin d'assurer la transmission des coordonnées à un appareil mobile via Bluetooth.</p>
+            <p>L'application mobile, développée en Flutter, récupère ces données GPS et les envoie à une API Symfony, qui les stocke dans une base de données <a href="../competences/postgresql.html">PostgreSQL</a> et les rend accessibles via un front-end web en Symfony et <a href="../competences/javascript.html">JavaScript</a>.</p>
+            <p>L'objectif principal est de fournir un suivi précis des déplacements, avec une transmission fiable des données, tout en optimisant la consommation d'énergie et la gestion des communications entre les différents composants.</p>
+        </div>
+
+        <div class="realisation-section" style="text-align: center;">
+            <div style="margin: 30px auto; max-width: 300px;">
+                <img src="../images/tracker-gps-schema.png" alt="Schéma du Tracker GPS" style="width: 100%; height: auto;">
+            </div>
+            <p style="font-style: italic; color: #666;">Architecture du système de tracking GPS</p>
+        </div>
+
+        <div class="realisation-section">
+            <h2>Objectifs techniques</h2>
+            <ul class="objectives-list">
+                <li><strong>Acquisition des données GPS</strong> - Utiliser le module Grove GPS 109020022 pour récupérer en temps réel les coordonnées de localisation et traiter les trames NMEA pour extraire les informations essentielles.</li>
+                <li><strong>Transmission Bluetooth vers un appareil Android</strong> - Exploiter le module HC-05 pour transférer les données GPS à un téléphone Android via Bluetooth classique et développer une communication stable entre l'<a href="../competences/arduino.html">Arduino</a> et l'application mobile.</li>
+                <li><strong>Développement de l'application mobile en Flutter</strong> - Concevoir une interface intuitive permettant d'afficher les coordonnées GPS en temps réel et assurer l'envoi automatique des données à l'API Symfony.</li>
+                <li><strong>API et back-end sous Symfony</strong> - Développer une API RESTful en Symfony pour gérer la réception et le stockage des données GPS et assurer la persistance dans une base <a href="../competences/postgresql.html">PostgreSQL</a> avec l'extension PostGIS.</li>
+                <li><strong>Développement du front-end web</strong> - Mettre en place une interface web permettant de visualiser les positions GPS en temps réel sur une carte et intégrer une bibliothèque de cartographie pour afficher les trajets.</li>
+                <li><strong>Sécurité et optimisation</strong> - Protéger l'accès à l'API via un système d'authentification sécurisé et optimiser la gestion des requêtes pour assurer des performances élevées.</li>
+            </ul>
+        </div>
+
+        <div class="realisation-section">
+            <h2>Objectifs humains</h2>
+            <ul class="objectives-list">
+                <li><strong>Renforcement de mes compétences en développement embarqué</strong> - Expérimenter la communication entre un <a href="../competences/arduino.html">Arduino</a> et un appareil mobile via Bluetooth et optimiser la lecture et la transmission des données GPS.</li>
+                <li><strong>Expérience en développement mobile avec Flutter</strong> - Concevoir une application robuste et ergonomique pour la gestion des données en temps réel et expérimenter la gestion des connexions réseaux dans un environnement mobile.</li>
+                <li><strong>Maîtrise avancée de Symfony</strong> - Développer une API performante et évolutive en Symfony pour la gestion des données GPS et améliorer mes compétences en optimisation des bases de données <a href="../competences/postgresql.html">PostgreSQL</a>.</li>
+                <li><strong>Travail sur l'intégration d'un système complet</strong> - Gérer l'ensemble du projet, de l'embarqué à l'application mobile, en passant par l'API et le front-end, et assurer la cohérence entre les différentes technologies utilisées.</li>
+            </ul>
+        </div>
+
+        <div class="realisation-section">
+            <h2>Contexte technique</h2>
+            <p>Pour réaliser ce tracker GPS, j'ai utilisé un ensemble de technologies complémentaires couvrant l'embarqué, le mobile et le web.</p>
+            
+            <div class="tech-stack">
+                <div class="tech-item"><a href="../competences/arduino.html">Arduino</a></div>
+                <div class="tech-item">Module GPS Grove 109020022</div>
+                <div class="tech-item">Module Bluetooth HC-05</div>
+                <div class="tech-item">Flutter (Dart)</div>
+                <div class="tech-item">Symfony 7.1</div>
+                <div class="tech-item"><a href="../competences/php.html">PHP</a></div>
+                <div class="tech-item"><a href="../competences/javascript.html">JavaScript</a></div>
+                <div class="tech-item"><a href="../competences/postgresql.html">PostgreSQL</a></div>
+                <div class="tech-item">PostGIS</div>
+                <div class="tech-item">Leaflet</div>
+            </div>
+            
+            <h3 style="margin-top: 30px;">Fonctionnalités développées</h3>
+            <ul class="objectives-list">
+                <li><strong>Acquisition et transmission des données GPS</strong> - Collecte des coordonnées GPS via le module Grove et transmission en Bluetooth vers l'application mobile.</li>
+                <li><strong>Application mobile Flutter</strong> - Interface utilisateur intuitive pour visualiser les données en temps réel et les transmettre à l'API.</li>
+                <li><strong>API Symfony</strong> - Réception, validation et stockage des données GPS dans la base <a href="../competences/postgresql.html">PostgreSQL</a> avec PostGIS.</li>
+                <li><strong>Interface web</strong> - Visualisation des parcours sur une carte interactive et consultation de l'historique des trajets.</li>
+                <li><strong>Synchronisation</strong> - Mécanisme de synchronisation entre l'application mobile et le serveur pour assurer la continuité des données même en cas de perte de connexion.</li>
+            </ul>
+        </div>
+
+        <div class="realisation-section">
+            <h2>Développement du projet</h2>
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+                <div>
+                    <h3>Étape 1 : Analyse des besoins</h3>
+                    <p>J'ai commencé par définir les cas d'usage du tracker GPS (suivi de véhicules, activités de plein air, etc.) et étudier les contraintes techniques liées à la transmission des données Bluetooth et à l'affichage en temps réel.</p>
+                </div>
+                <div>
+                    <h3>Étape 2 : Conception de l'architecture</h3>
+                    <p>J'ai développé une architecture modulaire entre l'embarqué, le mobile et le web, et modélisé les données dans <a href="../competences/postgresql.html">PostgreSQL</a> avec PostGIS pour optimiser les requêtes spatiales.</p>
+                </div>
+                <div>
+                    <h3>Étape 3 : Développement</h3>
+                    <p>Le développement s'est déroulé en plusieurs phases : programmation de l'<a href="../competences/arduino.html">Arduino</a> pour gérer le GPS et le Bluetooth, développement de l'application Flutter pour afficher et envoyer les données GPS, mise en place de l'API Symfony pour stocker et traiter les données, et développement du front-end web pour la visualisation des trajets.</p>
+                </div>
+                <div>
+                    <h3>Étape 4 : Tests et optimisation</h3>
+                    <p>J'ai effectué des tests approfondis pour vérifier les performances de transmission Bluetooth entre l'<a href="../competences/arduino.html">Arduino</a> et l'application Flutter, optimiser l'API Symfony pour gérer un grand nombre de requêtes, et valider l'affichage des cartes et le fonctionnement de la base de données.</p>
+                </div>
+                <div>
+                    <h3>Étape 5 : Mise en production et évolutions</h3>
+                    <p>Après avoir hébergé l'API Symfony et la base <a href="../competences/postgresql.html">PostgreSQL</a> sur un serveur, j'ai ajouté des fonctionnalités comme l'historique des trajets et la gestion des alertes (zones de géofencing, vitesse excessive).</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="realisation-section">
+            <h2>Conclusion</h2>
+            <p>Ce projet de tracker GPS a été une expérience riche techniquement et formatrice, me permettant d'explorer plusieurs domaines : systèmes embarqués (gestion d'un module GPS et communication Bluetooth), développement mobile avec Flutter, développement web avec Symfony, et visualisation des données de localisation.</p>
+            <p>Les prochaines évolutions du projet pourraient inclure l'ajout de notifications en temps réel pour signaler des anomalies, l'amélioration de l'efficacité énergétique du tracker pour une autonomie prolongée, et l'intégration de nouvelles fonctionnalités embarquées, comme la détection d'accélérations brutales ou la température.</p>
+            <p>Grâce à ce projet, j'ai consolidé ma maîtrise des technologies embarquées, mobiles et web, tout en développant un système fonctionnel et évolutif répondant aux exigences modernes de suivi GPS.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Mathis Buchet - Portfolio</p>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+</html>
