@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compétence WebSockets - Mathis Buchet</title>
     <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="competences.css">
 </head>
 <body class="websocket-theme">
     <header>
@@ -38,8 +37,8 @@
                             <ul class="submenu">
                                 <li><a href="communication.html">Communication</a></li>
                                 <li><a href="gestion-projet.html">Gestion de projet</a></li>
-                                <li><a href="../index.html#competences">Travail d'équipe</a></li>
-                                <li><a href="../index.html#competences">Résolution de problèmes</a></li>
+                                <li><a href="travail-equipe.html">Travail d'équipe</a></li>
+                                <li><a href="resolution-problemes.html">Résolution de problèmes</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -47,7 +46,7 @@
                 <li class="has-submenu">
                     <a href="../index.html#realisations">Réalisations</a>
                     <ul class="submenu">
-                        <li><a href="../realisations/easy-monitor.html">Easy-Monithor</a></li>
+                        <li><a href="../realisations/easy-monithor.html">Easy-Monithor</a></li>
                         <li><a href="../realisations/easy-check.html">Easy-Check</a></li>
                         <li><a href="../realisations/tracker-gps.html">Tracker GPS</a></li>
                     </ul>
@@ -90,14 +89,14 @@
                 </p>
                 
                 <div class="project-highlight">
-                    <h3><a href="../realisations/easy-monitor.html">Projet Easy-Monitor (Sudalys)</a></h3>
+                    <h3><a href="../realisations/easy-monithor.html">Projet Easy-Monithor (Sudalys)</a></h3>
                     <p>
                         J'ai utilisé <strong>WebSockets</strong> pour afficher en <strong>temps réel</strong> les données de supervision des capteurs. L'objectif était de permettre aux utilisateurs de visualiser instantanément les mesures collectées, sans avoir à recharger la page. L'implémentation a nécessité l'intégration de <strong>Mercure</strong> pour assurer une diffusion efficace des événements depuis le serveur <strong>Symfony</strong> vers le front-end <strong>JavaScript</strong>. Cette solution a permis de réduire considérablement la latence entre l'acquisition des données et leur affichage, offrant ainsi une expérience utilisateur plus fluide et réactive. Les tableaux de bord de supervision ont gagné en pertinence, permettant aux opérateurs de prendre des décisions plus rapidement face aux anomalies détectées.
                     </p>
                 </div>
                 
                 <div class="project-highlight">
-                    <h3>Projet Easy-Check (Sudalys)</h3>
+                    <h3><a href="../realisations/easy-check.html">Projet Easy-Check (Sudalys)</a></h3>
                     <p>
                         J'ai mis en place un système de <strong>mise à jour en temps réel</strong> des statuts d'audits, permettant aux utilisateurs de voir immédiatement les modifications effectuées par d'autres membres de l'équipe. Cette fonctionnalité a amélioré la <strong>collaboration</strong> et la fluidité du travail. L'implémentation a impliqué la création d'un système d'<strong>événements</strong> côté serveur qui, lors de la modification d'un audit, déclenche l'envoi de notifications via WebSockets aux clients connectés. Cette approche a considérablement réduit les risques de travail en doublon et a permis aux équipes d'audit de coordonner leurs actions plus efficacement sur le terrain.
                     </p>

@@ -1194,6 +1194,115 @@ footer {
     color: #8e44ad;
 }
 
+/* Styles spécifiques pour Résolution de problèmes */
+.resolution-problemes-theme .competence-detail-icon {
+    background: linear-gradient(135deg, #e67e22, #d35400);
+    box-shadow: 0 4px 10px rgba(230, 126, 34, 0.3);
+}
+
+.resolution-problemes-theme .back-button {
+    background: linear-gradient(135deg, #e67e22, #d35400);
+}
+
+.resolution-problemes-theme .project-highlight {
+    border-left: 4px solid #d35400;
+}
+
+.resolution-problemes-theme .project-highlight h3 {
+    color: #d35400;
+}
+
+/* Styles spécifiques pour JavaScript */
+.javascript-theme .competence-detail-icon {
+    background: linear-gradient(135deg, #f7df1e, #c9b018);
+    box-shadow: 0 4px 10px rgba(247, 223, 30, 0.3);
+}
+
+.javascript-theme .back-button {
+    background: linear-gradient(135deg, #f7df1e, #c9b018);
+    color: #333; /* Texte foncé pour meilleure lisibilité sur fond jaune */
+}
+
+.javascript-theme .project-highlight {
+    border-left: 4px solid #f7df1e;
+}
+
+.javascript-theme .project-highlight h3 {
+    color: #c9b018;
+}
+
+/* Styles spécifiques pour Git */
+.git-theme .competence-detail-icon {
+    background: linear-gradient(135deg, #f05033, #bd4130);
+    box-shadow: 0 4px 10px rgba(240, 80, 51, 0.3);
+}
+
+.git-theme .back-button {
+    background: linear-gradient(135deg, #f05033, #bd4130);
+}
+
+.git-theme .project-highlight {
+    border-left: 4px solid #f05033;
+}
+
+.git-theme .project-highlight h3 {
+    color: #bd4130;
+}
+
+/* Styles spécifiques pour PostgreSQL */
+.postgresql-theme .competence-detail-icon {
+    background: linear-gradient(135deg, #336791, #254b6a);
+    box-shadow: 0 4px 10px rgba(51, 103, 145, 0.3);
+}
+
+.postgresql-theme .back-button {
+    background: linear-gradient(135deg, #336791, #254b6a);
+}
+
+.postgresql-theme .project-highlight {
+    border-left: 4px solid #336791;
+}
+
+.postgresql-theme .project-highlight h3 {
+    color: #336791;
+}
+
+/* Styles spécifiques pour WebSocket */
+.websocket-theme .competence-detail-icon {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
+}
+
+.websocket-theme .back-button {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+}
+
+.websocket-theme .project-highlight {
+    border-left: 4px solid #3498db;
+}
+
+.websocket-theme .project-highlight h3 {
+    color: #2980b9;
+}
+
+/* Styles spécifiques pour Travail d'équipe */
+.travail-equipe-theme .competence-detail-icon {
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+    box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
+}
+
+.travail-equipe-theme .back-button {
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+}
+
+.travail-equipe-theme .project-highlight {
+    border-left: 4px solid #3498db;
+}
+
+.travail-equipe-theme .project-highlight h3 {
+    color: #3498db;
+}
+
 /* Style commun pour les icônes et boutons */
 .competence-detail-icon {
     font-size: 2.5rem;
@@ -1406,7 +1515,7 @@ footer {
     }
 }
 
-/* Styles responsives pour le menu */
+/* Styles responsifs pour le menu */
 @media screen and (max-width: 768px) {
     .menu-toggle {
         display: flex;

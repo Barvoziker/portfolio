@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compétence PostgreSQL - Mathis Buchet</title>
     <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="competences.css">
 </head>
 <body class="postgresql-theme">
     <header>
@@ -38,8 +37,8 @@
                             <ul class="submenu">
                                 <li><a href="communication.html">Communication</a></li>
                                 <li><a href="gestion-projet.html">Gestion de projet</a></li>
-                                <li><a href="../index.html#competences">Travail d'équipe</a></li>
-                                <li><a href="../index.html#competences">Résolution de problèmes</a></li>
+                                <li><a href="travail-equipe.html">Travail d'équipe</a></li>
+                                <li><a href="resolution-problemes.html">Résolution de problèmes</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -47,7 +46,7 @@
                 <li class="has-submenu">
                     <a href="../index.html#realisations">Réalisations</a>
                     <ul class="submenu">
-                        <li><a href="../realisations/easy-monitor.html">Easy-Monithor</a></li>
+                        <li><a href="../realisations/easy-monithor.html">Easy-Monithor</a></li>
                         <li><a href="../realisations/easy-check.html">Easy-Check</a></li>
                         <li><a href="../realisations/tracker-gps.html">Tracker GPS</a></li>
                     </ul>
@@ -93,21 +92,21 @@
                 </p>
                 
                 <div class="project-highlight">
-                    <h3><a href="../realisations/easy-monitor.html">Projet Easy-Monitor (Sudalys)</a></h3>
+                    <h3><a href="../realisations/easy-monithor.html">Projet Easy-Monithor (Sudalys)</a></h3>
                     <p>
-                        Easy-Monitor est une application de <strong>supervision en temps réel</strong> des capteurs réseau, qui permet de collecter et d'analyser des données techniques en continu. Ce projet repose sur <strong>PostgreSQL</strong> pour assurer le stockage et le traitement efficace d'un volume important de données générées par les capteurs. Pour garantir des performances optimales, j'ai mis en place plusieurs stratégies d'optimisation : utilisation des <strong>Common Table Expressions (CTE)</strong> pour structurer et améliorer la lisibilité des requêtes complexes, exploitation des <strong>fonctions fenêtrées</strong> pour calculer les moyennes et détecter les anomalies sans exécuter plusieurs sous-requêtes coûteuses, définition d'<strong>index spécifiques</strong> (BTREE, HASH, GIN) en fonction des types de requêtes les plus fréquentes, et mise en place d'un <strong>partitionnement par plage de temps</strong> pour faciliter l'archivage et améliorer les performances des requêtes ciblées. Grâce à ces optimisations, l'application est capable de récupérer et d'afficher les données des capteurs en <strong>temps réel</strong>, tout en maintenant une excellente fluidité et réactivité.
+                        Easy-Monithor est une application de <strong>supervision en temps réel</strong> des capteurs réseau, qui permet de collecter et d'analyser des données techniques en continu. Ce projet repose sur <strong>PostgreSQL</strong> pour assurer le stockage et le traitement efficace d'un volume important de données générées par les capteurs. Pour garantir des performances optimales, j'ai mis en place plusieurs stratégies d'optimisation : utilisation des <strong>Common Table Expressions (CTE)</strong> pour structurer et améliorer la lisibilité des requêtes complexes, exploitation des <strong>fonctions fenêtrées</strong> pour calculer les moyennes et détecter les anomalies sans exécuter plusieurs sous-requêtes coûteuses, définition d'<strong>index spécifiques</strong> (BTREE, HASH, GIN) en fonction des types de requêtes les plus fréquentes, et mise en place d'un <strong>partitionnement par plage de temps</strong> pour faciliter l'archivage et améliorer les performances des requêtes ciblées. Grâce à ces optimisations, l'application est capable de récupérer et d'afficher les données des capteurs en <strong>temps réel</strong>, tout en maintenant une excellente fluidité et réactivité.
                     </p>
                 </div>
                 
                 <div class="project-highlight">
-                    <h3>Projet Easy-Check (Sudalys)</h3>
+                    <h3><a href="../realisations/easy-check.html">Projet Easy-Check (Sudalys)</a></h3>
                     <p>
                         Easy-Check est un logiciel de <strong>gestion d'audits pour les infrastructures télécoms</strong>, où chaque campagne d'audit comprend un grand volume de données à structurer et analyser. PostgreSQL a été choisi pour assurer <strong>l'intégrité et la scalabilité</strong> de la base de données, en garantissant une gestion rigoureuse des informations. Les améliorations techniques que j'ai mises en place incluent l'utilisation de <strong>contraintes d'intégrité</strong> (clés étrangères, contraintes CHECK et déclencheurs) pour garantir la validité et la cohérence des données stockées, la définition d'<strong>index multi-colonnes</strong> et d'<strong>index GIN</strong> pour les recherches textuelles afin d'optimiser les performances des filtres avancés, l'ajout de <strong>transactions ACID</strong> pour s'assurer que les mises à jour de données sont effectuées sans risque d'incohérence, et la structuration de la base de données avec des <strong>relations bien normalisées</strong> pour réduire la redondance des données. Grâce à ces optimisations, Easy-Check est capable de gérer un grand nombre d'audits simultanément sans ralentir, tout en garantissant une grande fiabilité des informations.
                     </p>
                 </div>
                 
                 <div class="project-highlight">
-                    <h3>Projet personnel de suivi GPS</h3>
+                    <h3><a href="../realisations/tracker-gps.html">Projet de suivi GPS (Projet personnel)</a></h3>
                     <p>
                         Dans ce projet, j'ai développé un <strong>système de suivi GPS en temps réel</strong> à l'aide d'un <strong>Arduino</strong>, d'un <strong>module GPS Grove 109020022</strong> et d'un <strong>module Bluetooth HC-05</strong>. Les coordonnées GPS sont envoyées vers une application mobile via Bluetooth, puis stockées dans <strong>PostgreSQL</strong> via une API. L'architecture mise en place repose sur <strong>PostGIS</strong>, une extension de PostgreSQL dédiée à la gestion de données géospatiales. Pour améliorer les performances et la précision des analyses, j'ai mis en place plusieurs optimisations : stockage des coordonnées sous forme de géométries avec le type de données <code>geom</code> pour effectuer des requêtes spatiales avancées directement dans la base de données, utilisation des <strong>fonctions spatiales de PostGIS</strong> pour mettre en place un système de suivi précis permettant de calculer les distances parcourues et gérer les alertes en cas de sortie d'un périmètre défini (géofencing), mise en place d'un <strong>index GiST</strong> sur le champ <code>geom</code> pour accélérer les requêtes de recherche géographique, et implémentation d'un <strong>système de purge automatique</strong> des anciennes positions pour éviter une surcharge de la base de données. Ces choix techniques permettent d'assurer un <strong>suivi GPS en temps réel</strong> fluide, fiable et optimisé, adapté à des applications nécessitant une gestion efficace des données géolocalisées.
                     </p>
