@@ -1126,6 +1126,24 @@ footer {
     color: #0077cc;
 }
 
+/* Styles spécifiques pour Communication */
+.communication-theme .competence-detail-icon {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    box-shadow: 0 4px 10px rgba(46, 204, 113, 0.3);
+}
+
+.communication-theme .back-button {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+}
+
+.communication-theme .project-highlight {
+    border-left: 4px solid #27ae60;
+}
+
+.communication-theme .project-highlight h3 {
+    color: #27ae60;
+}
+
 /* Style commun pour les icônes et boutons */
 .competence-detail-icon {
     font-size: 2.5rem;
