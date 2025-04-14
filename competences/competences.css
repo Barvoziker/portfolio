@@ -94,22 +94,22 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* Styles spécifiques pour PHP */
-.php-theme .competence-detail-icon {
-    background: linear-gradient(135deg, #8892bf, #4F5B93);
-    box-shadow: 0 4px 10px rgba(79, 91, 147, 0.3);
+/* Styles spécifiques pour Symfony */
+.symfony-theme .competence-detail-icon {
+    background: linear-gradient(135deg, #8f0a1a, #5c0a1a);
+    box-shadow: 0 4px 10px rgba(143, 10, 26, 0.3);
 }
 
-.php-theme .back-button {
-    background: linear-gradient(135deg, #8892bf, #4F5B93);
+.symfony-theme .back-button {
+    background: linear-gradient(135deg, #8f0a1a, #5c0a1a);
 }
 
-.php-theme .project-highlight {
-    border-left: 4px solid #4F5B93;
+.symfony-theme .project-highlight {
+    border-left: 4px solid #5c0a1a;
 }
 
-.php-theme .project-highlight h3 {
-    color: #4F5B93;
+.symfony-theme .project-highlight h3 {
+    color: #5c0a1a;
 }
 
 /* Styles spécifiques pour Arduino */
