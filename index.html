@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Mathis Buchet</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <header>
@@ -87,6 +88,14 @@
                 Fort de mon expérience et de ma formation, j'ai développé un ensemble de compétences techniques et humaines 
                 qui me permettent de mener à bien des projets complexes et de travailler efficacement en équipe.
             </p>
+            
+            <div class="competences-chart-container">
+                <h3>Comparaison de mes compétences</h3>
+                <p>Ce graphique présente une évaluation comparative de mes compétences techniques et humaines sur une échelle de 1 à 10.</p>
+                <div class="chart-wrapper">
+                    <canvas id="competencesChart"></canvas>
+                </div>
+            </div>
             
             <div class="competences-container">
                 <div class="competence-category">
@@ -278,5 +287,62 @@
         <p>&copy; 2025 Mathis Buchet - Portfolio</p>
     </footer>
     <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const ctx = document.getElementById('competencesChart');
+            
+            new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: [
+                        'Symfony', 'PostgreSQL', 'JavaScript', 'Arduino', 'Git', 'WebSockets',
+                        'Communication', 'Gestion de projet', 'Travail d\'équipe', 'Résolution de problèmes'
+                    ],
+                    datasets: [{
+                        label: 'Niveau de compétence (sur 10)',
+                        data: [9, 8, 7, 6, 8, 7, 8, 7, 9, 8],
+                        fill: true,
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        borderColor: 'rgb(54, 162, 235)',
+                        pointBackgroundColor: 'rgb(54, 162, 235)',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: 'rgb(54, 162, 235)'
+                    }]
+                },
+                options: {
+                    elements: {
+                        line: {
+                            borderWidth: 3
+                        }
+                    },
+                    scales: {
+                        r: {
+                            angleLines: {
+                                display: true
+                            },
+                            suggestedMin: 0,
+                            suggestedMax: 10,
+                            ticks: {
+                                stepSize: 2
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.dataset.label + ': ' + context.raw + '/10';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>

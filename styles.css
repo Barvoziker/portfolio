@@ -1578,3 +1578,37 @@ footer {
         display: block;
     }
 }
+
+/* Styles pour le graphique radar des compétences */
+.competences-chart-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.competences-chart-container h3 {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.competences-chart-container p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.chart-wrapper {
+    max-width: 700px;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .chart-wrapper {
+        height: 400px;
+    }
+}
