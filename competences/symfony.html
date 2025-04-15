@@ -7,153 +7,244 @@
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body class="symfony-theme">
-    <header>
-        <nav class="menu">
-            <div class="logo">Mathis Buchet</div>
-            <div class="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="../index.html">Accueil</a></li>
-                <li><a href="../presentation.html">Présentation</a></li>
-                <li class="has-submenu">
-                    <a href="../index.html#competences">Compétences</a>
-                    <ul class="submenu">
-                        <li class="has-submenu">
-                            <a href="../index.html#competences">Techniques</a>
-                            <ul class="submenu">
-                                <li><a href="symfony.html">Symfony</a></li>
-                                <li><a href="postgresql.html">PostgreSQL</a></li>
-                                <li><a href="javascript.html">JavaScript</a></li>
-                                <li><a href="arduino.html">Arduino</a></li>
-                                <li><a href="git.html">Git</a></li>
-                                <li><a href="websocket.html">WebSockets</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-submenu">
-                            <a href="../index.html#competences">Humaines</a>
-                            <ul class="submenu">
-                                <li><a href="communication.html">Communication</a></li>
-                                <li><a href="gestion-projet.html">Gestion de projet</a></li>
-                                <li><a href="travail-equipe.html">Travail d'équipe</a></li>
-                                <li><a href="resolution-problemes.html">Résolution de problèmes</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li class="has-submenu">
-                    <a href="../index.html#realisations">Réalisations</a>
-                    <ul class="submenu">
-                        <li><a href="../realisations/easy-monithor.html">Easy-Monithor</a></li>
-                        <li><a href="../realisations/easy-check.html">Easy-Check</a></li>
-                        <li><a href="../realisations/tracker-gps.html">Tracker GPS</a></li>
-                    </ul>
-                </li>
-                <li><a href="../parcours.html">Parcours</a></li>
-                <li><a href="../contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <nav class="menu">
+        <div class="logo">Mathis Buchet</div>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="../presentation.html">Présentation</a></li>
+            <li class="has-submenu">
+                <a href="../index.html#competences">Compétences</a>
+                <ul class="submenu">
+                    <li class="has-submenu">
+                        <a href="../index.html#competences">Techniques</a>
+                        <ul class="submenu">
+                            <li><a href="symfony.html">Symfony</a></li>
+                            <li><a href="postgresql.html">PostgreSQL</a></li>
+                            <li><a href="javascript.html">JavaScript</a></li>
+                            <li><a href="arduino.html">Arduino</a></li>
+                            <li><a href="git.html">Git</a></li>
+                            <li><a href="websocket.html">WebSockets</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="../index.html#competences">Humaines</a>
+                        <ul class="submenu">
+                            <li><a href="communication.html">Communication</a></li>
+                            <li><a href="gestion-projet.html">Gestion de projet</a></li>
+                            <li><a href="travail-equipe.html">Travail d'équipe</a></li>
+                            <li><a href="resolution-problemes.html">Résolution de problèmes</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="../index.html#realisations">Réalisations</a>
+                <ul class="submenu">
+                    <li><a href="../realisations/easy-monithor.html">Easy-Monithor</a></li>
+                    <li><a href="../realisations/easy-check.html">Easy-Check</a></li>
+                    <li><a href="../realisations/tracker-gps.html">Tracker GPS</a></li>
+                </ul>
+            </li>
+            <li><a href="../parcours.html">Parcours</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <div class="container">
-        <h1>Compétence Symfony</h1>
-        
-        <section class="competence-detail-section">
-            <div class="competence-detail-header">
-                <div class="competence-detail-icon">🐘</div>
-                <h2>Ma définition</h2>
-            </div>
-            <div class="competence-detail-content">
-                <p>
-                    Symfony est un framework PHP construit autour de composants et d'un écosystème. Né en 2005 et ayant traversé plusieurs versions jusqu'à la 7 actuelle, il est incontestablement un incontournable dans le monde du développement web professionnel. En utilisant Symfony, vous serez capable de transformer simplement et rapidement des besoins métier complexes en un logiciel à la fois fiable et maintenable dans le temps. Pour cela, Symfony s'appuie sur différents piliers. Le premier est l'architectural : maîtriser Symfony c'est maîtriser la conception d'un projet selon le modèle de conception MVC (Modèle-Vue-Contrôleur), le découper en bundles distribués de manière logique, et connaître et comprendre l'utilisation de modèles de conception plus avancés comme l'Injection des dépendances ou le Repository par exemple. Le deuxième est fonctionnel : c'est la gestion des composants principaux du framework sur lesquels les projets Symfony s'appuient, comme le Router, le Security, la surcouche d'abstraction à la base de données comme Doctrine, le traitement des formulaires, élément central à de nombreux projets. Le troisième est méthodologique. Il concerne l'adoption de règles de codage, l'utilisation d'outils comme PHPStan, PHP-CS-Fixer, ou encore le recours à des tests pour éviter les régressions sur votre code au fur et à mesure de son évolution. Le dernier, l'écosystémique : il est question de savoir évoluer au sein de l'écosystème de Symfony, utiliser entre autres composer pour la gestion de vos dépendances, de Twig pour la gestion des templates, ou encore d'API Platform pour la création d'APIs RESTful.
-                </p>
-                
-                <p>
-                    Dans le contexte professionnel d'aujourd'hui, Symfony est un framework qui occupe une place de choix. En effet, aujourd'hui, plus de 50% des projets web professionnel réalisés en utilisant le langage PHP choisissent d'utiliser le framework Symfony. A ce sujet, on retrouve une diversité de marché : des petites aux entreprises du CAC 40, en passant par de nombreuses startups comme BlaBlaCar, Spotify ou encore Dailymotion. La tendance du marché pousse d'ailleurs les géants du marché comme SensioLabs (la société à l'initiative du framework) à se tourner de plus en plus vers les entreprises privées pour leur proposer des services support, training mais aussi de l'audit et de la conduite de programme.
-                </p>
-                
-                <p>
-                    L'évolution de Symfony au fil des années est représentative de celle de l'écosystème PHP. Alors que les premières itérations se sont davantage concentrées sur les bases de la structuration d'une application web, les évolutions récentes ont vu apparaître des fonctionnalités avancées telles qu'un système de messaging asynchrone, le support natif de WebSockets (Mercure), ou encore l'intégration facile et naturelle avec les frameworks JavaScript modernes via Symfony UX. Cette capacité à évoluer et à être à l'affût des tendances émergentes du développement web, tout en conservant une compatibilité ascendante qui prémunit les investissements métier, est l'une des forces du framework. Ainsi, Symfony est un partenaire de choix pour répondre aux besoins actuels.
-                </p>
-            </div>
-        </section>
-        
-        <section class="competence-detail-section">
-            <div class="competence-detail-header">
-                <div class="competence-detail-icon">📊</div>
-                <h2>Mes éléments de preuve</h2>
-            </div>
-            <div class="competence-detail-content">
-                <p>
-                    C'est vers l'âge de dix-huit ans, dans le cadre de projets personnels et universitaires, que j'ai commencé à pratiquer le développement PHP. Très vite dans mon apprentissage, j'ai découvert Symfony. Comme beaucoup d'autres l'ont vécu, j'ai alors pu redécouvrir et donner un second élan à mes projets.
-                </p>
-                
-                <div class="project-highlight">
-                    <h3><a href="../realisations/easy-monithor.html">Easy-Monitor (Sudalys)</a></h3>
-                    <p>
-                        Durant ce projet, j'ai développé une application de supervision du réseau de fibre optique sous la forme d'une Single Page Application (SPA) en utilisant une version récente de Symfony. Ce contexte particulier m'a amené à rapidement maîtriser des fonctionnalités avancées du framework, notamment le mapping objet-relationnel (ORM), ainsi que la mise en place d'un système d'authentification sécurisé. La réussite de ce projet est passée par une étroite collaboration avec l'équipe métier afin de traduire précisément leurs besoins en solutions techniques robustes et évolutives.
-                    </p>
-                </div>
-                
-                <div class="project-highlight">
-                    <h3><a href="../realisations/easy-check.html">Easy-Check (Sudalys)</a></h3>
-                    <p>
-                        Easy-Check est un logiciel de gestion d'audits destiné aux infrastructures télécoms, dont l'objectif était de centraliser et simplifier la gestion des campagnes d'audit. En utilisant Symfony 7.1 avec PostgreSQL, j'ai pu concevoir une solution performante répondant aux exigences élevées de sécurité, de flexibilité et d'évolutivité demandées par l'entreprise. Mon rôle était essentiel : garantir un code structuré respectant rigoureusement les bonnes pratiques Symfony, tout en optimisant les processus métiers identifiés.
-                    </p>
-                </div>
-                
-                <div class="project-highlight">
-                    <h3>BioData (Sequens)</h3>
-                    <p>
-                        Le projet BioData réalisé pour l'entreprise Sequens m'a permis de confirmer ma maîtrise technique sous pression. Nous devions livrer un site web complexe, accompagné d'une vaste base de données, en seulement deux mois. Cette contrainte temporelle a été très formatrice, renforçant non seulement ma passion pour PHP et Symfony, mais aussi mes capacités en gestion d'équipe et en organisation de projet dans un cadre très exigeant. Mon rôle a consisté à coordonner les efforts techniques, structurer le code selon les bonnes pratiques, et garantir les performances optimales de l'application livrée dans les délais.
-                    </p>
-                </div>
-            </div>
-        </section>
-        
-        <section class="competence-detail-section">
-            <div class="competence-detail-header">
-                <div class="competence-detail-icon">🔍</div>
-                <h2>Mon autocritique et ma marge de progression</h2>
-            </div>
-            <div class="competence-detail-content">
-                <p>
-                    Je me situe à 8,5/10 en Symfony après plus de 5 ans d'expérience, complétée notamment par mes missions chez Sudalys, où j'ai pu développer des projets alliant performance et sécurité. J'ai donc acquis une bonne connaissance de l'architecture MVC, de la gestion des routes, de l'injection de dépendances et de l'ORM Doctrine avancé. Je suis aussi expert sécurité, avec la mise en place de différents types de systèmes d'authentification (formLogin, JWT, OAuth) et expérimenté dans le développement d'API RESTful via API Platform, associée à une documentation automatique via OpenAPI/Swagger. La qualité de mon code est garantie grâce à des tests automatisés faits avec PHPUnit et Behat. Presque 60 % de ma journée de travail reposent sur Symfony, auquel s'ajoutent aisément mes connaissances en PostgreSQL et en JavaScript (en utilisant Symfony UX et Webpack Encore) pour former un socle technologique homogène.
-                </p>
-                
-                <p>
-                    Je cherche maintenant à améliorer mes résultats en maîtrisant des techniques comme l'utilisation d'Edge Side Includes (ESI), l'optimisation fine de la requête Doctrine, et la mise en cache distribuée via Redis ou Memcached. Je souhaite également approfondir mon expertise en architecture microservices, en continuant à utiliser Symfony Messenger pour la communication asynchrone. De plus, je souhaite améliorer mes pipelines CI/CD avec l'intégration d'outils comme GitHub Actions et SonarQube, pour améliorer la qualité et la performance de mes déploiements. La migration d'applications legacy vers Symfony est aussi une grande opportunité d'amélioration que je souhaite mieux maîtriser.
-                </p>
-                
-                <p>
-                    Afin d'atteindre ces objectifs, la certification Symfony (niveau avancé) que je prépare actuellement, et que je compte obtenir d'ici la fin de l'année. J'interviens activement sur des projets Open Source pour faire connaître mon code à des pairs expérimentés et enrichir mes habitudes de travail quotidien. En parallèle, j'ai créé un environnement de développement personnel consacré à l'exploration de nouvelles acquis (comme CQRS ou l'utilisation avancée de Symfony UX), tout en gardant une veille technologique permanente. Cette approche globale me permet de transformer des besoins métiers complexes en solutions techniques robustes et évolutives tout en renforçant mon leadership technique et en agissant en tant que mentor avec les développeurs moins expérimentés.
-                </p>
-            </div>
-        </section>
-        
-        <section class="competence-detail-section">
-            <div class="competence-detail-header">
-                <div class="competence-detail-icon">📈</div>
-                <h2>Évolution et objectifs personnels-professionnels</h2>
-            </div>
-            <div class="competence-detail-content">
-                <p>
-                    Mon objectif pour Symfony est d'atteindre 9,5/10 dans les 2 prochaines années pour devenir un expert capable de mettre en place des architectures logicielles complexes et de participer activement à l'écosystème Symfony. Cet objectif fait partie d'une stratégie de développement professionnel à long terme, en prenant en compte l'expertise technique comme un moyen pour accéder à des postes plus élevés en architecture logicielle. Pour arriver à cela j'ai en tête un plan en 4 étapes pour m'améliorer. La première étape est l'amélioration des performances des applications à forte charge. Il s'agit d'acquérir une bonne maîtrise des mécanismes de cache (Cache component, HTTP cache, ESI), d'optimisation des requêtes Doctrine, d'apprendre Blackfire.io pour le profiling et l'analyse des performances. La deuxième étape est l'approfondissement de l'architecture micro-services avec Symfony avec en particulier la maîtrise de Symfony Messenger pour la communication asynchrone et l'étude de patterns comme CQRS et Event Sourcing. Dans le même ordre d'idée, j'ai l'intention de commencer un projet personnel de démonstration couvrant la gestion des transactions distribuées, la tolérance aux pannes via Circuit Breaker et l'observabilité avec les outils comme Prometheus et Grafana. La troisième étape concerne le développement des compétences en intégration et déploiement continu (CI/CD). Bien que je sois déjà capable de déployer des pipelines complexes englobant une multitude de tests et d'analyses qualité de code (avec SonarQube), je prévois de suivre une formation certifiante d'ici mi-2026 pour préciser ces pratiques, notamment avec des stratégies de déploiement avancées comme le blue/green deployment. Enfin, le quatrième axe consiste à prendre le contrôle de la migration d'applications PHP legacy vers Symfony. Je souhaite apprendre à adopter des techniques de migration progressive, comme le Strangler Fig Pattern, en réalisant d'ici fin 2026 la migration d'un projet PHP vers la dernière version de Symfony, tout en documentant cette expérience sous forme d'étude de cas et en développant un Framework de migration réutilisable intégrant des outils d'analyse statique, des adaptateurs facilitant l'intégration entre code legacy et composants modernes, ainsi que des stratégies de test pour prévenir toute régression fonctionnelle.
-                </p>
-            </div>
-        </section>
-        
+<div class="container">
+    <h1>Compétence Symfony</h1>
 
-        
-        <a href="../index.html#competences" class="back-button">Retour aux compétences</a>
-    </div>
+    <section class="competence-detail-section">
+        <div class="competence-detail-header">
+            <div class="competence-detail-icon">🐘</div>
+            <h2>Ma définition</h2>
+        </div>
+        <div class="competence-detail-content">
+            <p>
+                Symfony est un framework PHP construit autour de composants et d'un écosystème. Né en 2005 et ayant
+                traversé plusieurs versions jusqu'à la 7 actuelle, il est incontestablement un incontournable dans le
+                monde du développement web professionnel. En utilisant Symfony, vous serez capable de transformer
+                simplement et rapidement des besoins métier complexes en un logiciel à la fois fiable et maintenable
+                dans le temps. Pour cela, Symfony s'appuie sur différents piliers. Le premier est l'architectural :
+                maîtriser Symfony c'est maîtriser la conception d'un projet selon le modèle de conception MVC
+                (Modèle-Vue-Contrôleur), le découper en bundles distribués de manière logique, et connaître et
+                comprendre l'utilisation de modèles de conception plus avancés comme l'Injection des dépendances ou le
+                Repository par exemple. Le deuxième est fonctionnel : c'est la gestion des composants principaux du
+                framework sur lesquels les projets Symfony s'appuient, comme le Router, le Security, la surcouche
+                d'abstraction à la base de données comme Doctrine, le traitement des formulaires, élément central à de
+                nombreux projets. Le troisième est méthodologique. Il concerne l'adoption de règles de codage,
+                l'utilisation d'outils comme PHPStan, PHP-CS-Fixer, ou encore le recours à des tests pour éviter les
+                régressions sur votre code au fur et à mesure de son évolution. Le dernier, l'écosystémique : il est
+                question de savoir évoluer au sein de l'écosystème de Symfony, utiliser entre autres composer pour la
+                gestion de vos dépendances, de Twig pour la gestion des templates, ou encore d'API Platform pour la
+                création d'APIs RESTful.
+            </p>
 
-    <footer>
-        <p>&copy; 2025 Mathis Buchet - Portfolio</p>
-    </footer>
+            <p>
+                Dans le contexte professionnel d'aujourd'hui, Symfony est un framework qui occupe une place de choix. En
+                effet, aujourd'hui, plus de 50% des projets web professionnel réalisés en utilisant le langage PHP
+                choisissent d'utiliser le framework Symfony. A ce sujet, on retrouve une diversité de marché : des
+                petites aux entreprises du CAC 40, en passant par de nombreuses startups comme BlaBlaCar, Spotify ou
+                encore Dailymotion. La tendance du marché pousse d'ailleurs les géants du marché comme SensioLabs (la
+                société à l'initiative du framework) à se tourner de plus en plus vers les entreprises privées pour leur
+                proposer des services support, training mais aussi de l'audit et de la conduite de programme.
+            </p>
 
-    <script src="../script.js"></script>
+            <p>
+                L'évolution de Symfony au fil des années est représentative de celle de l'écosystème PHP. Alors que les
+                premières itérations se sont davantage concentrées sur les bases de la structuration d'une application
+                web, les évolutions récentes ont vu apparaître des fonctionnalités avancées telles qu'un système de
+                messaging asynchrone, le support natif de <a href="websocket.html">WebSockets (Mercure)</a>, ou encore
+                l'intégration facile et
+                naturelle avec les frameworks <a href="javascript.html">JavaScript modernes</a> via Symfony UX. Cette
+                capacité à évoluer et à être à
+                l'affût des tendances émergentes du développement web, tout en conservant une compatibilité ascendante
+                qui prémunit les investissements métier, est l'une des forces du framework. Ainsi, Symfony est un
+                partenaire de choix pour répondre aux besoins actuels.
+            </p>
+        </div>
+    </section>
+
+    <section class="competence-detail-section">
+        <div class="competence-detail-header">
+            <div class="competence-detail-icon">📊</div>
+            <h2>Mes éléments de preuve</h2>
+        </div>
+        <div class="competence-detail-content">
+            <p>
+                C'est vers l'âge de dix-huit ans, dans le cadre de projets personnels et scolaire, que j'ai commencé à
+                pratiquer le développement PHP natif. Très vite dans mon apprentissage, j'ai découvert Symfony.
+            </p>
+
+            <div class="project-highlight">
+                <h3><a href="../realisations/easy-monithor.html">Easy-Monitor (Sudalys)</a></h3>
+                <p>
+                    Durant ce projet, j'ai développé une application de supervision du réseau de fibre optique sous la
+                    forme d'une Single Page Application (SPA) en utilisant Symfony 6. Ce contexte
+                    particulier m'a amené à rapidement maîtriser des fonctionnalités avancées du framework, notamment le
+                    mapping objet-relationnel (ORM), ainsi que la mise en place d'un système d'authentification
+                    sécurisé. La réussite de ce projet est passée par une collaboration avec le client
+                    afin de traduire précisément leurs besoins en solutions techniques robustes et évolutives.
+                </p>
+            </div>
+
+            <div class="project-highlight">
+                <h3><a href="../realisations/easy-check.html">Easy-Check (Sudalys)</a></h3>
+                <p>
+                    Easy-Check est un logiciel de gestion d'audits destiné aux infrastructures télécoms, dont l'objectif
+                    était de centraliser et simplifier la gestion des campagnes d'audit. En utilisant Symfony 7.2 avec
+                    PostgreSQL, j'ai pu concevoir une solution performante répondant aux exigences élevées de sécurité,
+                    de flexibilité et d'évolutivité demandées par l'entreprise. Mon rôle était essentiel : garantir un
+                    code structuré respectant rigoureusement les bonnes pratiques Symfony, tout en optimisant les
+                    processus métiers identifiés.
+                </p>
+            </div>
+
+            <div class="project-highlight">
+                <h3>BioData (Sequens)</h3>
+                <p>
+                    Le projet BioData réalisé pour l'entreprise Sequens m'a permis de confirmer ma maîtrise technique
+                    sous pression. Nous devions livrer un site web complexe, accompagné d'une vaste base de données, en
+                    seulement deux mois. Cette contrainte temporelle a été très formatrice, renforçant mon interêt pour
+                    PHP et Symfony, mais aussi mes capacités en gestion d'équipe et en organisation de
+                    projet dans un cadre très exigeant. Mon rôle a consisté à coordonner les efforts techniques,
+                    structurer le code selon les bonnes pratiques, et garantir les performances optimales de
+                    l'application livrée dans les délais.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="competence-detail-section">
+        <div class="competence-detail-header">
+            <div class="competence-detail-icon">🔍</div>
+            <h2>Mon autocritique et ma marge de progression</h2>
+        </div>
+        <div class="competence-detail-content">
+            <p>
+                Je me situe à 8,5/10 en Symfony après plus de 5 ans d'expérience, complétée notamment par mes missions
+                chez Sudalys, où j'ai pu développer des projets alliant performance et sécurité. J'ai donc acquis une
+                bonne connaissance de l'architecture MVC, de la gestion des routes, de l'injection de dépendances et de
+                l'ORM Doctrine avancé. Je suis aussi expert sécurité, avec la mise en place de différents types de
+                systèmes d'authentification (formLogin, JWT, OAuth) et expérimenté dans le développement d'API RESTful
+                via API Platform, associée à une documentation automatique via OpenAPI/Swagger. La qualité de mon code
+                est garantie grâce à des tests automatisés faits avec PHPUnit et Behat. Presque 60 % de ma journée de
+                travail reposent sur Symfony, auquel s'ajoutent aisément mes connaissances en PostgreSQL et en
+                JavaScript (en utilisant Symfony UX et Webpack Encore) pour former un socle technologique homogène.
+            </p>
+
+            <p>
+                Je cherche maintenant à améliorer mes résultats en maîtrisant des techniques comme l'utilisation d'Edge
+                Side Includes (ESI), l'optimisation fine de la requête Doctrine, et la mise en cache distribuée via
+                Redis ou Memcached. Je souhaite également approfondir mon expertise en architecture microservices, en
+                continuant à utiliser Symfony Messenger pour la communication asynchrone. De plus, je souhaite améliorer
+                mes pipelines CI/CD avec l'intégration d'outils comme GitHub Actions et SonarQube, pour améliorer la
+                qualité et la performance de mes déploiements. La migration d'applications legacy vers Symfony est aussi
+                une grande opportunité d'amélioration que je souhaite mieux maîtriser.
+            </p>
+
+            <p>
+                Afin d'atteindre ces objectifs, la certification Symfony (niveau avancé) que je prépare actuellement, et
+                que je compte obtenir d'ici la fin de l'année. J'interviens activement sur des projets Open Source pour
+                faire connaître mon code à des pairs expérimentés et enrichir mes habitudes de travail quotidien. En
+                parallèle, j'ai créé un environnement de développement personnel consacré à l'exploration de nouvelles
+                acquis (comme CQRS ou l'utilisation avancée de Symfony UX), tout en gardant une veille technologique
+                permanente. Cette approche globale me permet de transformer des besoins métiers complexes en solutions
+                techniques robustes et évolutives tout en renforçant mon leadership technique et en agissant en tant que
+                mentor avec les développeurs moins expérimentés.
+            </p>
+        </div>
+    </section>
+
+    <section class="competence-detail-section">
+        <div class="competence-detail-header">
+            <div class="competence-detail-icon">📈</div>
+            <h2>Évolution et objectifs personnels-professionnels</h2>
+        </div>
+        <div class="competence-detail-content">
+            <p>
+                Mon objectif pour Symfony est d'atteindre 9,5/10 dans les 2 prochaines années pour devenir un expert
+                capable de mettre en place des architectures logicielles complexes et de participer activement à
+                l'écosystème Symfony. Cet objectif fait partie d'une stratégie de développement professionnel à long
+                terme, en prenant en compte l'expertise technique comme un moyen pour accéder à des postes plus élevés
+                en architecture logicielle. Pour arriver à cela j'ai en tête un plan en 4 étapes pour m'améliorer. La
+                première étape est l'amélioration des performances des applications à forte charge. Il s'agit d'acquérir
+                une bonne maîtrise des mécanismes de cache (Cache component, HTTP cache, ESI), d'optimisation des
+                requêtes Doctrine, d'apprendre Blackfire.io pour le profiling et l'analyse des performances. La deuxième
+                étape est l'approfondissement de l'architecture micro-services avec Symfony avec en particulier la
+                maîtrise de Symfony Messenger pour la communication asynchrone et l'étude de patterns comme CQRS et
+                Event Sourcing. Dans le même ordre d'idée, j'ai l'intention de commencer un projet personnel de
+                démonstration couvrant la gestion des transactions distribuées, la tolérance aux pannes via Circuit
+                Breaker et l'observabilité avec les outils comme Prometheus et Grafana. La troisième étape concerne le
+                développement des compétences en intégration et déploiement continu (CI/CD). Bien que je sois déjà
+                capable de déployer des pipelines complexes englobant une multitude de tests et d'analyses qualité de
+                code (avec SonarQube), je prévois de suivre une formation certifiante d'ici mi-2026 pour préciser ces
+                pratiques, notamment avec des stratégies de déploiement avancées comme le blue/green deployment. Enfin,
+                le quatrième axe consiste à prendre le contrôle de la migration d'applications PHP legacy vers Symfony.
+                Je souhaite apprendre à adopter des techniques de migration progressive, comme le Strangler Fig Pattern,
+                en réalisant d'ici fin 2026 la migration d'un projet PHP vers la dernière version de Symfony, tout en
+                documentant cette expérience sous forme d'étude de cas et en développant un Framework de migration
+                réutilisable intégrant des outils d'analyse statique, des adaptateurs facilitant l'intégration entre
+                code legacy et composants modernes, ainsi que des stratégies de test pour prévenir toute régression
+                fonctionnelle.
+            </p>
+        </div>
+    </section>
+
+
+    <a href="../index.html#competences" class="back-button">Retour aux compétences</a>
+</div>
+
+<footer>
+    <p>&copy; 2025 Mathis Buchet - Portfolio</p>
+</footer>
+
+<script src="../script.js"></script>
 </body>
 </html>
