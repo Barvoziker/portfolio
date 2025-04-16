@@ -56,7 +56,6 @@
         </ul>
     </nav>
 </header>
-
 <div class="container">
     <h1>Compétence PostgreSQL</h1>
 
@@ -69,40 +68,35 @@
             <p>
                 PostgreSQL est bien plus qu'un système de gestion de bases de données relationnelles (SGBDR) : c'est un
                 pilier de l'architecture des données actuelle, symbole de la parfaite maîtrise de la fiabilité, de la
-                performance et de l'innovation. Né en 1996 comme successeur du projet Postgres de l'Université de
+                performance et de l'innovation. Né en 1996 comme successeur du projet Postgres de l'université de
                 Berkeley, PostgreSQL a connu une très forte évolution pour devenir aujourd'hui le SGBDR open source le
-                plus avancé au monde.
-            </p>
+                plus avancé au monde. </p>
 
             <p>
-                La compétence PostgreSQL se compose en plusieurs dimensions complémentaires. La première dimension est
-                conceptuelle : maîtriser les notions de modélisation relationnelle, apprendre à concevoir des schémas
-                normalisés qui trouvent le bon équilibre entre performances et intégrité, et mettre en œuvre des
-                contraintes qui assureront la cohérence des données. La deuxième dimension est fonctionnelle : elle
-                concerne la maîtrise du langage SQL avancé de PostgreSQL, couvrant les Common Table Expressions (CTE),
-                les fonctions de fenêtrage, les types de données spécialisés tels que Jsonb et les opérateurs
-                spécifiques qui permettent à la fois d'offrir de nouvelles possibilités d'interrogation et de
-                manipulation des données. La troisième dimension est opérationnelle : elle concerne l'optimisation des
-                performances par l'indexation stratégique (B-tree, GIN, GiST) et le tuning des paramètres de
-                configuration, la lecture des plans d'exécution et la mise en œuvre de stratégies de partitionnement
-                pour les gros volumes de données. Enfin, la dimension écosystémique concerne la capacité à tirer parti
-                de l'environnement étendu de PostgreSQL, incluant ses nombreuses extensions comme PostGIS pour les
-                données géospatiales, TimescaleDB pour les séries temporelles, ou pg_stat_statements pour le monitoring
-                des performances.
-            </p>
+                Il se compose de plusieurs dimensions. La première est conceptuelle, maîtriser les notions de
+                modélisation relationnelle, apprendre à concevoir des schémas normalisés qui trouvent le bon équilibre
+                entre performances et intégrité, et mettre en œuvre des contraintes qui assureront la cohérence des
+                données. La deuxième dimension est fonctionnelle, elle concerne la maîtrise du langage SQL avancé de
+                PostgreSQL, couvrant les Common Table Expressions (CTE), les fonctions de fenêtrage, les types de
+                données spécialisés tels que Jsonb et les opérateurs spécifiques qui permettent en même temps d'offrir
+                de nouvelles possibilités d'interrogation et de manipulation des données. La troisième dimension est
+                opérationnelle : elle concerne l'optimisation des performances par l'indexation stratégique (B-tree,
+                GIN, GiST) et le tuning des paramètres de configuration, la lecture des plans d'exécution et la mise en
+                œuvre de stratégies de partitionnement pour les gros volumes de données. La dernière est écosystémique,
+                elle concerne la capacité à utiliser l'environnement de PostgreSQL, avec ses extensions comme PostGIS
+                pour les données géospatiales, TimescaleDB pour les séries temporelles, ou pg_stat_statements pour le
+                monitoring des performances. </p>
 
             <p>
                 Dans le cadre professionnel actuel, PostgreSQL occupe une place privilégiée dans l'architecture des SI.
-                Selon les recherches récentes, il est passé au premier SGBDR open source utilisé par les entreprises,
-                surpassant MySQL dans de nombreux secteurs exigeants tels que les services financiers, la santé, les
-                télécommunications. Cette adoption croissante est due à plusieurs facteurs distinctifs : sa forte
-                conformité aux standards ANSI SQL, sa fiabilité éprouvée avec des garanties ACID complètes, sa sécurité
-                robuste avec un système d'authentification et d'autorisation avancé et sa capacité unique de se
-                transformer pour répondre aux besoins émergents sans compromettre la stabilité. Que vous conceviez une
-                application web transactionnelle, un système d'analyse de données complexe, ou une infrastructure IoT
-                gérant des millions de points de données, PostgreSQL est un socle solide de confiance qui inspire les
-                architectes de données les plus exigeants.
-            </p>
+                Depuis peu, il est passé au premier SGBDR open source utilisé par les entreprises, dépassant MySQL dans
+                de nombreux secteurs exigeants comme les services financiers, la santé, les télécommunications. Cette
+                adoption croissante est due à plusieurs facteurs distinctifs : sa parfaite conformité aux standards ANSI
+                SQL, sa fiabilité éprouvée avec des garanties ACID complètes, sa sécurité robuste avec un système
+                d'authentification et d'autorisation avancé et sa capacité unique de se transformer pour répondre aux
+                besoins émergents sans compromettre la stabilité. Que vous conceviez une application web ou une
+                infrastructure IoT gérant des millions de données, PostgreSQL est un socle solide de confiance qui
+                inspire les architectes de données les plus exigeants. </p>
         </div>
     </section>
 
@@ -125,34 +119,31 @@
                 <p>
                     Dans ce projet, j'ai dû mettre en place une gestion d'optimisation de performance en faisant appel à
                     PostgreSQL pour gérer un grand volume de données techniques. Pour optimiser la performance, j'ai
-                    employé des Common Table Expressions (CTE) pour organiser et simplifier des requêtes complexes et
+                    employé des common table expressions (CTE) pour organiser et simplifier des requêtes complexes et
                     pris parti pour les fonctions fenêtrées afin de calculer les moyennes et de déceler les anomalies
                     sans multiplier les sous-requêtes coûteuses. Je n'ai également pas manqué de définir des index
-                    adaptés aux requêtes fréquentes et créé un partitionnement par plage de temps qui facilite
+                    adaptés aux requêtes fréquentes et de créer un partitionnement par plage de temps qui facilite
                     l'archivage et accélère les requêtes ciblées. Avec ces améliorations, les données sont récupérées et
-                    affichées en temps réel.
-                </p>
+                    affichées en temps réel. </p>
             </div>
 
             <div class="project-highlight">
                 <h3><a href="../realisations/easy-check.html">Projet Easy-Check (Sudalys)</a></h3>
                 <p>
-                    Sur Easy-Check, j'ai repensé intégralement l'architecture MCD d'une ancienne application pour la
-                    migrer vers une nouvelle solution. J'ai ensuite développé un SAS de validation des données, ce qui
-                    m'a amené à utiliser des blocs DO et la fonction merge de PostgreSQL pour consolider et synchroniser
-                    efficacement les mises à jour. </p>
+                    Sur Easy-Check, j'ai travaillé sur la refonte d'une base de données d'une ancienne application pour
+                    la migrer vers une nouvelle solution en améliorant le nommage des tables et en rendant les liaisons
+                    entre elles plus simples. Il a fallu ensuite que je développe des fonctions PL/pgSQL, des DO ainsi
+                    que j'apprenne à utiliser la fonction merge afin de préparer le développement d'un SAS de validation
+                    de données dans le style de Git. </p>
             </div>
 
             <div class="project-highlight">
                 <h3><a href="../realisations/tracker-gps.html">Projet de suivi GPS (Projet personnel)</a></h3>
                 <p>
-                    Sur ce projet personnel, j'ai exploité PostgreSQL et son extension PostGIS pour gérer efficacement
-                    les données géospatiales. Les coordonnées sont stockées sous forme de géométries, ce qui permet de
-                    réaliser directement dans la base des requêtes spatiales avancées, comme le calcul des distances et
-                    la gestion du géofencing. Un index GiST sur le champ géom accélère significativement les recherches
-                    géographiques, tandis qu'un système de purge automatique des anciennes positions assure une
-                    performance constante malgré l'accumulation des données. </p>
-            </div>
+                    Dans ce projet personnel, j'ai utilisé PostGIS pour gérer efficacement les données géospatiales, les
+                    coordonnées sont stockées sous forme de géométries, ce qui permet de réaliser directement dans la
+                    base des requêtes spatiales avancées, comme le calcul des distances et la gestion du
+                    géofencing. </p></div>
 
             <p>
                 Ces expériences m'ont permis d'exploiter pleinement les fonctionnalités de PostgreSQL et de comprendre
@@ -168,38 +159,39 @@
         </div>
         <div class="competence-detail-content">
             <p>
-                Je me pense être à 8/10 après un apprentissage progressif et une pratique intense sur des projets
-                personnel et professionnel. J'ai une grande expérience en modélisation relationnelle, en optimisation de
-                requêtes complexes et en utilisation des fonctionnalités avancées telles que les CTE et les fonctions de
-                fenêtrage. Mon expérience se mesure en capacité à dessiner des schémas normalisés et évolutifs, à
-                manipuler efficacement les index (B-tree, GIN, GiST) et à utiliser les types de données spécialisés
-                comme JSONB ou les types géométriques pour des applications de type spatial. PostgreSQL représente
-                environ 20 % de mon quotidien, parfaitement complémentaire de mes compétences en Symfony et en
-                JavaScript pour former un socle technologique complet.
-            </p>
+                Je me situe à peu près à 8/10 grâce à une pratique sur des projets personnels et professionnels. J'ai
+                acquis une expérience en modélisation relationnelle, en optimisation de requêtes complexes et en
+                utilisation des fonctionnalités avancées. Je sais faire de la modélisation relationnelle, mais également
+                de l'optimisation de requêtes et l'utilisation des fonctionnalités telles que les fonctions de
+                fenêtrage. Je sais maintenant dessiner des schémas complets, je sais aussi manipuler efficacement les
+                index et utiliser les types de données comme JSONB ou les types géométriques. PostgreSQL représente
+                environ 20 % de mon quotidien, complémentaire avec mes compétences Symfony et JavaScript. </p>
 
             <p>
-                Ma marge de progression est large dans plusieurs secteurs. D'une part je voudrais compléter mes
-                connaissances en haute disponibilité et réplication avancée pour des applications critiques qui
-                nécessitent une disponibilité permanente. D'un autre côté, j'espère apprendre à maîtriser des techniques
-                de partitionnement plus avancées pour les énormes bases de données, comme le partitionnement
-                hiérarchique et la gestion automatique des partitions avec des outils tels que pg_partman. Je compte
-                aussi améliorer encore plus les performances sur des machines très chargées en affinant le paramétrage
-                du moteur PostgreSQL (shared_buffers, work_mem, effective_cache_size), en optimisant la configuration de
+                Ma marge de progression est large. Je voudrais apprendre à gérer de la haute disponibilité et de la
+                réplication avancée pour des applications lourdes qui ont besoin d'une disponibilité permanente.
+                J'espère apprendre à maîtriser des techniques de partitionnement plus avancées pour les grosses bases de
+                données, comme le partitionnement hiérarchique et la gestion automatique des partitions. Je compte aussi
+                améliorer encore plus les performances sur des machines très chargées en affinant le paramétrage du
+                moteur PostgreSQL (shared_buffers, work_mem, effective_cache_size), en optimisant la configuration de
                 stockage (tablespaces, stratégies VACUUM). Finalement, je souhaite développer un peu plus ma compétence
                 PL/pgSQL afin de mettre en place des procédures stockées complexes, à l'aide notamment des curseurs et
                 des mécanismes d'événements asynchrones.
-            </p>
 
-            <p>
-                Pour y parvenir, je relève des défis au seins de mon entreprise afin de me mettre en situation ce qui me
+                Pour y parvenir, je relève des défis au sein de mon entreprise afin de me mettre en situation, ce qui me
                 facilite l'apprentissage. Parallèlement à cela, j'ai mis en place un environnement personnel complet me
                 permettant d'expérimenter des configurations avancées (clusters de réplication, partitionnement
-                complexe), de consolider mes connaissances. Tout comme pour Symfony je reste tout le temps actif et je
-                pratique une veille technologique importante. Ce mode d'approche théorique et pratique me permet de
-                relever de manière sereine les difficultés liées aux bases de données et d'assurer que mes choix
-                techniques soient toujours adaptés aux attentes des métiers.
-            </p>
+                complexe), de consolider mes connaissances. Tout comme pour Symfony, je reste tout le temps actif et je
+                pratique une veille technologique importante, cette approche théorique et pratique va me permettre de
+                passer les difficultés liées aux bases de données. </p>
+
+            <p>
+                Pour y parvenir, je relève des défis au sein de mon entreprise afin de me mettre en situation, ce qui me
+                facilite l'apprentissage. Parallèlement à cela, j'ai mis en place un environnement personnel complet me
+                permettant d'expérimenter des configurations avancées (clusters de réplication, partitionnement
+                complexe), de consolider mes connaissances. Tout comme pour Symfony, je reste tout le temps actif et je
+                pratique une veille technologique importante. Cette approche théorique et pratique va me permettre de
+                passer les difficultés liées aux bases de données. </p>
         </div>
     </section>
 
@@ -211,35 +203,28 @@
         </div>
         <div class="competence-detail-content">
             <p>
-                Mon objectif pour PostgreSQL est d'atteindre un niveau d'excellence (9,5/10) dans 3 ans pour devenir un
-                expert capable de concevoir et d'optimiser des architectures de données performantes pour des
-                applications lourdes. Ce but est en lié à une stratégie de développement à long terme, dans laquelle
-                l'expertise en gestion de données est un facteur de croissance pour atteindre des postes plus élevés
-                dans l'architecture logicielle.
-            </p>
+                Je souhaite atteindre un niveau que j'estimerai à 9,5/10 d'ici à 3 ans pour devenir un expert capable de
+                concevoir et d'optimiser des architectures de données performantes pour des applications lourdes. </p>
 
             <p>
                 J'ai l'intention de progresser en m'entraînant surtout sur le développement de mes compétences
-                analytiques et procédurales. Le premier axe est d'apprendre à utiliser correctement EXPLAIN ANALYZE. Je
-                veux apprendre à comprendre correctement les plans d'exécution pour identifier goulot d'étranglement qui
-                font perdre de l'efficacité aux requêtes. Pour cela je compte suivre des formations spécialisées et
-                effectuer des benchmarks comparatifs en utilisant des outils comme pgbench et pg_stat_statements pour
-                affiner mes analyses.
+                analytiques et procédurales. La première chose que je ferai est d'apprendre à utiliser correctement
+                EXPLAIN ANALYZE. Je veux apprendre à comprendre correctement les plans d'exécution pour identifier les
+                goulots d'étranglement qui font perdre de l'efficacité aux requêtes. Pour cela, je compte suivre des
+                formations spécialisées et effectuer des benchmarks comparatifs grâce à des outils comme pgbench et
+                pg_stat_statements pour affiner mes analyses.
             </p>
 
             <p>
-                D'autre part, bien sûr, sur l'amélioration de ma maîtrise du PL/pgSQL. Même si j'utilise déjà les
-                triggers et que je crée des fonctions simples, mon objectif est de créer des procédures stockées plus
-                évoluées, d'optimiser l'utilisation des curseurs, d'implémenter des logiques métier complexes dans la
-                base de données.
-            </p>
+                Et, bien sûr, sur l'amélioration de ma maîtrise du PL/pgSQL. Même si j'utilise déjà les triggers et que
+                je crée des fonctions simplesje souhaite créer des procédures stockées plus évoluées, d'optimiser
+                l'utilisation des curseurs, d'implémenter des logiques métier complexes dans la base de données. </p>
 
             <p>
                 Pour participer à cette évolution, je passe environ 2 heures par semaine en apprentissage actif via la
-                doc officielle, de la pratique que ce soit professionnel ou personnel. Je suis aussi informé de toute
-                nouveauté par une veille technologique performante. Cette démarche me permettra de relever les défis
-                techniques et d'apporter une valeur ajoutée réelle aux organismes pour lesquels je travaille.
-            </p>
+                doc officielle, de la pratique que ce soit professionnelle ou personnelle. Je suis aussi informé de
+                toute nouveauté par une veille technologique performante. Cette démarche me permettra de relever les
+                défis techniques et d'apporter une valeur ajoutée réelle aux organismes pour lesquels je travaille. </p>
         </div>
     </section>
 
