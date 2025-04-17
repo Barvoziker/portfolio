@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Easy Monithor - Mathis Buchet</title>
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../css/carousel.css">
     <style>
         .realisation-container {
             max-width: 1200px;
@@ -132,7 +133,7 @@
                 <li class="has-submenu">
                     <a href="../index.html#realisations">Réalisations</a>
                     <ul class="submenu">
-                        <li><a href="../realisations/easy-monitor.html">Easy-Monithor</a></li>
+                        <li><a href="../realisations/easy-monithor.html">Easy-Monithor</a></li>
                         <li><a href="../realisations/easy-check.html">Easy-Check</a></li>
                         <li><a href="../realisations/tracker-gps.html">Tracker GPS</a></li>
                     </ul>
@@ -153,10 +154,12 @@
         </div>
 
         <div class="realisation-section">
-            <h2>Introduction</h2>
-            <p>Dans le cadre de ma première année d'alternance durant mes études à l'ESIEA, afin d'obtenir le titre d'expert en ingénierie logicielle, j'ai réalisé cette alternance au sein de l'entreprise Sudalys, une société spécialisée dans le conseil, l'audit et le contrôle des infrastructures télécoms pour le compte des collectivités locales et des opérateurs.</p>
-            <p>Sudalys se définit par son expertise dans la gestion des infrastructures télécoms et ses services dédiés aux collectivités locales et aux opérateurs. L'objectif principal de Sudalys est d'améliorer la fiabilité et l'efficacité des infrastructures de télécommunication grâce à des audits et des contrôles rigoureux.</p>
-            <p>Le projet Easy-Monithor est une application développée en utilisant le framework Symfony 6, avec <a href="../competences/symfony.html">Symfony</a>, <a href="../competences/javascript.html">JavaScript</a> et Twig, et une base de données <a href="../competences/postgresql.html">PostgreSQL</a>. Ce projet a été conçu pour répondre à des problématiques spécifiques rencontrées par Sudalys dans la supervision et le diagnostic des infrastructures télécoms.</p>
+            <h2>Présentation et définition du projet Easy-Monithor</h2>
+            <p>Easy‑Monithor c'est la solution que j’ai développée pendant mon stage et mon alternance chez Sudalys. C’est un projet qui reflète l’engagement de Sudalys et son savoir-faire en conseil et contrôle des infrastructures télécoms. Il vise à répondre aux besoins spécifiques de ses clients  comme les collectivités et opérateurs souhaitant superviser de façon autonome l’état de leurs équipements actifs ou de leurs réseaux de fibre optique. En fait, l’objectif principal était de proposer une plateforme de monitoring performante accessible et évolutive. Elle permet à chaque client de visualiser en temps réel l’état de ses infrastructures d’anticiper les incidents et d’optimiser la gestion de son réseau.</p>
+            <p>La genèse du projet prend racine dans une phase de diagnostic menée au sein de l’entreprise d’accueil. Cette dernière éprouvait des difficultés pour surveiller en temps réel l’état de ses serveurs, de ses équipements réseau et de ses applications critiques. En l’absence d’outil centralisé les équipes techniques perdaient un temps précieux pour identifier l’origine des incidents et elles ne pouvaient pas agir de façon proactive. Dans ce contexte ma mission a consisté à imaginer, spécifier, développer et déployer une plateforme capable de collecter, analyser et restituer de façon claire et synthétique l’ensemble des données nécessaires à la gestion du système d’information.</p>
+            <p>Easy‑Monithor se distingue par une approche modulaire et évolutive. Directement, dès les premières étapes de conception j’ai veillé à ce que la solution s’adapte à différents contextes métiers tout en restant simple pour des utilisateurs non sachant. Le projet s’articule autour de plusieurs volets. Il comprend la collecte automatisée des métriques des capteurs et stockage. Ensuite, il propose une visualisation dynamique sous forme de tableaux de bord interactifs, mais aussi cartographique. Il permet l’envoi d’alertes personnalisées en cas d’anomalie et l’ajout de nouveaux modules selon les besoins futurs de l’entreprise.</p>
+            <p>La réalisation du projet s’est appuyée sur une méthodologie rigoureuse. Mêlant phases d’analyse, développement, tests et déploiement progressif. J’ai assuré la coordination avec l’ensemble des acteurs depuis la définition des besoins jusqu’à la rédaction des guides utilisateurs. Cette expérience, m’a permis de renforcer mes compétences en gestion de projet en développement logiciel back end et front end, en administration système et en communication professionnelle.</p>
+            <p>Easy‑Monithor n’est pas une simple réponse technique à un problème identifié. C'est une démarche globale d’amélioration continue visant à renforcer la performance opérationnelle de l’entreprise et à sécuriser son infrastructure informatique. La plateforme est conçue pour évoluer en intégrant de nouveaux indicateurs et fonctionnalités afin d’accompagner durablement la transformation digitale de l’organisation.</p>
         </div>
 
         <div class="realisation-section" style="text-align: center;">
@@ -167,84 +170,77 @@
         </div>
 
         <div class="realisation-section">
-            <h2>Contexte du projet</h2>
-            <p>Il arrive que des équipements cessent de fonctionner sans que nous sachions réellement pourquoi. Cela peut venir d'un problème électrique chez le client ou d'un cheminement de fibre sectionné, par exemple. L'application EasyExploit, utilisée jusqu'à présent, ne permet pas de faire des diagnostics ou de visualiser des équipements présentant une panne ou une anomalie sur les cheminements ou points techniques.</p>
-            <p>En permettant d'avoir les détails sur un équipement actif d'un client, Easy-Monithor permet à Sudalys Service de proposer aux futurs clients une supervision déjà fonctionnelle.</p>
+            <h2>Objectifs, contexte, enjeux et risques</h2>
+            <p>Le projet Easy‑Monithor s’inscrit dans un contexte professionnel. La maîtrise et la surveillance des infrastructures informatiques sont devenues des enjeux stratégiques pour la continuité d’activité et pour la compétitivité des organisations. Chez Sudalys les clients issus des collectivités et des opérateurs ont vu s’imposer la nécessité d’un outil de supervision centralisé. La multiplication des incidents non détectés et la difficulté d’anticiper les défaillances matérielles ou logicielles ont joué un rôle important dans la réflexion de ce projet. L’objectif fondamental du projet était de proposer une solution fiable, évolutive et intuitive capable de répondre aux exigences de réactivité et de précision des équipes techniques.</p>
+            <p>Il s’agissait de monitorer des serveurs et des équipements réseau. Parmi ceux‑ci on retrouvait des box internet utilisées quotidiennement par les collaborateurs. Cette diversité technique imposait une conception souple : le système devait s’adapter à des contextes variés tout en garantissant la cohérence de la collecte et de la restitution des données. L’enjeu principal était d’offrir une vision globale et synthétique de l’état du système d’information ; cela facilitait la prise de décision et optimisait les interventions de maintenance.</p>
+            <p>L’un des défis majeurs du projet reposait sur l’interopérabilité avec les outils existants. Il fallait intégrer EasyExploit et ajouter de nouvelles fonctionnalités. On pense notamment à la visualisation cartographique des équipements. À cela s’ajoutent l’analyse en temps réel des métriques et l’automatisation des alertes. Ce positionnement, innovant visait à renforcer l’attractivité de Sudalys auprès des clients et des partenaires. Il mettait en avant l’expertise technologique de l’entreprise et sa capacité à anticiper les évolutions du marché.</p>
+            <p>La gestion des risques a constitué un axe de réflexion central. Sur le plan technique l’objectif était clair il fallait prévenir les failles de sécurité, éviter toute perte de données et garantir la disponibilité du service en toutes circonstances. J’ai mis en place des protocoles de sauvegarde réguliers comme mener des tests de chargeou organiser des audits de sécurité pour limiter les vulnérabilités. Du côté organisationnel le principal défi concernait la conduite du changement. Il a fallu accompagner les utilisateurs vers la nouvelle solution grâce à des sessions de formation et un support réactif. J’ai prévu des sessions de formation adaptées et un support réactif lors du déploiement.</p>
+            <p>Enfin le projet Easy‑Monithor portait aussi un enjeu personnel. Il s’agissait de démontrer ma capacité à piloter un projet complexe du début jusqu’à la fin. J’ai mobilisé des compétences transversales en gestion, en développement et en communication. La réussite de cette mission reposait sur ma faculté à anticiper les besoins futurs de l’entreprise, à fédérer les acteurs autour d’une vision commune et à transformer les contraintes en opportunités d’innovation.</p>
         </div>
 
         <div class="realisation-section">
-            <h2>Objectifs techniques</h2>
-            <ul class="objectives-list">
-                <li><strong>Réception et interprétation des données des capteurs et équipements</strong> - Collecte automatisée des données en <a href="../competences/websocket.html">temps réel</a> et analyse des anomalies pour détecter les pannes et dysfonctionnements.</li>
-                <li><strong>Affichage des données sur une carte interactive</strong> - Visualisation géographique pour localiser précisément les équipements supervisés et identification dynamique des pannes.</li>
-                <li><strong>Système de recherche et de corrélation des données</strong> - Moteur de recherche avancé permettant de filtrer les équipements par critères et analyse des causes récurrentes.</li>
-                <li><strong>Interopérabilité avec EasyExploit</strong> - Intégration transparente avec l'application existante et harmonisation des outils.</li>
-                <li><strong>Performances et évolutivité</strong> - Optimisation pour traiter de grandes quantités de données en temps réel et architecture modulaire permettant l'ajout de nouvelles fonctionnalités.</li>
-                <li><strong>Sécurité et fiabilité</strong> - Mise en place de systèmes d'authentification renforcée et tests automatisés pour garantir la fiabilité.</li>
-            </ul>
-        </div>
-
-        <div class="realisation-section">
-            <h2>Objectifs humains</h2>
-            <ul class="objectives-list">
-                <li><strong>Découverte et compréhension du domaine des télécoms</strong> - Immersion métier et traduction des besoins en solutions techniques.</li>
-                <li><strong>Développement de compétences techniques</strong> - Maîtrise des outils modernes comme Symfony 6, PostgreSQL et technologies de cartographie interactive.</li>
-                <li><strong>Gestion de projet et travail en équipe</strong> - Planification des tâches et communication interdisciplinaire.</li>
-                <li><strong>Prise en compte des retours utilisateurs</strong> - Tests utilisateurs et amélioration continue des fonctionnalités.</li>
-                <li><strong>Développement sous pression</strong> - Gestion des contraintes temporelles et résolution proactive des problèmes.</li>
-            </ul>
-        </div>
-
-        <div class="realisation-section">
-            <h2>Contexte technique</h2>
-            <p>Pour réaliser Easy-Monithor, nous avons utilisé le framework Symfony 6, intégrant <a href="../competences/symfony.html">Symfony</a> pour le backend, <a href="../competences/javascript.html">JavaScript</a> pour les interactions frontend et Twig pour le rendu des templates. La base de données utilisée était <a href="../competences/postgresql.html">PostgreSQL</a>, choisie pour sa robustesse et ses performances en traitement de données.</p>
-            <p>Le développement s'est concentré sur la mise en place d'une architecture modulaire et évolutive, capable de traiter un grand volume de données en temps réel. Les données des capteurs et des équipements étaient collectées via des API et stockées dans la base de données <a href="../competences/postgresql.html">PostgreSQL</a> pour un accès rapide et efficace.</p>
+            <h2>Aspects fondamentaux du projet Easy-Monithor</h2>
+            <p>Le projet Easy‑Monithor, repose sur plusieurs aspects principaux qui ont guidé sa conception et son développement. Ils répondaient à un besoin précis des clients de Sudalys et ils renforçaient la valeur ajoutée de la solution. Plutôt que de dérouler une chronologie j'ai choisi de mettre en avant les dimensions essentielles qui rendent ce projet unique et pertinent.</p>
             
-            <div class="tech-stack">
-                <div class="tech-item">Symfony 6</div>
-                <div class="tech-item"><a href="../competences/javascript.html">JavaScript</a></div>
-                <div class="tech-item">Twig</div>
-                <div class="tech-item"><a href="../competences/postgresql.html">PostgreSQL</a></div>
-                <div class="tech-item">PRTG</div>
-                <div class="tech-item">Zabbix</div>
-            </div>
+            <h3>Architecture fonctionnelle et contexte d'utilisation</h3>
+            <p>L'architecture fonctionnelle faite pour relever les défis de la supervision d'infrastructures télécoms. J'ai imaginé, personnellement, un système modulaire capable d'intégrer différentes sources de données puis de traiter ces informations pour les restituer sous forme exploitable. Le contexte d'utilisation a été analysé avec soin pour m'assurer que la solution colle aux besoins opérationnels et aux objectifs stratégiques des opérateurs et des collectivités.</p>
+            <div id="architecture-carousel" class="carousel-container" style="height: 400px;"></div>
             
-            <h3 style="margin-top: 30px;">Fonctionnalités développées</h3>
-            <ul class="objectives-list">
-                <li><strong>Collecte de données</strong> - Réception et traitement des données provenant des capteurs et des équipements.</li>
-                <li><strong>Visualisation des données</strong> - Affichage des données sur une carte interactive dans l'application.</li>
-                <li><strong>Recherche et affichage de points communs</strong> - Identification et affichage des équipements en panne dans le même secteur.</li>
-                <li><strong>Intégration avec PRTG, Zabbix</strong> - Pour une supervision complète et une visualisation avancée des données de monitoring.</li>
-            </ul>
+            <h3>Traitement intelligent des données et gestion des pannes</h3>
+            <p>Le traitement intelligent des données constitue le cœur d'Easy‑Monithor. J'ai développé des algorithmes pour collecter, filtrer et analyser les flux issus des équipements réseau. Grâce à cette approche la plateforme détecte les incidents analyse leurs causes et détecte la route optique liée. Le schéma de récupération des données ne montre pas la complexité des flux traités, chaque solution a ses propres trames de données que l'on cherche à centraliser au même endroit. Chaque source suit un protocole spécifique avant d'être normalisée pour alimenter le système central.</p>
+            <div id="database-carousel" class="carousel-container" style="height: 400px;"></div>
+            
+            <h3>Interfaces utilisateur et visualisation des données</h3>
+            <p>L'expérience utilisateur est au centre de la démarche. J'ai dessiné des interfaces intuitives et ergonomiques pour accéder rapidement aux informations pertinentes et interagir sans effort avec la plateforme. Des tableaux de bord synthétiques apportent une vue globale. Des cartes interactives offrent une perspective géographique. Des listes détaillées facilitent le pilotage au plus fin. Cette combinaison garantit une prise de décision éclairée et une réactivité optimale.</p>
+            <div id="interfaces-carousel" class="carousel-container" style="height: 400px;"></div>
+            
+            <h3>Intégration et transformation des données</h3>
+            <p>La capacité à intégrer et transformer des données hétérogènes représente un autre point clé d'Easy‑Monithor. Le processus de mapping convertit les données brutes en informations structurées et exploitables afin de garantir leur cohérence. J'ai conçu une interface no code qui permet aux administrateurs de régler précisément les règles de transformation sans écrire la moindre ligne de code. Cette autonomie simplifie l'adaptation de la solution aux spécificités de chaque client.</p>
+            <div id="mapping-carousel" class="carousel-container" style="height: 400px;"></div>
         </div>
 
         <div class="realisation-section">
-            <h2>Développement du projet</h2>
-            <div style="display: flex; flex-direction: column; gap: 20px;">
-                <div>
-                    <h3>Étape 1 : Analyse des besoins</h3>
-                    <p>La première étape a consisté en une analyse approfondie des besoins de Sudalys. Cela a impliqué des réunions avec les équipes techniques et les responsables de projets pour comprendre les exigences spécifiques en matière de supervision et de diagnostic des infrastructures télécoms.</p>
-                </div>
-                <div>
-                    <h3>Étape 2 : Conception de l'architecture</h3>
-                    <p>La conception de l'architecture a été réalisée en tenant compte des besoins identifiés. Une attention particulière a été portée à la modularité et à l'évolutivité de la solution pour assurer sa pérennité et sa capacité à évoluer avec les besoins futurs.</p>
-                </div>
-                <div>
-                    <h3>Étape 3 : Développement et intégration</h3>
-                    <p>Le développement a été effectué en utilisant Symfony 6 pour la structure backend, <a href="../competences/symfony.html">Symfony</a> pour la logique métier, <a href="../competences/javascript.html">JavaScript</a> pour les interactions frontend, et Twig pour le rendu des templates. La base de données <a href="../competences/postgresql.html">PostgreSQL</a> a été configurée pour gérer les données collectées.</p>
-                </div>
-                <div>
-                    <h3>Étape 4 : Tests et validation</h3>
-                    <p>Des tests rigoureux ont été réalisés pour garantir la fiabilité et la performance de l'application. Les données des capteurs ont été simulées pour valider les capacités de collecte et d'interprétation de l'application.</p>
-                </div>
-            </div>
+            <h2>Les acteurs et les interactions</h2>
+            <p>Les équipes métiers de Sudalys ont été des partenaires importants sur toute la durée du projet, leur expertise du terrain et leur connaissance fine des infrastructures à superviser ont permis d’affiner le cahier des charges et de valider la pertinence des fonctionnalités développées. Des ateliers de co‑conception ont été organisés afin de recueillir leurs attentes et d’identifier les points de blocage avant de tester les prototypes réalisés. Cette démarche collaborative a favorisé l’adhésion au projet et renforcé la qualité des livrables.</p>
+            <p>La direction technique de l’entreprise a également assuré la supervision et l’arbitrage du projet et des décisions. Elle veillait au respect des contraintes de sécurité et de performance tout en garantissant la compatibilité avec les outils existants, des points réguliers ont permis d’ajuster la feuille de route et de valider les jalons clés du projet. Enfin les techniciens de maintenance et les responsables d’exploitation ont été impliqués dès la phase de tests pour s’assurer que la solution réponde effectivement à leurs besoins quotidiens.</p>
+            <p>Pour faciliter la communication entre tous les acteurs du projet j’ai mis en place des outils collaboratifs comme un suivi de mes tâches via un kanban sur notre Gitea, puis nous avions des réunions hebdomadaires et un suivi documentaire rigoureux. Cette dynamique d’échange permanent a permis d’anticiper les difficultés puis de réagir rapidement aux imprévus pour instaurer un climat de confiance propice à l’innovation. Le projet Easy‑Monithor montre l’importance d’une approche transversale et participative qui implique chaque intervenant dans la réussite collective.</p>
+        </div>
+
+        <div class="realisation-section">
+            <h2>Résultats et réflexion personnelle</h2>
+            <p>La mise en œuvre du projet Easy‑Monithor a généré des bons résultats pour Sudalys, tout en constituant une expérience enrichissante sur les plans personnel et professionnel. Pour l’entreprise l’arrivée de cette solution de supervision a sensiblement amélioré la visibilité sur l’état des infrastructures. Elle a réduit les temps d’intervention lorsqu’un incident survient et renforcé la qualité du service fourni aux clients. Les équipes techniques disposent maintenant d’un outil centralisé qui alerte en temps réel lorsqu’une anomalie apparaît et qui simplifie la prise de décision grâce à des tableaux de bord intuitifs et personnalisables.</p>
+            <p>La haute fiabilité des infrastructures des clients et la capacité à anticiper les pannes ont eu un impact direct sur la satisfaction des collectivités et des opérateurs qui utilisent la solution. Ces progrès ont simultanément renforcé la réputation de Sudalys, comme partenaire technologique. Elle met aujourd’hui cette innovation en avant dans ses réponses aux appels d’offres ou lors de salon afin de démontrer sa maîtrise des technologies de pointe et sa démarche proactive en gestion des risques, Easy‑Monithor est devenu un levier de différenciation stratégique qui soutient la croissance et la pérennité de l’activité.</p>
+            <p>Sur le plan personnel cette aventure m’a permis de développer des compétences techniques avancées en développement logiciel en administration système et aussi en gestion de bases de données, j’ai aussi consolidé mes aptitudes en gestion de projet en communication et en conduite du changement. La reconnaissance et les encouragements venant de mes collègues et de la direction tout au long du projet ont renforcé ma confiance dans ma capacité à mener des missions importantes comme celle-ci.</p>
+            <p>En travaillant sur Easy-Monithor, j'ai pu finalement concevoir une application innovante sur le marché, et cela m'a donné l'impression d'avoir mis ma petite pierre à l'édifice dans l'avancée technologique. Cette réalisation marque une étape majeure sur mon parcours et prouve ma capacité à relever des défis ambitieux tout en produisant des résultats concrets au service de l'entreprise et de ses clients.</p>
+        </div>
+
+        <div class="realisation-section">
+            <h2>Les lendemains du projet : dans un futur immédiat, à distance, aujourd’hui</h2>
+            <p>Après le déploiement initial d’Easy‑Monithor le projet a rapidement prouvé son utilité opérationnelle chez Sudalys. Dans l’immédiat l’outil a instauré de nouveaux réflexes de supervision et de maintenance préventive. Il a facilité la détection précoce des incidents et priorisé les interventions. Les équipes se sont approprié la solution grâce à une interface intuitive et une documentation limpide, l’adoption a été rapide avec une montée en compétences généralisée. Je ne peux pas fournir de données réelles de ce qu'est devenu Easy-Monithor car l'application n'a même pas encore 1 an, je peux seulement essayer de prédire ce qu'elle va devenir.</p>
+            <p>À moyen terme, Easy‑Monithor s'inscrira dans la suite Easy-Solution de Sudalys. Sur cette application, il sera possible de gérer tout un système de ticketing pour suivre ses pannes. La commercialisation de cette solution va être faite à l'internationale. Une gestion des risques naturelle va surement être implémentée afin de voir les inondations, les feux de forêt et bien plus.</p>
+            <p>Sur le long terme, Easy‑Monithor est destiné à servir les intérêts d'un NOC (Network Operations Center), qui est un lieu centralisé où les équipes informatiques peuvent surveiller en permanence et piloter à distance. Avant d'en arriver à ce point, il faut encore quelques années de développement et d'ajout de fonctionnalités.</p>
+            <p>En définitive, les lendemains du projet Easy‑Monithor confirment sa capacité à évoluer et à générer de la valeur sur le long terme. Il reste un atout majeur pour Sudalys et ses clients tant sur le plan opérationnel que stratégique et incarne l’engagement de l’entreprise pour l’excellence et l’innovation dans la gestion des infrastructures de ses clients.</p>
+        </div>
+
+        <div class="realisation-section">
+            <h2>Mon regard critique</h2>
+            <p>Porter Easy‑Monithor de l’idée à la réalisation a été un défi et une occasion de progresser. J’ai découvert qu’aucune réussite ne tient sans rigueur méthodologique ni écoute active, surtout quand chaque détail compte et que la capacité à anticiper les risques change tout. Cette expérience m’a offert une vision mélangeant technique et stratégie entre les attentes métiers et les contraintes technologiques.</p>
+            <p>Pour moi, ma valeur ajoutée s’est surtout vue dans ma faculté à réunir les acteurs autour d’une vision partagée et à instaurer un climat de confiance favorable à l’innovation. J’ai adapté ma communication aux interlocuteurs pour rendre accessibles des concepts techniques et recueilli des retours constructifs afin de faire évoluer la solution sans cesse. Inviter les utilisateurs finaux dès le lancement du projet a assuré que l’outil réponde vraiment à leurs besoins.</p>
+            <p>Je trouve que ce projet m’a aussi confronté à des défis en gestion du temps et en priorisation des tâches, l’enchaînement des enjeux et l’évolution constante des besoins ont parfois créé des tensions entre développement et accompagnement du changement qu’il a fallu gérer. J’ai compris que la flexibilité et la remise en question de mes choix étaient indispensables pour m’adapter à un environnement mouvant.</p>
+            <p>Easy‑Monithor m’a confirmé qu’un projet technologique réussit autant grâce aux relations humaines que grâce à la maîtrise des outils. Ce projet, m'a permis de renforcer ma motivation à innover mais aussi à explorer de nouveaux horizons et à continuer de me former pour relever les prochains défis. J’en garde une grande fierté. Maintenant j'ai l'envie d'aborder chaque nouveau projet avec curiosité et envie pour me dépasser et faire mieux que le projet d'avant.</p>
+        </div>
+
+        <div class="realisation-section">
+            <h2>Compétences mobilisées</h2>
+            <p>La réalisation du projet Easy-Monithor m’a permis de mobiliser et de renforcer plusieurs compétences clés, notamment la <a href="../competences/gestion-projet.html">gestion de projet</a>, la <a href="../competences/symfony.html">maîtrise du framework Symfony</a>, la <a href="../competences/postgresql.html">gestion de bases de données PostgreSQL</a>, le <a href="../competences/javascript.html">développement JavaScript</a>, l'utilisation de <a href="../competences/websocket.html">WebSockets</a> pour les communications en temps réel, et la gestion de versions avec <a href="../competences/git.html">Git</a>.</p>
+            <p>J'ai également pu développer mes compétences transversales comme la <a href="../competences/communication.html">communication</a> et la <a href="../competences/resolution-problemes.html">résolution de problèmes</a>.</p>
+            <p>Ces compétences ont été essentielles à chaque étape du projet, de la conception à la mise en production, et constituent aujourd'hui un socle solide pour aborder de nouveaux défis techniques et organisationnels. Pour en savoir plus sur ces domaines, vous pouvez consulter les pages dédiées à chaque compétence.</p>
         </div>
 
         <div class="realisation-section">
             <h2>Conclusion</h2>
-            <p>Le projet Easy-Monithor a permis de mettre en place une solution de supervision efficace pour Sudalys, répondant aux besoins de diagnostic et de visualisation des pannes des équipements télécoms.</p>
-            <p>L'intégration de PRTG et Zabbix a permis d'améliorer la surveillance et la gestion des infrastructures, offrant une vision globale et détaillée des performances et des éventuelles anomalies.</p>
-            <p>La réalisation de ce projet a été une expérience très enrichissante, me permettant de combiner des compétences en développement logiciel avec une compréhension approfondie des enjeux liés à la supervision des infrastructures télécoms.</p>
+            <p>En définitive, Easy-Monithor représente bien plus qu’une simple solution technique : il incarne une véritable démarche d’innovation et d’amélioration continue, au service de la performance des clients de Sudalys et de la montée en compétences des équipes impliquées. Ce projet a marqué une étape déterminante dans mon parcours, en me confrontant à des enjeux complexes et en m’offrant l’opportunité de piloter un projet d’envergure de bout en bout. Il a permis à Sudalys de renforcer sa compétitivité et d’anticiper les évolutions du secteur, tout en consolidant mon expertise et ma confiance dans la gestion de projets technologiques.</p>
+            <p>Fort de cette expérience, je suis aujourd’hui prêt à relever de nouveaux défis, à poursuivre dans la voie de l’innovation et à continuer d’apporter ma contribution à des projets ambitieux, porteurs de sens et d’impact pour l’entreprise et ses clients.</p>
         </div>
     </div>
 
@@ -252,5 +248,49 @@
         <p>&copy; 2025 Mathis Buchet - Portfolio</p>
     </footer>
     <script src="../script.js"></script>
+    <script src="../js/carousel.js"></script>
+    <script>
+        // Initialisation des carrousels avec les images
+        document.addEventListener('DOMContentLoaded', function() {
+            // Carrousel 1: Architecture fonctionnelle et contexte d'utilisation
+            new Carousel('architecture-carousel', [
+                { src: 'images/Easy-monithor/archi_fonctionnelle_globale.png', alt: 'Architecture fonctionnelle globale' },
+                { src: 'images/Easy-monithor/contexte_utilisation.png', alt: 'Contexte d\'utilisation de la solution' }
+            ], {
+                autoplay: true,
+                delay: 5000,
+                caption: 'Architecture fonctionnelle et contexte d\'utilisation d\'Easy-Monithor'
+            });
+            
+            // Carrousel 2: Traitement intelligent des données et gestion des pannes
+            new Carousel('database-carousel', [
+                { src: 'images/Easy-monithor/traitement_panne_bdd.png', alt: 'Schéma de traitement d\'une panne en base de données' },
+                { src: 'images/Easy-monithor/schema_recup_donnees.png', alt: 'Schéma de récupération des données' }
+            ], {
+                autoplay: true,
+                delay: 6000,
+                caption: 'Traitement des données et gestion des pannes'
+            });
+            
+            // Carrousel 3: Interfaces utilisateur et visualisation des données
+            new Carousel('interfaces-carousel', [
+                { src: 'images/Easy-monithor/Cartographie.png', alt: 'Cartographie interactive des équipements' },
+                { src: 'images/Easy-monithor/Dashboard.png', alt: 'Tableau de bord de supervision' },
+                { src: 'images/Easy-monithor/tableau_equipements.png', alt: 'Interface de gestion des équipements' }
+            ], {
+                autoplay: true,
+                delay: 4000,
+                caption: 'Interfaces utilisateur et visualisation des données'
+            });
+            
+            // Carrousel 4: Intégration et transformation des données
+            new Carousel('mapping-carousel', [
+                { src: 'images/Easy-monithor/mapping.png', alt: 'Interface de mapping des données' }
+            ], {
+                autoplay: false,
+                caption: 'Outil de mapping et transformation des données'
+            });
+        });
+    </script>
 </body>
 </html>
