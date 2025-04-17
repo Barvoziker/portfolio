@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Easy-Check - Mathis Buchet</title>
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../css/carousel.css">
     <style>
         .realisation-container {
             max-width: 1200px;
@@ -153,11 +154,12 @@
         </div>
 
         <div class="realisation-section">
-            <h2>Introduction</h2>
-            <p>Dans le cadre de ma deuxième année d'alternance au sein de l'entreprise Sudalys, spécialisée dans le conseil, l'audit, et le contrôle des infrastructures télécoms pour les collectivités locales et les opérateurs, j'ai développé le projet Easy-Check.</p>
-            <p>Sudalys se distingue par sa capacité à offrir des services adaptés aux besoins spécifiques de ses clients, notamment en garantissant une gestion rigoureuse et une supervision performante des réseaux télécoms.</p>
-            <p>Easy-Check est un logiciel développé avec Symfony 7.1, combiné à <a href="../competences/symfony.html">Symfony</a>, <a href="../competences/javascript.html">JavaScript</a>, Twig, et une base de données <a href="../competences/postgresql.html">PostgreSQL</a>. Ce projet répond aux problématiques rencontrées par les équipes de Sudalys dans la gestion et le suivi des audits, en proposant une solution centralisée et flexible.</p>
-            <p>Easy-Check est une application mobile qui permet aux techniciens de Sudalys de réaliser des diagnostics sur le terrain. Elle est complémentaire à <a href="easy-monithor.html">Easy-Monithor</a>, l'application de supervision des infrastructures télécoms.</p>
+            <h2>Présentation et définition du projet Easy-Check</h2>
+            <p>Easy-Check est la solution que j'ai développée pendant ma deuxième année d'alternance chez Sudalys. Ce projet montre l'engagement de Sudalys et son savoir-faire en conseil, audit des infrastructures télécoms. Il vient en solution de remplacement d'une vieille solution de Sudalys nommée Check'IT qui devenait complètement obsolète et qui n'était pas adaptée à un usage grand public. Easy-Check vise à répondre aux besoins spécifiques de ses clients comme les collectivités et opérateurs qui souhaitent réaliser des audits quelconques sur leurs équipements et réseaux de fibre optique. L'objectif principal était de proposer une plateforme de gestion des audits performante, accessible et évolutive, permettant à chaque client de suivre en temps réel l'état de ses audits, d'optimiser les visites sur le terrain et d'améliorer la qualité des rapports générés.</p>
+            <p>Les débuts du projet prennent racine dans une phase de diagnostic menée au sein de Sudalys. Les personnes au bureau d'étude qui avaient pour rôle de créer les campagnes d'étude éprouvaient des difficultés pour gérer efficacement les campagnes d'audit, suivre les visites sur le terrain et centraliser les documents associés. Sur l'ancienne solution, les équipes techniques perdaient un temps précieux pour organiser les audits et ne pouvaient pas agir de façon proactive car les interfaces étaient lentes, la base de données n'était pas optimisée et l'interconnexion entre l'ancienne solution et les autres solutions de Sudalys n'était pas possible. Ma mission était d'imaginer, spécifier, développer et déployer une plateforme capable de collecter, analyser et restituer de façon limpide et synthétique l'ensemble des données nécessaires à la gestion des audits, ainsi qu'un moyen simple de faire du contrôle de qualité. Cette solution web est accompagnée d'une application mobile, pour les techniciens sur le terrain afin qu'ils puissent réaliser leurs audits, réalisée par un autre membre de l'équipe.</p>
+            <p>Easy-Check se distingue par une approche modulaire et évolutive pour ne pas répéter le schéma de l'ancienne solution. J'ai veillé à ce que la solution s'adapte à différents contextes métiers tout en restant simple pour des utilisateurs non-techniques, dès le début de la conception. Le projet s'organise autour de quelques aspects comme par exemple la centralisation des campagnes et la gestion des audit, la gestion des visites associées, l'ajout et la gestion des médias, le développement d'une application pour tablette et l'exportation et le reporting automatisés.</p>
+            <p>Pendant la réalisation du projet je me suis appuyée sur une méthodologie rigoureuse mêlant phases d'analyse, développement, tests et déploiement progressif. Je me suis également appuyé sur l'existant et j'ai analysé en détail la solution Check'IT. Durant tout le projet j'ai assuré la coordination avec l'ensemble des acteurs depuis la définition des besoins jusqu'à la rédaction des guides utilisateurs. Cette expérience m'a permise de renforcer mes compétences en <a href="../competences/gestion-projet.html">gestion de projet</a>, en développement logiciel avec <a href="../competences/symfony.html">Symfony</a>, <a href="../competences/javascript.html">JavaScript</a>, <a href="../competences/postgresql.html">PostgreSQL</a> et un peu de flutter car de temps en temps j'aidais au debugging de l'application mobile.</p>
+            <p>Easy-Check n'est pas une simple réponse technique à un problème identifié. C'est une démarche globale d'amélioration continue visant à renforcer la performance opérationnelle de l'entreprise et à optimiser ses processus d'audit. C'est aussi une solution beaucoup demandée dans le monde de la télécommunication, avec cette solution Sudalys qui a su se placer sur le marché au bon moment. La plateforme est conçue pour évoluer en intégrant de nouveaux indicateurs et fonctionnalités afin d'accompagner durablement la transformation digitale de l'organisation.</p>
         </div>
 
         <div class="realisation-section" style="text-align: center;">
@@ -168,93 +170,87 @@
         </div>
 
         <div class="realisation-section">
-            <h2>Contexte du projet</h2>
-            <p>Dans le domaine des infrastructures télécoms, les audits sont indispensables pour garantir la qualité des installations. Cependant, la gestion de ces audits se heurtait à des limites importantes en termes de traçabilité, de gestion des documents associés, et de suivi des visites sur le terrain.</p>
-            <p>Les solutions existantes ne permettaient pas une coordination optimale entre les différents acteurs, ce qui ralentissait le processus de contrôle et générait un manque d'efficacité.</p>
-            <p>Easy-Check a été imaginé pour pallier ces lacunes en proposant une plateforme unifiée pour la planification, le suivi et la validation des audits. Une fonctionnalité essentielle du projet a été l'intégration de l'application sur tablette, afin que les auditeurs puissent accéder directement à l'ensemble des informations nécessaires sur le terrain.</p>
+            <h2>Objectifs, contexte, enjeux et risques</h2>
+            <p>Le projet Easy‑Check s'inscrit dans un contexte professionnel où la qualité des audits et la traçabilité des contrôles sont des enjeux stratégiques pour la conformité et la performance des infrastructures télécoms. Les opérateurs souhaitent aussi se lancer dans la traque des malfaçons lors de raccordement client, par exemple. Les collectivités et les opérateurs voulaient un outil moderne et centralisé pour gérer leurs audits car l'ancienne solution Check'IT ne répondait plus aux besoins de mobilité, d'ergonomie ni d'intégration avec les autres outils.
+            La dispersion de l'information, la difficulté à suivre les campagnes et l'absence de rapports standardisés ont motivé le lancement du projet.
+            L'objectif clé était d'offrir une solution fiable, évolutive et intuitive pour garantir rigueur et précision aux équipes techniques.</p>
+            <p>Il fallait gérer les campagnes d'audit et les visites associées tout en prenant en compte les médias collectés sur le terrain (photos ou documents). Le système devait s'adapter à chaque type d'audit tout en assurant une collecte et une restitution cohérentes des données. Pour auditer un poteau ou une chambre, les points de contrôles ne sont pas les même il fallait donc un moyen d'ajouter les points de contrôles automatiquement suivant le type d'éléments réseaux tout en laissant une liberté au client en cas de besoin d'apporter quelques ajustements. L'enjeu était d'offrir une vue globale et synthétique de l'état des audits pour faciliter la création de campagnes d'audit et optimiser les interventions sur le terrain. Le plus grand défi concernait le développement d'une application mobile pour tablette performante mais aussi la validation des données de retour avant de les injecter définitivement en base de données.</p>
+            <p>En ce qui concerne l'application mobile, les auditeurs devaient pouvoir travailler en hors ligne et synchroniser leurs données sans problème avec la plateforme web au moment où ils retrouvaient de la connexion. Il a aussi fallu prévoir l'export et le reporting automatisés pour envoyer automatiquement les malfaçons aux opérateurs concernés.</p>
+            <p>Du côté organisationnel le principal défi était la migration de solution de l'ancienne Chek'IT vers Easy-Check. Il a fallu accompagner les utilisateurs vers cette nouvelle solution par des formations adaptées et un support réactif lors du déploiement. Bien que la solution fût attendue de tous, le changement fut déroutant pour certains, après avoir travaillé plus de 5 ans sur Check'IT ils ont du passer à une nouvelle solution.</p>
+            <p>Le projet Easy‑Check était aussi un défi personnel, c'était pour moi une occasion de démontrer ma capacité à mener un projet complet et complexe de bout en bout. J'ai mobilisé mes compétences en <a href="../competences/gestion-projet.html">gestion</a> <a href="../competences/symfony.html">développement web</a> et mobile ainsi qu'en <a href="../competences/communication.html">communication</a> pour mener cette mission.
+            La réussite a reposé sur mon anticipation des besoins futurs la fédération des acteurs autour d'une vision commune et ma faculté à transformer les contraintes en opportunités d'innovation.</p>
         </div>
 
         <div class="realisation-section">
-            <h2>Objectifs techniques</h2>
-            <ul class="objectives-list">
-                <li><strong>Centralisation et gestion des campagnes d'audit</strong> - Permettre la création, modification et suppression de campagnes d'audit via une interface claire et intuitive, et assurer une traçabilité complète des actions effectuées.</li>
-                <li><strong>Gestion des visites associées</strong> - Intégrer des fonctionnalités pour ajouter, modifier ou supprimer des visites directement dans une campagne, et gérer les informations collectées lors des visites.</li>
-                <li><strong>Ajout et gestion des médias</strong> - Permettre aux auditeurs de joindre des photos ou d'autres fichiers justificatifs aux visites, et stocker ces médias de manière optimisée.</li>
-                <li><strong>Développement d'une application pour tablette</strong> - Proposer une solution mobile accessible sur tablette pour permettre aux auditeurs de travailler directement sur le terrain.</li>
-                <li><strong>Exportation et reporting automatisés</strong> - Générer des rapports détaillés à partir des données collectées, exportables sous divers formats (PDF, Excel, etc.).</li>
-                <li><strong>Recherche et filtrage avancés</strong> - Mettre en place un moteur de recherche performant pour accéder rapidement aux informations spécifiques.</li>
-                <li><strong>Sécurité et conformité des données</strong> - Implémenter un système d'authentification sécurisé et respecter les normes RGPD.</li>
-                <li><strong>Maintenance et évolutivité</strong> - Structurer le code en suivant les bonnes pratiques de Symfony pour assurer la maintenabilité et l'évolutivité de l'application.</li>
-            </ul>
-        </div>
-
-        <div class="realisation-section">
-            <h2>Objectifs humains</h2>
-            <ul class="objectives-list">
-                <li><strong>Compréhension des besoins métiers</strong> - S'immerger dans le domaine des audits télécoms pour identifier et analyser les attentes des utilisateurs finaux.</li>
-                <li><strong>Collaboration avec les équipes</strong> - Travailler en coordination avec les équipes métier et techniques de Sudalys pour garantir une adéquation entre la solution développée et les attentes réelles.</li>
-                <li><strong>Découverte du fonctionnement en entreprise</strong> - Observer et intégrer les processus internes de Sudalys, notamment en matière de <a href="../competences/gestion-projet.html">gestion des projets</a> et des priorités.</li>
-                <li><strong>Renforcement des compétences en gestion de projet</strong> - Organiser les différentes étapes du développement en respectant les délais et les priorités définies.</li>
-                <li><strong>Adoption des bonnes pratiques de développement</strong> - Respecter les standards de qualité et les conventions de développement propres à Symfony.</li>
-                <li><strong>Amélioration de la prise en compte des retours utilisateurs</strong> - Réaliser des tests utilisateurs avec les auditeurs pour ajuster les fonctionnalités selon leurs besoins réels.</li>
-                <li><strong>Développement de soft skills</strong> - Renforcer mes compétences en <a href="../competences/communication.html">communication</a> et en gestion des priorités dans un environnement professionnel exigeant.</li>
-            </ul>
-        </div>
-
-        <div class="realisation-section">
-            <h2>Contexte technique</h2>
-            <p>Pour réaliser Easy-Check, une plateforme centralisée pour la gestion des audits télécoms, j'ai utilisé des technologies modernes garantissant performance, maintenabilité, et accessibilité multiplateforme.</p>
+            <h2>Aspects fondamentaux du projet Easy-Check</h2>
+            <p>Le projet Easy-Check repose sur plusieurs aspects principaux qui ont guidé sa conception et son développement. Ils répondaient à un besoin précis des clients de Sudalys et ils renforçaient la valeur ajoutée de la solution. Plutôt que de dérouler une chronologie, j'ai choisi de mettre en avant les dimensions essentielles qui rendent ce projet unique et pertinent.</p>
             
-            <div class="tech-stack">
-                <div class="tech-item"><a href="../competences/symfony.html">Symfony</a></div>
-                <div class="tech-item"><a href="../competences/javascript.html">JavaScript</a></div>
-                <div class="tech-item">Twig</div>
-                <div class="tech-item"><a href="../competences/postgresql.html">PostgreSQL</a></div>
-                <div class="tech-item">Flutter</div>
-            </div>
+            <h3>Architecture fonctionnelle et contexte d'utilisation</h3>
+            <p>La première image montre l’architecture fonctionnelle d’Easy‑Check. À gauche, on distingue deux types d’utilisateurs. En haut, l’utilisateur web responsable ou administrateur. En bas, le technicien mobile sur le terrain. L’utilisateur web gère les campagnes d’audit et importe ou exporte les données via l’application web Easy‑Check située au centre du schéma. Cette application web constitue le cœur du système, elle centralise la logique métier puis gère les flux et pilote toutes les interactions, c'est elle qui va s'occuper de faire apparaitre les données du technicien après qu'il ait fini sa campagne d'audit. À droite, on trouve la base de données. Elle stocke toutes les informations nécessaires au fonctionnement de la plateforme, comme les campagnes puis les visites, les utilisateurs ou les fichiers joints.</p>
             
-            <h3 style="margin-top: 30px;">Fonctionnalités développées</h3>
-            <ul class="objectives-list">
-                <li><strong>Collecte et gestion des données</strong> - Création et organisation des campagnes d'audit, suivi des visites terrain, et gestion des médias associés.</li>
-                <li><strong>Visualisation des informations</strong> - Affichage des données critiques dans une interface utilisateur simple et claire.</li>
-                <li><strong>Recherche avancée</strong> - Intégration de filtres multicritères pour faciliter l'accès aux informations spécifiques.</li>
-                <li><strong>Application mobile avec Flutter</strong> - Développement d'une solution optimisée pour les tablettes, permettant la consultation des informations en temps réel et l'enregistrement immédiat des observations.</li>
-            </ul>
+            <p>En parallèle le technicien mobile récupère les campagnes sur sa tablette lors de la synchronisation descendante, puis il réalise ses visites, ajoute ses observations, prend des photos. Une fois terminé il renvoie les données vers l’application web lors de la synchronisation montante. Ce processus garantit une gestion fluide des audits même hors ligne et assure un lien efficace entre le terrain et le backoffice.</p>
             
-            <p>J'ai appliqué les conventions Symfony pour garantir la maintenabilité et l'évolutivité du code backend, ainsi que les bonnes pratiques Flutter pour assurer la fluidité et la réactivité de l'application mobile. Le tout en respectant les réglementations RGPD pour protéger les données sensibles des audits.</p>
+            <p>La deuxième image illustre le flux de travail typique d’Easy‑Check. On commence par importer les données et créer les entités techniques comme les PTO. Ensuite on crée une campagne en choisissant un ou plusieurs templates. Chaque template définit des thèmes et des points de contrôle pour structurer l’audit. Ce système permet de composer une campagne sur mesure en combinant différents modules. Une fois le paramétrage terminé, on lance la campagne en affectant les auditeurs et en sélectionnant les PTO à contrôler. Sur le terrain, les données récoltées </p>
+            <div id="architecture-carousel" class="carousel-container" style="height: 400px;"></div>
+            
+            <h3>Gestion des données et modèle de base de données</h3>
+            <p>Le schéma représente la structure générale de la base de données métier d’Easy-Check qui est dédiée spécifiquement à la gestion des audits terrain. C'est un schéma à part entière dans les bases de données métier. Ce qui nous permet d'avoir un découpage des logiques non négligeable.</p>
+            <p>La base est structurée de manière modulaire  : on y retrouve des blocs fonctionnels bien séparés pour les éléments d’infrastructure, les campagnes et leurs templates, les visites sur le terrain, ainsi que tout ce qui concerne la collecte des données (observations, documents, checkings). Chaque partie du schéma est pensée pour répondre à une brique métier précise, avec des relations claires entre elles.</p>
+            <p>Cette organisation permet une forte évolutivité, une séparation des responsabilités et facilite les échanges entre la version web et la version mobile de l’application. En ce qui concerne le portage en hors ligne grâce à GDAL nous faisons une image de la base de données en sqlite que nous envoyons à la tablette du technicien qui est en charge de la campagne.</p>
+            <div id="database-carousel" class="carousel-container" style="height: 400px;"></div>
+            
+            <h3>Interfaces utilisateur et visualisation des données</h3>
+            <p>L’interface web d’Easy‑Check accompagne l’utilisateur à chaque étape du processus d’audit. On commence par la planification, puis on passe au suivi en enchaînant plusieurs écrans qui structurent l’expérience. D’abord les informations générales, ensuite la zone d’intervention, puis les audits programmés, pour finir sur la page de finalisation. Cette démarche progressive réduit la complexité visible et maintient l’attention.</p>
+            <p>Chaque vue repose sur des tableaux dynamiques, des cartes interactives et des formulaires intuitifs. L’utilisateur peut sélectionner un site puis filtrer les données et dessiner des zones géographiques via des polygones. Il affecte ensuite les éléments à auditer avec précision. Les composants restent cohérents et les boutons explicites pour que l’on sache toujours où l’on se trouve.</p>
+            <p>Plusieurs fonctionnalités avancées s’intègrent naturellement à l’environnement. On y trouve la sélection de templates, la répartition des éléments par point de contrôle et l’édition des visites. Le tableau de bord central affiche une synthèse visuelle des campagnes en cours, des campagnes terminées et des campagnes en retard. On y suit aussi les statistiques sur les non‑conformités et sur les visites réalisées. Des graphiques lisibles et des cartes offrent une vue d’ensemble rapide pour faciliter la prise de décision.</p>
+            <p>Cette conception place l’opérationnel au premier plan tout en couvrant l’ensemble des besoins fonctionnels. Elle s’adresse aussi bien aux responsables de campagnes qu’aux auditeurs.</p>
+            <div id="interfaces-carousel" class="carousel-container" style="height: 400px;"></div>
         </div>
 
         <div class="realisation-section">
-            <h2>Développement du projet</h2>
-            <div style="display: flex; flex-direction: column; gap: 20px;">
-                <div>
-                    <h3>Étape 1 : Analyse des besoins</h3>
-                    <p>J'ai commencé par rencontrer les équipes métier pour identifier les spécificités des audits télécoms et leurs contraintes. Cette phase a permis de formaliser les besoins pour le backend, le frontend, et l'application mobile.</p>
-                </div>
-                <div>
-                    <h3>Étape 2 : Conception de l'architecture</h3>
-                    <p>J'ai défini une architecture modulaire permettant une interaction fluide entre la plateforme web et l'application mobile Flutter. Cette étape a également inclus la création des schémas de base de données <a href="../competences/postgresql.html">PostgreSQL</a> adaptés aux relations complexes entre campagnes, visites et médias.</p>
-                </div>
-                <div>
-                    <h3>Étape 3 : Développement</h3>
-                    <p>Le développement a été réalisé avec Symfony 7.1 pour le backend, <a href="../competences/symfony.html">Symfony</a> pour la logique métier, <a href="../competences/javascript.html">JavaScript</a> et Twig pour le frontend. En parallèle, j'ai développé l'application mobile avec Flutter pour permettre la consultation des données en temps réel et l'ajout de nouvelles observations sur le terrain.</p>
-                </div>
-                <div>
-                    <h3>Étape 4 : Intégration des tests</h3>
-                    <p>J'ai mis en place des tests unitaires et fonctionnels pour valider les fonctionnalités backend et frontend. Des tests spécifiques ont également été réalisés pour l'application Flutter, incluant des scénarios d'utilisation en mode hors ligne. Enfin, des tests utilisateurs avec les auditeurs ont permis d'ajuster l'ergonomie et les fonctionnalités selon leurs retours.</p>
-                </div>
-                <div>
-                    <h3>Étape 5 : Mise en production</h3>
-                    <p>La dernière étape a consisté au déploiement de la plateforme web et de l'application mobile, suivi d'une formation des utilisateurs finaux pour garantir une prise en main rapide et efficace.</p>
-                </div>
-            </div>
+            <h2>Les acteurs et les interactions</h2>
+            <p>Le bureau d'étude de Sudalys et certains clients ont été des partenaires clés tout au long du projet Easy‑Check. Ils m'ont apporté leur expertise terrain et leur connaissance précise des processus d’audit ce qui m'a permis d'affiner le cahier des charges et de valider la pertinence des fonctionnalités développées. 
+            </p>
+            <p>Le développement du projet a été suivi de près par beaucoup, j'ai mis un point d'honneur à travailler sur les performances de l'outil et à la compatibilité avec les outils existants. Des points d'avancement réguliers ajustaient la feuille de route et validaient chaque jalon. Enfin les auditeurs de terrain se sont impliqués dès la phase de tests pour garantir que la solution corresponde à leurs besoins quotidiens. Grâce notamment à des formulaires que j'ai créés pour tous ceux qui utilisaient l'ancienne solution pour avoir leur retour utilisateur, qui est pour moi indispensable pour ne pas recommettre les mêmes erreurs. J'ai pu avoir beaucoup de retour que ce soit via les formulaires, le téléphone ou mail, pour m'indiquer les points négatifs et les gros bugs existant sur l'ancienne solution. </p>
+            <p>Pour faciliter la communication j’ai mis en place trois outils collaboratifs : un kanban sur Gitea un rituel de réunions hebdomadaires et un suivi documentaire rigoureux. Cette dynamique d’échange permanent a permis de voir venir les difficultés et de les contourner avant qu'elles n'apparaissent. Elle a instauré un climat de confiance propice à l’innovation. Le projet Easy‑Check illustre l’importance d’une approche transversale et participative impliquant chaque intervenant dans la réussite collective.</p>
+        </div>
+
+        <div class="realisation-section">
+            <h2>Résultats et réflexion personnelle</h2>
+            <p>Nous n'avons pas encore de résultat précis sur ce qu'a généré Easy-Check pour Sudalys, car l'application est sortie il y a très peu de temps mais l'engouement dont les clients m'ont fait part tout au long du projet m'indique que les résultats devraient être excellents. Travailler sur ce projet a été très gratifiant pour moi surtout en tant qu'alternant : avoir la chance qu'on me confie des missions aussi importantes est très motivant pour se surpasser. Cette solution de gestion des audits a sensiblement amélioré la qualité et l'efficacité des contrôles réalisés. Elle a réduit les temps de traitement des campagnes d'audit et renforcé la qualité du service fourni aux clients. Les équipes techniques disposent maintenant d'un outil performant qui facilite la planification des visites, la collecte des données sur le terrain et la génération de rapports détaillés.</p>
+            <p>La centralisation des données, la traçabilité complète et l'accès en temps réel grâce à l'application mobile ont eu un impact direct sur la satisfaction des collectivités et des opérateurs qui utilisent la solution. Ces progrès ont simultanément renforcé la réputation de Sudalys comme partenaire technologique. Sudalys utilise Easy-Check dans ses réponses aux appels d'offres pour démontrer sa maîtrise en matière de gestion des audits.</p>
+            <p>Tout cela m'a permis de développer des compétences techniques avancées en développement web avec <a href="../competences/symfony.html">Symfony</a>, un peu en Flutter et surtout en gestion de bases de données <a href="../competences/postgresql.html">PostgreSQL</a>. J'ai aussi consolidé mes aptitudes en <a href="../competences/gestion-projet.html">gestion de projet</a>, en <a href="../competences/communication.html">communication</a> et en conduite du changement. La reconnaissance et les encouragements venant de mes collègues et de la direction tout au long du projet ont renforcé ma confiance dans ma capacité à mener des missions importantes comme celle-ci.</p>
+            <p>Ce projet a été une opportunité de créer une application innovante qui répond à des besoins concrets et améliore significativement les processus métier de l'entreprise, cette réalisation marque un tournant dans mon parcours et renforce les preuves de ma capacité à relever des défis ambitieux tout en produisant des résultats concrets au service de l'entreprise et de ses clients. C'est surement l'un des projets dont je suis le plus fier aujourd'hui.</p>
+        </div>
+
+        <div class="realisation-section">
+            <h2>Les lendemains du projet : dans un futur immédiat, à distance, aujourd'hui</h2>
+            <p>Après le déploiement d’Easy‑Check le projet a rapidement démontré sa valeur opérationnelle pour Sudalys. Tout d'abord l'outil a fait naître de nouveaux réflexes pour gérer les audits et optimiser les visites sur le terrain. Il a facilité l'uniformisation des rapports tout en améliorant la qualité des contrôles. Les équipes ont adopté la solution grâce à son interface intuitive et à une documentation limpide. Cette adoption rapide s’est accompagnée d’une montée en compétences généralisée.</p>
+            <p>À moyen terme Easy‑Check rejoindra la suite Easy‑Solution de Sudalys aux côtés d<a href="easy-monithor.html">Easy-Monithor</a>. Des intégrations entre ces deux plateformes renforceront la vision globale des infrastructures télécoms depuis la supervision jusqu’à l’audit.</p>
+            <p>Sur le long terme Easy‑Check évoluera vers une plateforme encore plus intelligent car elle intègrera l’intelligence artificielle pour analyser les données d’audit et fournir des recommandations automatiques. L’application mobile bénéficiera de fonctions de réalité augmentée pour identifier plus facilement les éléments réseaux et guider les auditeurs lors de leurs interventions.</p>
+            <p>En conclusion les suites du projet Easy‑Check confirment sa capacité à créer de la valeur sur la durée. Il représente un grand atout pour Sudalys et ses clients tant au niveau opérationnel que stratégique. Il est aussi une très bonne facade pour communiquer sur les produits de Sudalys. Ce projet incarne l’engagement de l’entreprise pour l’excellence et l’innovation dans la gestion des audits d’infrastructures télécoms.</p>
+        </div>
+
+        <div class="realisation-section">
+            <h2>Mon regard critique</h2>
+            <p>Porter Easy-Check de l'idée à la réalisation a été un défi et une occasion de progresser. J'ai découvert qu'aucune réussite ne tient sans rigueur méthodologique ni écoute active, surtout quand chaque détail compte et que la capacité à anticiper les risques change tout. Cette expérience m'a offert une vision technique et stratégique entre les attentes métiers et les contraintes technologiques.</p>
+            <p>Pour moi ma valeur ajoutée s'est surtout vue dans ma faculté à réunir les acteurs autour d'une vision partagée et à instaurer une confiance favorable à l'innovation. J'ai adapté ma communication aux interlocuteurs pour rendre accessibles des concepts techniques et recueilli des retours constructifs afin de faire évoluer la solution sans cesse, j'ai communiqué avec les utilisateurs finaux, dès le lancement du projet pour m'assurer une dernière fois que l'outil réponde vraiment à leurs besoins.</p>
+            <p>Ce projet m'a aussi confronté à des défis en gestion du temps et en priorisation des tâches. Le développement simultané d'une plateforme web et d'une application mobile a parfois créé des moments de creux entre les différentes équipes qu'il a fallu gérer et j'ai compris que la flexibilité et la remise en question de mes choix étaient indispensables pour m'adapter à un environnement mouvant.</p>
+            <p>Easy-Check m'a confirmé qu'un projet technologique réussit autant grâce aux relations humaines qu'à la maîtrise des outils, ce projet m'a permis de renforcer ma motivation à innover et à continuer de me former pour relever les prochains défis. J'en garde une grande fierté et l'envie d'aborder chaque nouveau projet avec curiosité et détermination pour me dépasser et faire mieux que le projet d'avant.</p>
+        </div>
+
+        <div class="realisation-section">
+            <h2>Compétences mobilisées</h2>
+            <p>La réalisation du projet Easy-Check m'a permis de mobiliser et de renforcer plusieurs compétences importantes, notamment la <a href="../competences/gestion-projet.html">gestion de projet</a> ou la <a href="../competences/symfony.html">maîtrise du framework Symfony</a>, ou même la <a href="../competences/postgresql.html">gestion de bases de données PostgreSQL</a>, le <a href="../competences/javascript.html">développement JavaScript</a>, et la gestion de versions avec <a href="../competences/git.html">Git</a>. J'ai également développé de nouvelles compétences en développement mobile avec Flutter, même si c'est relativement léger.</p>
+            <p>J'ai également pu développer mes compétences transversales comme la <a href="../competences/communication.html">communication</a> et la <a href="../competences/resolution-problemes.html">résolution de problèmes</a>.</p>
+            <p>Ces compétences ont été essentielles à chaque étape du projet, de la conception à la mise en production, et constituent aujourd'hui un socle solide pour aborder de nouveaux défis techniques et organisationnels. Pour en savoir plus sur ces domaines, vous pouvez consulter les pages dédiées à chaque compétence.</p>
         </div>
 
         <div class="realisation-section">
             <h2>Conclusion</h2>
-            <p>Le projet Easy-Check a répondu efficacement aux besoins de Sudalys pour optimiser la gestion des audits télécoms en proposant une solution innovante et multiplateforme.</p>
-            <p>Les principaux avantages pour Sudalys incluent la centralisation des données, une traçabilité complète, et un accès en temps réel grâce à l'application mobile Flutter. Cela a permis d'accélérer les processus de collecte et de validation des données sur le terrain, et d'améliorer la coordination entre les équipes.</p>
-            <p>Sur le plan personnel, ce projet m'a permis de renforcer mes compétences en développement mobile avec Flutter, d'acquérir une expérience significative dans l'intégration d'un écosystème web et mobile, et d'améliorer mes capacités à <a href="../competences/gestion-projet.html">gérer un projet technique complet</a>, de l'analyse à la livraison.</p>
+            <p>Finalement Easy-Check, ne représente pas seulement une solution technique, c'est une véritable démarche d'innovation et d'amélioration continue au service de la performance des clients de Sudalys et de la montée en compétences des équipes impliquées, ce projet a marqué une étape importante dans mon parcours en me confrontant à des enjeux complexes, et en m'offrant l'opportunité de piloter un projet d'envergure entièrement. Sudalys a pu renforcer sa compétitivité et a pu anticiper les évolutions du secteur tout en consolidant de mon côté mon expertise et ma confiance dans la gestion de projets technologiques.</p>
+            <p>Le remplacement de Check'IT par Easy-Check illustre parfaitement la capacité de Sudalys à se réinventer et à moderniser ses outils pour répondre aux exigences actuelles du marché cette transition réussie à amélioré l'efficacité opérationnelle et, a renforcé la proposition de valeur de l'entreprise aux yeux de ses clients.</p>
+            <p>Grâce à cette expérience, je suis désormais prêt à relever de nouveaux défis et, à poursuivre l’innovation et à continuer de contribuer à des projets ambitieux qui ont un impact significatif sur l’entreprise et ses clients.</p>
         </div>
     </div>
 
@@ -262,5 +258,44 @@
         <p>&copy; 2025 Mathis Buchet - Portfolio</p>
     </footer>
     <script src="../script.js"></script>
+    <script src="../js/carousel.js"></script>
+    <script>
+        // Initialisation des carrousels avec les images
+        document.addEventListener('DOMContentLoaded', function() {
+            // Carrousel 1: Architecture fonctionnelle et contexte d'utilisation
+            new Carousel('architecture-carousel', [
+                { src: 'images/Easy-check/creation_campagne.png', alt: 'Création d\'une campagne' },
+                { src: 'images/Easy-check/flux_travail.png', alt: 'Flux de travail typique' }
+            ], {
+                autoplay: true,
+                delay: 5000,
+                caption: 'Création d\'une campagne et flux de travail typique'
+            });
+            
+            // Carrousel 2: Gestion des données et modèle de base de données
+            new Carousel('database-carousel', [
+                { src: 'images/Easy-check/schema_bdd.png', alt: 'Schéma de base de données' }
+            ], {
+                autoplay: true,
+                delay: 6000,
+                caption: 'Modèle de données et gestion des informations'
+            });
+            
+            // Carrousel 3: Interfaces utilisateur et visualisation des données
+            new Carousel('interfaces-carousel', [
+                { src: 'images/Easy-check/dashboard.png', alt: 'Tableau de bord principal' },
+                { src: 'images/Easy-check/creation1.png', alt: 'Création d\'une campagne' },
+                { src: 'images/Easy-check/creation2.png', alt: 'Création d\'une campagne' },
+                { src: 'images/Easy-check/creation3.png', alt: 'Création d\'une campagne' },
+                { src: 'images/Easy-check/creation4.png', alt: 'Création d\'une campagne' },
+                { src: 'images/Easy-check/visite1.png', alt: 'Création d\'une visite' },
+                { src: 'images/Easy-check/visite2.png', alt: 'Création d\'une visite' },
+            ], {
+                autoplay: true,
+                delay: 4000,
+                caption: 'Interfaces utilisateur et visualisation des données'
+            });
+        });
+    </script>
 </body>
 </html>

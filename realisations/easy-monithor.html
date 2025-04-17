@@ -184,18 +184,27 @@
             
             <h3>Architecture fonctionnelle et contexte d'utilisation</h3>
             <p>L'architecture fonctionnelle faite pour relever les défis de la supervision d'infrastructures télécoms. J'ai imaginé, personnellement, un système modulaire capable d'intégrer différentes sources de données puis de traiter ces informations pour les restituer sous forme exploitable. Le contexte d'utilisation a été analysé avec soin pour m'assurer que la solution colle aux besoins opérationnels et aux objectifs stratégiques des opérateurs et des collectivités.</p>
+            
+            <p>Ici, vous trouverez deux schémas. Le premier schéma représente l'architecture fonctionnelle globale d'Easy-Monithor, illustrant d'un côté les outils de supervision, tels que Zabbix, Centreon ou PRTG, avec lesquels nous allons nous interfacer pour récupérer les données. Sur la droite, les autres outils de Sudalys vont venir peupler les données et ajouter du contexte à nos potentielles alarmes, tandis que les informations disponibles à la vue du client incluent les KPI/SLA, qui sont les indicateurs clés de performance et les accords de niveau de service. Ensuite, nous avons l'alarming, le ticketing et les travaux en cours qui sont là pour faire remonter et ajouter du contexte aux alarmes. Si, par exemple, on voit sur notre cartographie que les box internet de tout un quartier sont en pannes et qu'il y a une zone de travaux sur le tronçon de fibre commun, le technicien sait par où commencer ses recherches.</p>
+            
+            <p>Puis le deuxième schéma est un exemple concret de flux de données. Les techniciens, clients ou capteurs vont envoyer des informations vers l'exploitant qui va, de son côté, ouvrir un ticket, le communiquer au client avec la panne en question. Ensuite, un mail sera envoyé à l'opérateur d'infrastructure, ici Nokia. Puis, une fois le ticket traité, il sera clôturé. Par exemple, une box envoie un status ping en erreur. L'exploitant va recevoir l'alarme, un ticket va se créer automatiquement, le client sera ajouté au ticket qu'il pourra donc suivre, et dans la foulée un mail sera envoyé à Nokia pour résolution du problème en respectant les SLA.</p>
             <div id="architecture-carousel" class="carousel-container" style="height: 400px;"></div>
             
             <h3>Traitement intelligent des données et gestion des pannes</h3>
             <p>Le traitement intelligent des données constitue le cœur d'Easy‑Monithor. J'ai développé des algorithmes pour collecter, filtrer et analyser les flux issus des équipements réseau. Grâce à cette approche la plateforme détecte les incidents analyse leurs causes et détecte la route optique liée. Le schéma de récupération des données ne montre pas la complexité des flux traités, chaque solution a ses propres trames de données que l'on cherche à centraliser au même endroit. Chaque source suit un protocole spécifique avant d'être normalisée pour alimenter le système central.</p>
+            <p>Voici comment, en base de données, une panne va être dirigée. Nous avons les tables du modèle GraceTHD, qui est un modèle de données relationnel standardisé destiné à échanger des modèles numériques de réseaux de télécommunications et à la gestion patrimoniale de ces réseaux avec les tables correspondantes au réseau de fibre. Ces tables incluent des informations sur des éléments tels que les câbles, les fibres et les routes optiques. Ensuite, les tables relatives aux contrats qui nous permettent de savoir à quelle entreprise appartient l'équipement et sa route optique. Ensuite, les informations relatives aux équipements sont présentées directement. Ainsi, cela inclut également les tickets et leur contenu.</p>
             <div id="database-carousel" class="carousel-container" style="height: 400px;"></div>
             
             <h3>Interfaces utilisateur et visualisation des données</h3>
             <p>L'expérience utilisateur est au centre de la démarche. J'ai dessiné des interfaces intuitives et ergonomiques pour accéder rapidement aux informations pertinentes et interagir sans effort avec la plateforme. Des tableaux de bord synthétiques apportent une vue globale. Des cartes interactives offrent une perspective géographique. Des listes détaillées facilitent le pilotage au plus fin. Cette combinaison garantit une prise de décision éclairée et une réactivité optimale.</p>
+            <p>Ici, vous pouvez voir quelques interfaces utilisateurs avec le dashboard contenant uniquement les informations essentielles comme le nombre d'alarmes ou de travaux en cours.</p>
+            <p>Ensuite, vous avez la cartographie où il est possible de visualiser les tronçons de fibre potentiellement cassés. Pour expliquer, chaque équipement peut être lié à une route optique, par exemple dans le cas d'une box internet. Si cette box internet tombe en panne, la route optique va être reconnue et marquée en jaune. Maintenant, si une deuxième box tombe non loin de la première et que la route optique liée emprunte le même tronçon à un endroit sur 100mètres, elle va apparaitre en rouge sur la carte, car c'est un point de corrélation, cela donne des informations sur le lieu de la potentielle panne.</p>
+            <p>Puis nous avons la page des équipements où nous pouvons consulter les informations de notre parc d'équipement. Nous pouvons leur ajouter une criticité en cas de panne sur une échelle de 0 à 5 et nous pouvons geler un équipement pour qu'il ne remonte pas en alarme.</p>
             <div id="interfaces-carousel" class="carousel-container" style="height: 400px;"></div>
             
             <h3>Intégration et transformation des données</h3>
             <p>La capacité à intégrer et transformer des données hétérogènes représente un autre point clé d'Easy‑Monithor. Le processus de mapping convertit les données brutes en informations structurées et exploitables afin de garantir leur cohérence. J'ai conçu une interface no code qui permet aux administrateurs de régler précisément les règles de transformation sans écrire la moindre ligne de code. Cette autonomie simplifie l'adaptation de la solution aux spécificités de chaque client.</p>
+            <p>J'ai dû imaginer un système de mapping des données lorsque l'utilisateur connecte sa solution de supervision. Ainsi, chaque solution ne renvoie pas la même trame de données, et donc il fallait un moyen de les formaliser pour notre base de données à nous. Le client va donc rentrer ses identifiants vers l'API, nous allons faire une requête pour récupérer l'exemple d'un retour que nous affichons, pour que le client puisse lui-même faire son mapping des données.</p>
             <div id="mapping-carousel" class="carousel-container" style="height: 400px;"></div>
         </div>
 
@@ -264,8 +273,7 @@
             
             // Carrousel 2: Traitement intelligent des données et gestion des pannes
             new Carousel('database-carousel', [
-                { src: 'images/Easy-monithor/traitement_panne_bdd.png', alt: 'Schéma de traitement d\'une panne en base de données' },
-                { src: 'images/Easy-monithor/schema_recup_donnees.png', alt: 'Schéma de récupération des données' }
+                { src: 'images/Easy-monithor/traitement_panne_bdd.png', alt: 'Schéma de traitement d\'une panne en base de données' }
             ], {
                 autoplay: true,
                 delay: 6000,
