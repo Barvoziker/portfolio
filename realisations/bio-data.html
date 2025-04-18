@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bio Data - Mathis Buchet</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../css/carousel.css">
+    <style>
+        .realisation-container {
+            max-width: 1200px;
+            margin: 100px auto 50px;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .realisation-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 20px;
+        }
+        
+        .realisation-logo {
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+        }
+        
+        .realisation-title {
+            flex: 1;
+        }
+        
+        .realisation-title h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .realisation-title p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+        
+        .realisation-section {
+            margin-bottom: 40px;
+        }
+        
+        .realisation-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+            color: #444;
+        }
+        
+        .realisation-section h3 {
+            font-size: 1.4rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #555;
+        }
+        
+        .realisation-section p {
+            text-align: justify;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            color: #333;
+            letter-spacing: 0.01em;
+        }
+        
+        /* Exception pour les sections centrées */
+        .realisation-section[style*="text-align: center"] p {
+            text-align: center;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .tech-item {
+            background-color: #f5f5f5;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+        
+        .objectives-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .objectives-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .objectives-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        
+        /* Styles pour améliorer la lisibilité */
+        .realisation-section a {
+            font-weight: 500;
+            text-decoration: none;
+            color: #0066cc;
+            transition: color 0.2s;
+        }
+        
+        .realisation-section a:hover {
+            color: #004499;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <div class="logo">Mathis Buchet</div>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="../presentation.html">Présentation</a></li>
+                <li class="has-submenu">
+                    <a href="#">Compétences</a>
+                    <ul class="submenu">
+                        <li><a href="symfony.html">Symfony</a></li>
+                        <li><a href="../competences/postgresql.html">PostgreSQL</a></li>
+                        <li><a href="../competences/javascript.html">JavaScript</a></li>
+                        <li><a href="../competences/git.html">Git</a></li>
+                        <li><a href="../competences/websocket.html">WebSocket</a></li>
+                        <li><a href="../competences/arduino.html">Arduino</a></li>
+                        <li><a href="../competences/communication.html">Communication</a></li>
+                        <li><a href="../competences/gestion-projet.html">Gestion de projet</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="../index.html#realisations">Réalisations</a>
+                    <ul class="submenu">
+                        <li><a href="../realisations/easy-monithor.html">Easy-Monithor</a></li>
+                        <li><a href="../realisations/easy-check.html">Easy-Check</a></li>
+                        <li><a href="../realisations/Tracker-GPS.html">Tracker GPS</a></li>
+                        <li><a href="../realisations/sea-clean.html">Sea Clean</a></li>
+                        <li><a href="../realisations/bio-data.html">Bio Data</a></li>
+                    </ul>
+                </li>
+                <li><a href="../parcours.html">Parcours</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="realisation-container">
+        <div class="realisation-header">
+            <img src="../bioData.png" alt="Logo Bio Data" class="realisation-logo">
+            <div class="realisation-title">
+                <h1>Bio Data</h1>
+                <p>Système de gestion de bases de données pour Protéus, filiale du groupe Seqens</p>
+            </div>
+        </div>
+
+        <div class="realisation-section">
+            <h2>Présentation et définition</h2>
+            <p>Bio Data est un projet de développement de bases de données spécialisées que j'ai mené pendant un semestre au groupe AEN. Ce projet a été réalisé pour Protéus, une société de biotechnologies créée en 1998, spécialisée dans le développement d'enzymes à application industrielle et offrant des solutions et procédés biotechnologiques innovants à des acteurs industriels majeurs.</p>
+            <p>Protéus, filiale du groupe français PCAS (créé en 1962 et spécialisé dans le domaine pharmaceutique et la chimie fine), appartient depuis 2017 au groupe Novacap, désormais renommé Seqens, un acteur mondial de la synthèse pharmaceutique et de la chimie de spécialités (cosmétique, alimentation, électronique...).</p>
+            <p>L'objectif du projet était de créer différentes bases de données accessibles en local depuis un navigateur. Certaines de ces bases existaient déjà en environnement Access et devaient être transformées et adaptées avec récupération des données, tandis que d'autres devaient être créées entièrement.</p>
+        </div>
+
+        <div class="realisation-section" style="text-align: center;">
+            <div style="margin: 30px auto; max-width: 300px;">
+                <img src="../bioData.png" alt="Logo du projet Bio Data" style="width: 100%; height: auto;">
+            </div>
+            <p style="font-style: italic; color: #666;">Logo du projet Bio Data</p>
+        </div>
+
+        <div class="realisation-section">
+            <h2>Objectifs, contexte, enjeux et risques</h2>
+            <p>Le projet Bio Data s’est inscrit dans la volonté de Protéus de moderniser ses outils de gestion pour remplacer les bases Access existantes par une plateforme web plus souple et pérenne. Cette migration se révélait essentielle pour fluidifier le travail quotidien des équipes R & D, qui manipulent des masses d’informations complexes sur les microorganismes, les enzymes et les protocoles de laboratoire. Passer du poste client isolé à une solution centralisée devait augmenter la disponibilité des données, réduire les redondances et soutenir l’évolution continue des recherches.</p>
+            
+            <p>Nos objectifs s’articulaient autour de cinq bases interconnectées : SOUCHOTHÈQUE pour l’ensemble des microorganismes conservés, MILIEUX pour les compositions de culture, GÈNES–PROTÉINES–ENZYMES pour les séquences biologiques, PROTOCOLE pour les méthodes d’expérimentation et GESTION DES ÉQUIPEMENTS pour le suivi du matériel. Il fallait non seulement migrer l’historique d’Access vers ce nouveau schéma, mais aussi proposer une interface web intuitive permettant de consulter, créer ou modifier les enregistrements. Les fonctionnalités clés incluaient un système de droits granulaires, l’export Excel en un clic et des liens croisés dynamiques afin de naviguer d’une souche vers ses milieux ou ses protocoles en un seul mouvement.</p>
+            
+            <p>Les enjeux étaient majeurs sur trois fronts. Pour Protéus, l’optimisation du capital scientifique – souches microbiennes, séquences génétiques, procédures – promettait un vrai gain de productivité et une meilleure collaboration horizontale entre laboratoires. Pour l’équipe projet, le défi résidait dans l’appropriation rapide d’un métier exigeant et très technique : comprendre la taxonomie, la génomique ou les contraintes BPF avant même de dessiner le premier diagramme de classes. Enfin, l’architecture de données devait anticiper la croissance future des collections et l’arrivée de nouveaux champs sans casser la compatibilité.</p>
+            
+            <p>Dès le lancement, nous avons listé plusieurs risques critiques. La richesse du modèle de données imposait une phase d’immersion métier approfondie ; le moindre écart conceptuel pouvait rendre la base inexploitable. Les commanditaires, souvent absorbés par leurs travaux, restaient peu disponibles, compliquant la validation continue. La contrainte de temps liée au semestre universitaire s’ajoutait à l’ampleur du développement et de la migration. Techniquement, la reprise d’Access posait des questions de normalisation : tables imbriquées, types de champs libres et relations implicites qu’il fallait redresser. En cours de route, le départ d’un membre a forcé une redistribution des tâches et le renforcement du suivi pour tenir les jalons. Malgré ces obstacles, la capacité à documenter chaque décision, à itérer sur le modèle et à maintenir un dialogue régulier avec les biologistes a permis de sécuriser la trajectoire du projet et de poser les bases d’un écosystème de données durable.</p>
+            
+            <div id="objectifs-carousel" class="carousel-container" style="height: 400px;"></div>
+        </div>
+
+        <div class="realisation-section">
+            <h2>Aspects fondamentaux du projet</h2>
+            <p>Le projet Bio Data s’est construit autour de plusieurs réalisations majeures qui ont jalonné notre démarche. Plutôt que d’adopter une chronologie linéaire, je mets en avant les dimensions clés qui ont fait de cette aventure un exercice à la fois exigeant et formateur.</p>
+            
+            <h3>Conception du Modèle Conceptuel de Données (MCD)</h3>
+            <p>La conception du MCD a représenté le socle de tout le projet, ainsi qu’un chantier particulièrement long et minutieux. Le domaine métier étant dense et truffé d’interrelations (microorganismes, milieux de culture, gènes, protéines, équipements de laboratoire) nous devions aboutir à un schéma robuste : évolutif dans le temps, mais suffisamment précis pour refléter la réalité scientifique quotidiennement manipulée par les chercheurs. De nombreux ateliers avec les experts de Protéus ont été nécessaires pour décortiquer leurs pratiques, lier les informations critiques et traduire ces échanges en entités et attributs.</p>
+            <p>Au terme de ces itérations, le modèle final totalisait plus d’une trentaine d’entités, liées par de nombreuses associations cardinalisées. Chaque base fonctionnelle (SOUCHOTHÈQUE, MILIEUX, GÈNES / PROTÉINES / ENZYMES, PROTOCOLE, GESTION DES ÉQUIPEMENTS) disposait de sa propre modélisation tout en conservant des ponts logiques avec les autres. Cette granularité permettait, par exemple, de rattacher une souche à son protocole de conservation ou de suivre un équipement jusqu’aux milieux qu’il a permis de produire.</p>
+            
+            <div id="mcd-carousel" class="carousel-container" style="height: 400px;"></div>
+            
+            <h3>Développement de l'interface web</h3>
+            <p>Nous avons utilisé PHP et MySQL s’est imposé : il offrait un déploiement rapide, une courbe d’apprentissage douce et une maintenance aisée pour les équipes internes. L’ergonomie constituait un impératif fort. Les utilisateurs n’avaient qu’une connaissance limitée des outils numériques. Nous avons donc conçu des formulaires adaptés à chaque entité (séquences génétiques, fiches souche, recettes de milieu) avec validation côté serveur et aide contextuelle.</p>
+            
+            <div id="interface-carousel" class="carousel-container" style="height: 400px;"></div>
+            
+            <h3>Migration des données existantes</h3>
+            <p>Restait l’étape délicate de la migration : il fallait rapatrier des années de saisies Access dans la nouvelle plateforme sans rien perdre de leur valeur. Nous avons commencé par cartographier la structure des fichiers source, relevé les divergences de typage et conçu un plan de correspondance champ à champ. Des scripts d’extraction / transformation en Python ont ensuite déroulé le transfert, table par table, en conservant les clés primaires et étrangères nécessaires à la reconstruction des liens.</p>
+            <p>Une vigilance particulière a été portée aux données, telles que les séquences génétiques ou les clauses contractuelles associées aux souches brevetées. Par ailleurs des jeux de tests ont été exécutés pour vérifier l’intégrité des enregistrements. À chaque itération, un échantillon était contrôlé par les équipes de biologiste pour valider la conformité scientifique avant de passer à la phase suivante. Au final, l’intégralité des données critiques a été importée sans incident, ouvrant la voie à une exploitation métier plus fluide et à une évolution fonctionnelle continue.</p>
+            
+        </div>
+
+        <div class="realisation-section">
+            <h2>Les acteurs et les interactions</h2>
+            <p>Le projet Bio Data a mobilisé plusieurs parties prenantes qui étaient nos encadrants du groupe AEN puis nos commanditaires. Par ailleurs notre équipe étudiante était le groupe opérationnel avec des rôles répartis selon les compétences mais pendant le projet un membre de notre équipe est parti de la formation ce qui a entrainé une réattribution des tâches et une charge de travail supplémentaire.</p>
+            
+            <p>Côté client, les principaux contacts étaient les chercheurs et ingénieurs de Protéus experts dans leur domaine, mais rarement disponibles. Cette faible disponibilité a compliqué la communication, ralenti notre compréhension métier et freiné la conception du modèle de données. Faute de réponses rapides nous avons dû prendre des décisions sur la base d’informations incomplètes.</p>
+            
+            <p>Les encadrants de l'école nous ont apporté conseil et suivi, ils nous ont aussi épaulé du fait de notre charge de travail élevée. Leurs retours réguliers ont structuré notre approche et nous ont aidé à surmonter les difficultés.</p>
+            
+            <p>La dynamique d’équipe a été mise à l’épreuve par le départ d’un membre et par les échanges limités avec le client. Cette situation a tout de même resserré notre cohésion et stimulé notre autonomie. Nous avons redoublé d’initiative et de créativité pour avancer malgré des zones d’ombre persistantes dans le cahier des charges.</p>
+        </div>
+
+        <div class="realisation-section">
+            <h2>Résultats et réflexion personnelle</h2>
+            <p>Le projet Bio Data n’a finalement pas fini sur la solution pleinement opérationnelle que nous avions imaginée. Malgré une forte implication, plusieurs obstacles ont freiné la livraison de toutes les fonctions visées : complexité du métier biologique, communications sporadiques avec les commanditaires, départ imprévu d’un coéquipier, temps important consacré à la modélisation, et apprentissage de technologies nouvelles.</p>
+            
+            <p>Nous avons tout de même livré des résultats concrets. Un modèle conceptuel de données exhaustif couvre les cinq bases attendues et se décline en schéma MySQL hébergé sur le serveur de test de Protéus. Nous avons aussi créé une interface web PHP avec formulaires d’insertion, recherche et mise à jour, ainsi qu’un guide technique détaillant le modèle, l’architecture, les scripts de migration et des pistes d’évolution pour toute équipe qui voudrait reprendre le projet.</p>
+            
+            <p>Ces livrables forment une base solide même si le périmètre initial reste partiellement atteint. Hélas, aucune équipe n’a repris le flambeau et la plateforme est restée inactive, faute de disponibilité côté client pour en assurer la continuité.</p>
+            
+            <p>Sur le plan personnel ce projet m’a beaucoup appris. J’ai affûté mes compétences en modélisation de données complexes, en développement PHP / MySQL, en organisation, en priorisation et en usage d’outils collaboratifs comme GitLab et Trello. J’ai aussi mesuré les défis que posent la communication client et l’adaptation quand un membre quitte l’équipe.</p>
+            
+            <p>Cette expérience rappelle l’importance d’un dialogue clair et régulier avec toutes les parties et la valeur d’une approche itérative qui livre des modules utilisables même si l’ensemble n’est pas terminé. Elle confirme aussi la nécessité de documenter chaque décision pour sécuriser la continuité ; ces leçons me servent depuis dans mes missions suivantes.</p>
+
+        </div>
+
+        <div class="realisation-section">
+            <h2>Les lendemains du projet : dans un futur immédiat, à distance, aujourd'hui</h2>
+            <p>Bien que le projet Bio Data n'ait pas abouti à une solution complètement fonctionnelle, il a posé des bases conceptuelles solides qui auraient pu être reprises et développées. Dans un futur immédiat après la fin du projet, nous avons transmis l'ensemble de nos travaux (MCD, base de données, interface web partielle, documentation) à Protéus, dans l'espoir qu'une autre équipe puisse poursuivre le développement.</p>
+            
+            <p>À distance, nous avons appris que le projet n'avait pas été repris et que les commanditaires n'avaient pas utilisé notre solution. Plusieurs facteurs peuvent expliquer cette situation : l'incomplétude de notre livraison, les changements potentiels dans les priorités de l'entreprise, ou encore la difficulté à reprendre un projet initié par d'autres. Cette réalité est malheureusement fréquente dans le monde du développement logiciel, où de nombreux projets ne dépassent pas le stade du prototype ou de la preuve de concept.</p>
+            
+            <p>Aujourd'hui, avec le recul et l'expérience acquise depuis, je réalise que nous aurions pu adopter une approche différente. Plutôt que de tenter de couvrir l'ensemble des cinq bases de données demandées, nous aurions pu nous concentrer sur une seule, la développer complètement, et la livrer comme un produit fonctionnel. Cette approche incrémentale aurait peut-être mieux répondu aux attentes immédiates des utilisateurs et facilité l'adoption de notre solution.</p>
+            
+            <p>Les compétences et connaissances acquises lors de ce projet continuent néanmoins d'influencer ma pratique professionnelle. La modélisation de données complexes, la gestion des difficultés de communication, et l'adaptation face aux imprévus sont des leçons que j'applique régulièrement dans mes projets actuels. En ce sens, même si le projet n'a pas abouti comme espéré, il a constitué une expérience formatrice précieuse.</p>
+        </div>
+        
+        <div class="realisation-section">
+            <h2>Mon regard critique</h2>
+            <p>Même si Bio Data n’a pas abouti à une application pleinement opérationnelle, le projet a posé des fondations robustes. Sitôt notre semestre terminé, nous avons remis à Protéus tout le travail produit : modèle conceptuel complet, base MySQL, début d’interface web et documentation détaillée, espérant qu’une équipe relais poursuivrait l’effort.</p>
+            
+            <p>Depuis, nous avons appris que personne n’a repris le flambeau et que les commanditaires n’ont jamais exploité notre prototype. Plusieurs raisons l’expliquent sans doute : livraison incomplète, priorités internes qui ont évolué, difficulté inhérente à reprendre une base de code extérieure. Le phénomène est courant dans le développement logiciel : beaucoup de projets restent au stade de preuve de concept.</p>
+            
+            <p>Avec le recul, je perçois une autre voie : cibler une seule base critique, la mener à terme et la livrer comme produit viable. Une approche incrémentale aurait sans doute répondu plus vite aux besoins immédiats des utilisateurs tout en facilitant l’adoption et la montée en charge.</p>
+            
+            <p>Malgrè tout la modélisation de données complexes, la gestion d’une communication difficile et l’adaptation aux imprévus font partie de la vie intégrante d'un développeur. Notre groupe n’a pas livré la solution espérée, mais il reste pour moi une étape formatrice et riche d’enseignements.</p>
+        </div>
+
+        <div class="realisation-section">
+            <h2>Compétences mobilisées</h2>
+            <p>Le projet Bio Data m’a donné l’occasion d'apprendre plusieurs compétences sur les plans technique humain et organisationnel.</p>
+            
+            <p>Sur la technique j’ai approfondi mon expertise en bases de données car j’ai conçu un modèle conceptuel puis un modèle logique complexe et je l’ai implémenté dans MySQL tout en optimisant les requêtes. J’ai gagné en compétences en développement PHP grâce à la création d’une interface web complète avec gestion des formulaires validation des entrées et connexion sécurisée à la base. J’ai aussi perfectionné mon usage de HTML et de CSS afin de produire des interfaces adaptées aux attentes des utilisateurs. Enfin la migration de données m’a donné une expérience pratique de l’analyse de structures existantes du codage de scripts de conversion et du contrôle d’intégrité après transfert.</p>
+            
+            <p>Sur le plan humain et organisationnel l’aventure a été tout aussi formatrice. En gestion de projet j’ai planifié suivi puis réajusté le travail pour compenser notamment le départ d’un équipier. Ma communication a été mise à l’épreuve lors des échanges avec les commanditaires dans l’équipe et auprès des encadrants. J’ai développé une meilleure capacité d’analyse de besoins en traduisant un domaine scientifique complexe en spécifications claires. Face aux lacunes d’information à la complexité du sujet et à la pression du temps j’ai affûté mes réflexes de résolution de problèmes. J’ai aussi cultivé mon autonomie et mon esprit d’initiative ce qui m’a permis d’avancer même quand certains détails restaient flous.</p>
+            
+            <p>Ces acquis ont montré leur valeur dans mes expériences professionnelles suivantes. La modélisation de données sophistiquées la communication efficace avec les parties prenantes et l’adaptabilité face aux aléas représentent autant d’atouts dans le développement logiciel.</p>
+            
+            <p>Les leçons tirées des obstacles rencontrés ont affiné ma méthode de travail et renforcé mon sens critique. Elles nourrissent aujourd’hui une démarche d’amélioration continue au service de projets futurs.</p>
+        </div>
+
+        <div class="realisation-section">
+            <h2>Conclusion</h2>
+            <p>Le projet Bio Data n’a pas abouti mais il reste une expérience formatrice riche. Il m’a permis d’exposer mes compétences techniques à un cas réel complexe et de muscler ma communication ma gestion de projet et ma capacité d’adaptation aux imprévus.</p>
+            
+            <p>La modélisation d’un système de bases de données pour une société de biotechnologie a posé un défi de taille mais stimulant, j'ai dû comprendre un domaine de métier pointu puis le traduire en structures informatiques cohérentes. Nous n’avons pas reussi à livrer toutes les fonctions prévues. Le travail effectué montre que nous nous sommes pas laisser aller et les bases conceptuelles démontrent un travail d’analyse rigoureux et profond.</p>
+            
+            <p>Les obstacles rencontrés notamment le manque de communication avec les commanditaires et la pression du temps ont servi d’occasions d’apprentissage. J’ai pu porterun regard critique sur mes méthodes et voir des pistes d’amélioration pour l’avenir.</p>
+            
+            <p>Je vois donc ce projet non comme un échec mais comme une étape majeure de mon parcours, qui m'a appris que je serais surement confronté à nouveau à cette situation dans ma vie professionnelle. Les compétences techniques et humaines acquises influencent toujours positivement ma façon de conduire des projets complexes.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Mathis Buchet - Portfolio</p>
+    </footer>
+    <script src="../script.js"></script>
+    <script src="../js/carousel.js"></script>
+    <script>
+        // Initialisation des carrousels avec les images
+        document.addEventListener('DOMContentLoaded', function() {
+
+            // Carrousel 2: Objectifs et contexte
+            new Carousel('objectifs-carousel', [
+                { src: 'images/Bio-Data/planning.png', alt: 'Planning prévisionnel' },
+                { src: 'images/Bio-Data/proteus.jpg', alt: 'Logo Protéus' },
+                { src: 'images/Bio-Data/equipe.png', alt: 'L\'équipe du projet' }
+            ], {
+                autoplay: true,
+                delay: 6000,
+                caption: 'Objectifs et contexte du projet'
+            });
+            
+            // Carrousel 3: MCD
+            new Carousel('mcd-carousel', [
+                { src: 'images/Bio-Data/MLD.png', alt: 'MCD final'}
+            ], {
+                autoplay: true,
+                delay: 4000,
+                caption: 'Modèles Conceptuels de Données'
+            });
+            
+            // Carrousel 4: Interface web
+            new Carousel('interface-carousel', [
+                { src: 'images/Bio-Data/flow.png', alt: 'Parcours utilisateur' },
+                { src: 'images/Bio-Data/login.png', alt: 'Interface de connexion' },
+                { src: 'images/Bio-Data/accueil.png', alt: 'Interface d\'accueil' },
+                { src: 'images/Bio-Data/compte.png', alt: 'Interface du compte' },
+                
+            ], {
+                autoplay: true,
+                delay: 5000,
+                caption: 'Interface web développée'
+            });
+        });
+    </script>
+</body>
+</html>

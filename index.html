@@ -4,6 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Mathis Buchet</title>
+    <style>
+    /* Styles pour améliorer la lisibilité */
+    p {
+        text-align: justify;
+        line-height: 1.7;
+        margin-bottom: 20px;
+        color: #333;
+        letter-spacing: 0.01em;
+    }
+    
+    /* Exceptions pour les textes centrés */
+    .hero-section p,
+    .section-description,
+    .competence-description,
+    .hero-subtitle,
+    .hero-description p,
+    .section h2,
+    .section-title,
+    .competence-name,
+    .competences-chart-container p {
+        text-align: center;
+    }
+    
+    h3 {
+        font-size: 1.4rem;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        color: #555;
+    }
+    
+    a {
+        font-weight: 500;
+        text-decoration: none;
+        color: #0066cc;
+        transition: color 0.2s;
+    }
+    
+    a:hover {
+        color: #004499;
+        text-decoration: underline;
+    }
+</style>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -50,6 +92,8 @@
                         <li><a href="realisations/easy-monithor.html">Easy-Monithor</a></li>
                         <li><a href="realisations/easy-check.html">Easy-Check</a></li>
                         <li><a href="realisations/tracker-gps.html">Tracker GPS</a></li>
+                        <li><a href="realisations/sea-clean.html">Sea Clean</a></li>
+                        <li><a href="realisations/bio-data.html">Bio Data</a></li>
                     </ul>
                 </li>
                 <li><a href="parcours.html">Parcours</a></li>
@@ -241,42 +285,22 @@
                 </div>
                 <div class="realisation-item">
                     <div class="realisation-image">
-                        <img src="https://via.placeholder.com/300x200" alt="Projet Web 1">
+                        <img src="bioData.png" alt="Bio Data">
                     </div>
                     <div class="realisation-content">
-                        <h4>Projet Web 1</h4>
-                        <p>Description du projet web avec les technologies utilisées et les défis relevés.</p>
-                        <a href="#" class="btn-more">En savoir plus</a>
+                        <h4>Bio Data</h4>
+                        <p>Projet de développement de bases de données spécialisées pour Protéus, une société de biotechnologies, utilisant PHP, MySQL et une architecture web.</p>
+                        <a href="realisations/bio-data.html" class="btn-more">En savoir plus</a>
                     </div>
                 </div>
                 <div class="realisation-item">
                     <div class="realisation-image">
-                        <img src="https://via.placeholder.com/300x200" alt="Projet Web 2">
+                        <img src="seaClean.png" alt="Sea Clean">
                     </div>
                     <div class="realisation-content">
-                        <h4>Projet Web 2</h4>
-                        <p>Description du projet web avec les technologies utilisées et les défis relevés.</p>
-                        <a href="#" class="btn-more">En savoir plus</a>
-                    </div>
-                </div>
-                <div class="realisation-item">
-                    <div class="realisation-image">
-                        <img src="https://via.placeholder.com/300x200" alt="Application 1">
-                    </div>
-                    <div class="realisation-content">
-                        <h4>Application 1</h4>
-                        <p>Description de l'application avec les technologies utilisées et les défis relevés.</p>
-                        <a href="#" class="btn-more">En savoir plus</a>
-                    </div>
-                </div>
-                <div class="realisation-item">
-                    <div class="realisation-image">
-                        <img src="https://via.placeholder.com/300x200" alt="Autre Projet">
-                    </div>
-                    <div class="realisation-content">
-                        <h4>Autre Projet</h4>
-                        <p>Description du projet avec les technologies utilisées et les défis relevés.</p>
-                        <a href="#" class="btn-more">En savoir plus</a>
+                        <h4>Sea Clean</h4>
+                        <p>Projet de sensibilisation à la pollution marine et de nettoyage des plages, réalisé en collaboration avec des associations environnementales locales.</p>
+                        <a href="realisations/sea-clean.html" class="btn-more">En savoir plus</a>
                     </div>
                 </div>
             </div>
@@ -346,3 +370,5 @@
     </script>
 </body>
 </html>
+
+

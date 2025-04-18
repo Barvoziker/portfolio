@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sea Clean - Mathis Buchet</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../css/carousel.css">
+    <style>
+        /* Styles pour améliorer la lisibilité */
+        .realisation-section p {
+            text-align: justify;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            color: #333;
+            letter-spacing: 0.01em;
+        }
+        
+        /* Exception pour les sections centrées */
+        .realisation-section[style*="text-align: center"] p {
+            text-align: center;
+        }
+        
+        .realisation-section h3 {
+            font-size: 1.4rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #555;
+        }
+        
+        .realisation-section a {
+            font-weight: 500;
+            text-decoration: none;
+            color: #0066cc;
+            transition: color 0.2s;
+        }
+        
+        .realisation-section a:hover {
+            color: #004499;
+            text-decoration: underline;
+        }
+        .realisation-container {
+            max-width: 1200px;
+            margin: 100px auto 50px;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .realisation-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 20px;
+        }
+        
+        .realisation-logo {
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+        }
+        
+        .realisation-title {
+            flex: 1;
+        }
+        
+        .realisation-title h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .realisation-title p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+        
+        .realisation-section {
+            margin-bottom: 40px;
+        }
+        
+        .realisation-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #333;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        
+        .realisation-section h3 {
+            font-size: 1.4rem;
+            margin: 25px 0 15px;
+            color: #444;
+        }
+        
+        .realisation-section p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+            color: #555;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .tech-item {
+            background-color: #f5f5f5;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <div class="logo">Mathis Buchet</div>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="../presentation.html">Présentation</a></li>
+                <li class="has-submenu">
+                    <a href="#">Compétences</a>
+                    <ul class="submenu">
+                        <li><a href="symfony.html">Symfony</a></li>
+                        <li><a href="../competences/postgresql.html">PostgreSQL</a></li>
+                        <li><a href="../competences/javascript.html">JavaScript</a></li>
+                        <li><a href="../competences/git.html">Git</a></li>
+                        <li><a href="../competences/websocket.html">WebSocket</a></li>
+                        <li><a href="../competences/arduino.html">Arduino</a></li>
+                        <li><a href="../competences/communication.html">Communication</a></li>
+                        <li><a href="../competences/gestion-projet.html">Gestion de projet</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="../index.html#realisations">Réalisations</a>
+                    <ul class="submenu">
+                        <li><a href="../realisations/easy-monithor.html">Easy-Monithor</a></li>
+                        <li><a href="../realisations/easy-check.html">Easy-Check</a></li>
+                        <li><a href="../realisations/Tracker-GPS.html">Tracker GPS</a></li>
+                        <li><a href="../realisations/sea-clean.html">Sea Clean</a></li>
+                    <li><a href="../realisations/bio-data.html">Bio Data</a></li>
+                    </ul>
+                </li>
+                <li><a href="../parcours.html">Parcours</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="realisation-container">
+        <div class="realisation-header">
+            <img src="../seaClean.png" alt="Logo Sea Clean" class="realisation-logo">
+            <div class="realisation-title">
+                <h1>Sea Clean</h1>
+                <p>Projet de formation humaine - Organisation d'une action environnementale</p>
+            </div>
+        </div>
+
+        <div class="realisation-section">
+            <h2>Présentation et définition</h2>
+            <p>Sea Clean est un projet de formation humaine mené dans le cadre de mon cursus au groupe AEN. L’objectif consistait à organiser une action humanitaire ou caritative en finançant soi‑même l’initiative. Après réflexion notre équipe a choisi un nettoyage de plage, une action concrète pour l’environnement.</p>
+            <p>Le projet s’est déroulé en plusieurs étapes. Nous avons créé une association de fait dont j’étais président puis élaboré les documents préparatoires avec planning et budget prévisionnel. Nous avons recherché des partenaires récolté les fonds organisé la logistique et enfin mené l’intervention sur une plage espagnole. Les fonds ont été reversés à la "Fondation de la Mer" qui est la pour la protection des océans.</p>
+            <p>Cette expérience a été enrichissante sur les plans humain et organisationnel. J'ai pu renforcer mes compétences en gestion de projet en communication en travail d'équipe et en résolution de problèmes tout en agissant concrètement pour l'environnement.</p>
+        </div>
+
+        <div class="realisation-section" style="text-align: center;">
+            <div style="margin: 30px auto; max-width: 300px;">
+                <img src="../seaClean.png" alt="Logo du projet Sea Clean" style="width: 100%; height: auto;">
+            </div>
+            <p style="font-style: italic; color: #666;">Logo du projet Sea Clean</p>
+        </div>
+
+        <div class="realisation-section">
+            <h2>Objectifs, contexte, enjeux et risques</h2>
+            <p>Le projet Sea Clean s’inscrivait dans un cadre pédagogique conçu pour nous initier à la gestion de projet et à l’engagement citoyen. Le groupe AEN avait intégré cette formation humaine dans notre parcours afin de développer notre sens des responsabilités et notre capacité à mener des actions concrètes au service d’une cause, ainsi que d'introduire la compétence de communication. Nous avons choisi de lutter contre la pollution des océans, un enjeu majeur auquel nous pouvions apporter une réponse directe en organisant un grand nettoyage de plage.</p>
+            
+            <p>Nos objectifs se déclinaient sur trois axes. D’un point de vue environnemental, nous voulions réduire la pollution marine en collectant les déchets et en sensibilisant le public à cette menace. D’un point de vue pédagogique il s’agissait d’exploiter nos compétences en gestion de projet, communication et travail d’équipe pour conduire une opération réelle de bout en bout. Enfin nous devions assurer le volet financier en levant assez de fonds pour couvrir l’action et verser un don à la Fondation de la Mer.</p>
+            
+            <p>Le projet soulevait plusieurs enjeux majeurs. Nous avons d’abord créé une association de fait avec toutes les responsabilités juridiques et administratives que cela implique. Puis ensuite est venue la levée de fonds, exercice qui imposait des démarches inventives afin de financer l’intégralité de l’initiative. La recherche de partenaires jouait un rôle clé, car un appui logistique ou matériel pouvait accélérer notre progression. Enfin l’organisation pratique représentait un défi particulier, puisque l’opération se déroulait hors de France, sur une plage espagnole.</p>
+            
+            <p>Nous avions identifié divers risques. Il pouvait devenir difficile de réunir la somme nécessaire, de gérer le transport du matériel, ou de faire face à un mauvais temps susceptible de compromettre le nettoyage. Des tensions internes pouvaient aussi survenir si la communication défaillait. Une opportunité décisive s’est toutefois présentée lorsque Yelloh Village nous a offert l’hébergement dans un camping côtier. Ce partenariat a réduit drastiquement nos coûts, simplifié la logistique et donné au projet l’élan qui lui manquait pour voir le jour.</p>
+        
+        </div>
+
+        <div class="realisation-section">
+            <h2>Aspects fondamentaux du projet</h2>
+            <p>Le projet Sea Clean s’est construit autour de plusieurs réalisations clés qui ont donné du rythme à notre démarche et assuré son succès. Je vais présenter les différentes réalisations importantes du projet et des images pour appuyer les propos.</p>
+            
+            <h3>Création de l'association et cadrage du projet</h3>
+            <p>La première étape a été la création d’une association de fait dont j’ai pris la présidence. Cette structure transitoire nous a permis d’agir collectivement et de gérer l’argent de manière transparente. Nous avons ensuite rédigé le planning prévisionnel, le budget, la répartition des rôles et la liste des partenaires cibles. Ce cadrage a fixé une direction claire et mis en lumière les difficultés à anticiper.</p>
+            
+            <div id="objectifs-carousel" class="carousel-container" style="height: 400px;"></div>
+
+            <h3>Partenariat stratégique avec Yelloh Village</h3>
+            <p>Le tournant du projet s’est produit lors d’un échange avec le DSI de Yelloh Village rencontré pendant un autre travail scolaire. Notre initiative environnementale a immédiatement résonné avec la démarche RSE de l’entreprise. Yelloh Village nous a donc offert un séjour dans un camping à l’Escala près de la frontière française. Ce soutien logistique a allégé nos coûts et simplifié l’organisation.</p>
+            
+            <div id="partenariat-carousel" class="carousel-container" style="height: 400px;"></div>
+
+            <h3>Récolte de fonds et communication</h3>
+            <p>La collecte de fonds s’annonçait cruciale. Nous avons écarté la tombola à cause des contraintes légales et du délai trop long. À la place nous avons proposé divers services comme le nettoyage de jardin ou l’aide aux devoirs en laissant chacun libre de contribuer. Nous avons aussi créé une cagnotte Leetchi où chaque membre a versé 10 € pour lancer la dynamique. Au final nous avons réuni environ 1200 €.</p>
+            <p>Pour mobiliser des soutiens nous avons ouvert un compte Instagram dédié et publié stories et photos régulières. Nos réseaux personnels sur LinkedIn et Facebook ont relayé l’info et élargi la portée de la campagne.</p>
+            
+            <div id="recolte-carousel" class="carousel-container" style="height: 400px;"></div>
+            
+            <h3>Réalisation de l'action de nettoyage</h3>
+            <p>L'action de nettoyage s'est déroulée sur trois jours, du mercredi au vendredi, sur une plage de l'Escala en Espagne. Armés de gants, de sacs poubelle et de matériel de collecte, nous avons parcouru la plage et ses abords pour ramasser tous les déchets : plastiques, mégots, emballages, etc. Au total, nous avons rempli une douzaine de sacs poubelle, contribuant ainsi concrètement à la préservation de cet environnement côtier.</p>
+            <p>Cette action a également été l'occasion de belles rencontres, notamment avec deux touristes allemands qui, impressionnés par notre démarche, ont spontanément proposé de nous aider. Ces échanges ont renforcé la dimension humaine de notre projet et nous ont permis de sensibiliser d'autres personnes à la problématique des déchets marins.</p>
+            <p>L'ensemble du séjour a été filmé, et nous avons réalisé une vidéo de 1 minute 30 que nous avons transmise à Yelloh Village pour leur communication RSE, comme convenu dans notre partenariat.</p>
+
+            <div id="action-carousel" class="carousel-container" style="height: 400px;"></div>
+        </div>
+
+        <div class="realisation-section">
+            <h2>Les acteurs et les interactions</h2>
+            <p>Le projet Sea Clean a rassemblé plusieurs acteurs dont la collaboration a été décisive pour sa réussite. Notre équipe étudiante formait le cœur de l’initiative avec des rôles répartis de façon nette. Comme président de l’association, je pilotais la coordination globale, la relation avec les partenaires et le suivi financier. Les autres membres géraient chacun un domaine précis comme la communication, la logistique ou la levée de fonds.</p>
+            
+            <p>Le partenariat conclu avec Yelloh Village s’est révélé capital. Le DSI de l’entreprise rencontré lors d’un précédent projet informatique est devenu notre contact principal. Il a rapidement soutenu l’idée et a rendu possible notre séjour en Espagne. Cette collaboration a profité aux deux parties puisque nous avons reçu un appui logistique précieux tandis que Yelloh Village a mis en avant cette action dans sa démarche RSE grâce à la vidéo que nous avons produite.</p>
+            
+            <p>La Fondation de la Mer bénéficiaire des fonds restants, a aussi apporté une portée symbolique. Même sans échange direct avec ses équipes, le choix de cette fondation a donné un relief supplémentaire à notre action en prolongeant l’impact au‑delà du simple nettoyage.</p>
+            
+            <p>Enfin, les rencontres sur place, dont deux touristes allemands qui se sont joints spontanément au nettoyage, ont offert une dimension humaine et internationale à l’expérience. Ces échanges ont élargi notre portée de sensibilisation tout en enrichissant le projet.</p>
+            
+            <div id="acteurs-carousel" class="carousel-container" style="height: 400px;"></div>
+        </div>
+
+        <div class="realisation-section">
+            <h2>Résultats et réflexion personnelle</h2>
+            <p>Le projet Sea Clean a livré des résultats concrets et mesurables, car sur le volet environnemental, nous avons rempli une douzaine de sacs de détritus et participé à la préservation du littoral. En plus, la cagnotte a atteint environ 1200 € dont 112 € versés à la Fondation de la Mer une fois nos frais couverts. Sur le volet médiatique, la vidéo produite figure désormais dans la communication RSE de Yelloh Village, ce qui offre une exposition supplémentaire à notre action.</p>
+            
+            <p>Au‑delà, de ces bilans chiffrés, le projet a été extrêmement formateur sur les plans personnel et professionnel. Comme président de l’association, j’ai développé mon leadership, ma gestion de projet et ma communication. J’ai appris à coordonner une équipe, à piloter un budget puis à négocier avec des partenaires et à réagir aux imprévus sont des compétences qui sont directement transposable dans le monde professionnel.</p>
+            
+            <p>L’expérience m’a aussi sensibilisé aux enjeux environnementaux et notamment à la pollution marine, et étant pêcheur il est important pour moi que la nature soit préservée. Découvrir l’ampleur des déchets sur une plage en apparence propre a provoqué une prise de conscience. Cette dimension écologique a donné un sens profond à l’initiative bien au‑delà de l’exercice scolaire.</p>
+            
+            <p>Le travail de groupe a été très enrichissant car nous avons travaillé vers un objectif commun qui nous motive tous, partager des moments forts lors du nettoyage et constater ensemble les résultats atteint a apporté sentiment de bien être et de joie. Cette expérience confirme que l’action commune même à petite échelle peut produire un gros impact que ce soit sur la nature ou sur le mental des gens.</p>
+            
+        </div>
+
+        <div class="realisation-section">
+            <h2>Compétences mobilisées</h2>
+            <p>Le projet Sea Clean m’a amené à mobiliser et développer de nombreuses compétences clés sur les plans professionnel et personnel. Comme j'étais le président de l’association, j’ai assumé la gestion de projet, toujours épaulé des membres du projet si j'avais besoin d'aide, la coordination des phases élaboration, suivi du planning et du budget ainsi que la répartition des rôles au sein de l’équipe.</p>
+            
+            <p>La communication a joué un rôle important car j’ai géré les échanges internes entre membres, mais aussi les contacts externes avec partenaires et donateurs et la diffusion sur les réseaux sociaux. J’ai même échangé en espagnol avec le camping hôte pour préparer notre arrivée. La négociation a aussi compté notamment lors de la mise en place du partenariat avec Yelloh Village.</p>
+            
+            <p>La gestion financière a constitué un pilier du projet avec la levée de fonds le suivi du budget et l’exigence de transparence sur l’usage des ressources. J'ai gagné des bases solides en comptabilité associative et en pilotage financier que je n'avais pas du tout avant ce projet.</p>
+            
+            <p>Enfin cette aventure a sollicité des aptitudes humaines et relationnelles précieuses comme le travail d’équipe puis leadership ou l'adaptabilité ou encore la résolution de problèmes et conscience des enjeux environnementaux. Ces compétences transversales complètent idéalement ma formation technique et me serviront dans tout contexte professionnel.</p>
+        </div>
+
+        <div class="realisation-section">
+            <h2>Les lendemains du projet : dans un futur immédiat, à distance, aujourd'hui</h2>
+            <p>Bien que Sea Clean soit terminé. À court terme, l’expérience a renforcé ma conscience écologique, qui était déjà développée, et m’a donné des méthodes concrètes pour répliquer ce type d’action. Le lien noué avec Yelloh Village pourrait ouvrir d’autres collaborations RSE dans un futur proche.</p>
+            
+            <p>À moyen terme, cette aventure peut servir d’inspiration. Le planning, le budget et la stratégie de communication que nous avons produits forment une base prête à l’emploi pour de nouveaux projets étudiants orientés vers l'environnement. Notre vidéo reprise par Yelloh Village diffuse plus largement le message sur la pollution marine.</p>
+            
+            <p>Aujourd’hui, je suis toujours les actions de la Fondation de la Mer et je guette d’autres occasions de m’engager. Les compétences acquises en gestion de projet puis en communication, et travail d’équipe se sont intégrées à ma pratique quotidienne. Cette expérience a confirmé qu’une initiative locale, même modeste, peut nourrir un changement global.</p>
+            
+        </div>
+        
+        <div class="realisation-section">
+            <h2>Mon regard critique</h2>
+            <p>En prenant du recul je vois plusieurs atouts dans cette aventure. L’équipe a su composer avec les contraintes et les imprévus. Quand la tombola est devenue impossible nous avons vite trouvé d’autres moyens pour lever des fonds. Le partenariat signé avec Yelloh Village reste notre plus grand succès, né d’une opportunité saisie au bon moment et d’un exposé convaincant.</p>
+            
+            <p>Des limites apparaissent aussi. Le planning initial s’est révélé trop optimiste, surtout pour la collecte de fonds. Nous avons sous‑estimé, le temps réclamé par les démarches administratives. Quelques quiproquos internes ont ralenti la communication et obligé à réajuster l’organisation en cours de route.</p>
+            
+            <p>Si c’était à refaire je documenterais mieux chaque étape et je préciserais les rôles dès le lancement. Je prévoirais plus large pour les aspects juridiques et administratifs, chronophages par nature. Je testerais, aussi d’autres canaux de communication pour toucher un public plus vaste et accroître notre impact.</p>
+            
+            <p>Cette auto‑analyse, n’enlève rien à la valeur de l’expérience acquise. Elle fournit au contraire des enseignements utiles pour les prochains projets. Savoir évaluer ses propres actions avec lucidité est une compétence que cette initiative m’a permis de renforcer.</p>
+        </div>
+        <div class="realisation-section">
+            <h2>Conclusion</h2>
+            <p>Le projet Sea Clean s’est révélé riche et formateur à plus d’un titre. Au‑delà, de l’action de nettoyage menée sur le littoral, il m’a donné l’occasion de consolider des compétences clés en pilotage de projet, en communication et en travail d’équipe. Il m’a aussi offert une prise de conscience concrète de la pollution marine et de l’urgence écologique.</p>
+            
+            <p>Cette aventure humaine complète idéalement ma formation technique, puisqu’elle m’a permis d’appliquer des compétences transversales dans une situation réelle et engagée par ailleurs le travail collectif, la satisfaction d’avoir agi pour la protection du littoral et la fierté d’avoir mené l’opération jusqu’au bout font de Sea Clean une étape marquante dans mon parcours.</p>
+            
+            <p>Les savoir‑faire, acquis se reportent sans effort dans le milieu professionnel : par exemple, être capable de conduire un projet de bout en bout, de collaborer vers un objectif commun, de dialoguer avec divers interlocuteurs et d’improviser face aux imprévus constitue un véritable atout pour ma future carrière. Cette expérience renforce enfin ma conviction que l’engagement citoyen et la responsabilité écologique ont toute leur place dans le monde du travail.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Mathis Buchet - Portfolio</p>
+    </footer>
+    <script src="../script.js"></script>
+    <script src="../js/carousel.js"></script>
+    <script>
+        // Initialisation des carrousels avec les images
+        document.addEventListener('DOMContentLoaded', function() {           
+            // Carrousel 1: Objectifs et contexte
+            new Carousel('objectifs-carousel', [
+            { src: 'images/Sea-Clean/equipe.png', alt: 'L\'équipe Sea Clean' },
+                { src: 'images/Sea-Clean/affiche_projet.png', alt: 'Affiche du projet' },
+                { src: 'images/Sea-Clean/budget.png', alt: 'Budget prévisionnel' }
+            ], {
+                autoplay: true,
+                delay: 6000,
+                caption: 'Documents de cadrage du projet'
+            });
+            
+            // Carrousel 2: Aspects fondamentaux
+            new Carousel('partenariat-carousel', [
+                { src: 'images/Sea-Clean/camping.png', alt: 'Camping Yelloh Village à l\'Escala' },
+                { src: 'images/Sea-Clean/communication.png', alt: 'Communication sur Instagram' },
+                { src: 'images/Sea-Clean/cagnotte.png', alt: 'Cagnotte Leetchi' },
+            ], {
+                autoplay: true,
+                delay: 4000,
+                caption: 'Organisation et communication'
+            });
+
+            // Carrousel 3: Récolte de fonds
+            new Carousel('recolte-carousel', [
+                { src: 'images/Sea-Clean/recolte.jpg', alt: 'Recolte de fonds' },
+            ], {
+                autoplay: true,
+                delay: 4000,
+                caption: 'Recolte de fonds'
+            });
+            
+            // Carrousel 4: Action de nettoyage
+            new Carousel('action-carousel', [
+                { src: 'images/Sea-Clean/nettoyage.png', alt: 'Action de nettoyage de la plage' },
+                { src: 'images/Sea-Clean/nettoyage1.png', alt: 'Déchets collectés' },
+                { src: 'images/Sea-Clean/nettoyage2.png', alt: 'Une soirée de nettoyage' },
+            ], {
+                autoplay: true,
+                delay: 4000,
+                caption: 'Résultats de l\'action Sea Clean'
+            });
+            
+            // Carrousel 5: Acteurs et interactions
+            new Carousel('acteurs-carousel', [ 
+                { src: 'images/Sea-Clean/yelloh.png', alt: 'Partenariat avec Yelloh Village' },
+                { src: 'images/Sea-Clean/fondation-de-la-mer.jpg', alt: 'Fondation de la Mer' },
+                { src: 'images/Sea-Clean/allemands.png', alt: 'Touristes allemands' },
+            ], {
+                autoplay: true,
+                delay: 5000,
+                caption: 'Partenaires du projet'
+            });
+        });
+    </script>
+</body>
+</html>

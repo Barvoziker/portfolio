@@ -7,6 +7,38 @@
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="../css/carousel.css">
     <style>
+        /* Styles pour améliorer la lisibilité */
+        .realisation-section p {
+            text-align: justify;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            color: #333;
+            letter-spacing: 0.01em;
+        }
+        
+        /* Exception pour les sections centrées */
+        .realisation-section[style*="text-align: center"] p {
+            text-align: center;
+        }
+        
+        .realisation-section h3 {
+            font-size: 1.4rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #555;
+        }
+        
+        .realisation-section a {
+            font-weight: 500;
+            text-decoration: none;
+            color: #0066cc;
+            transition: color 0.2s;
+        }
+        
+        .realisation-section a:hover {
+            color: #004499;
+            text-decoration: underline;
+        }
         .realisation-container {
             max-width: 1200px;
             margin: 100px auto 50px;
@@ -131,12 +163,14 @@
                     </ul>
                 </li>
                 <li class="has-submenu">
-                    <a href="../index.html#realisations">Réalisations</a>
-                    <ul class="submenu">
-                        <li><a href="../realisations/easy-monithor.html">Easy-Monithor</a></li>
-                        <li><a href="../realisations/easy-check.html">Easy-Check</a></li>
-                        <li><a href="../realisations/tracker-gps.html">Tracker GPS</a></li>
-                    </ul>
+                <a href="../index.html#realisations">Réalisations</a>
+                <ul class="submenu">
+                    <li><a href="../realisations/easy-monithor.html">Easy-Monithor</a></li>
+                    <li><a href="../realisations/easy-check.html">Easy-Check</a></li>
+                    <li><a href="../realisations/tracker-gps.html">Tracker GPS</a></li>
+                    <li><a href="../realisations/sea-clean.html">Sea Clean</a></li>
+                    <li><a href="../realisations/bio-data.html">Bio Data</a></li>
+                </ul>
                 </li>
                 <li><a href="../parcours.html">Parcours</a></li>
                 <li><a href="../contact.html">Contact</a></li>
@@ -155,39 +189,26 @@
 
         <div class="realisation-section">
             <h2>Présentation et définition du projet Tracker GPS</h2>
-            <p>Le Tracker GPS est un projet personnel que j'ai développé pour répondre à mon intérêt pour les systèmes embarqués et l'automobile. Ce projet reflète ma passion pour l'intégration de technologies diverses et ma volonté de créer un système complet de géolocalisation en temps réel. Il vise à offrir une solution fiable et précise pour le suivi des déplacements, que ce soit pour des véhicules, des activités sportives ou d'autres applications nécessitant une localisation précise. L'objectif principal était de concevoir un dispositif capable de collecter, transmettre et visualiser des données GPS de manière fluide et efficace.</p>
-            <p>La genèse du projet est née de mon désir d'explorer les possibilités offertes par la combinaison de l'<a href="../competences/arduino.html">Arduino</a>, des modules GPS et de la communication Bluetooth. Face aux limitations des solutions commerciales existantes, souvent coûteuses ou limitées en termes de personnalisation, j'ai décidé de développer ma propre solution. Cette approche m'a permis d'avoir un contrôle total sur les fonctionnalités et de créer un système parfaitement adapté à mes besoins spécifiques.</p>
-            <p>Le Tracker GPS se distingue par son architecture complète, allant du dispositif embarqué jusqu'à l'interface web. Au cœur du système, un <a href="../competences/arduino.html">Arduino</a> connecté à un module GPS Grove 109020022 et à un module Bluetooth HC-05 assure la collecte et la transmission des coordonnées. Ces données sont ensuite récupérées par une application mobile développée en Flutter, qui les transmet à une API Symfony. Enfin, les informations sont stockées dans une base de données <a href="../competences/postgresql.html">PostgreSQL</a> avec l'extension PostGIS et visualisées via une interface web développée en Symfony et <a href="../competences/javascript.html">JavaScript</a>.</p>
-            <p>La réalisation de ce projet s'est appuyée sur une méthodologie rigoureuse, combinant phases d'analyse, conception, développement et tests. J'ai assuré l'intégration des différentes composantes, depuis la programmation du microcontrôleur jusqu'à la mise en place de l'interface web. Cette expérience m'a permis de renforcer mes compétences en développement embarqué, en programmation mobile et en développement web, tout en relevant le défi de faire communiquer efficacement ces différentes technologies.</p>
-            <p>Le Tracker GPS n'est pas simplement un dispositif de géolocalisation, mais une plateforme complète offrant des fonctionnalités avancées comme la visualisation des trajets sur une carte interactive, la gestion d'un historique des déplacements et la possibilité d'ajouter des alertes basées sur la position. Sa conception modulaire permet d'envisager de nombreuses évolutions futures, comme l'ajout de capteurs supplémentaires ou l'intégration de fonctionnalités d'intelligence artificielle pour l'analyse des déplacements.</p>
-        </div>
-
-        <div class="realisation-section" style="text-align: center;">
-            <div style="margin: 30px auto; max-width: 300px;">
-                <img src="../images/tracker-gps-schema.png" alt="Schéma du Tracker GPS" style="width: 100%; height: auto;">
+            <p>Le Tracker GPS est un projet personnel que j'ai développé pour introduire le monde de l'électronique embarqué dans mes compétences. Ce projet reflète ma passion pour l'intégration de technologies diverses et ma volonté de créer un système complet de géolocalisation en temps réel. Il vise à offrir une solution fiable et précise pour le suivi des déplacements, que ce soit pour des véhicules, des activités sportives ou d'autres applications nécessitant une localisation précise. L'objectif principal était de concevoir un dispositif capable de collecter, transmettre et visualiser des données GPS de manière fluide et efficace.</p>
+            <p>La genèse du projet a évolué par étapes. Au début, j'avais simplement le capteur GPS et l'<a href="../competences/arduino.html">Arduino</a>, ce qui me forçait à brancher l'Arduino à mon PC portable pour recevoir les données. Ensuite, j'ai réfléchi à une solution pour rendre le dispositif plus portable. J'ai d'abord opté pour un module Bluetooth HC-05, mais celui-ci n'était pas compatible BLE (Bluetooth Low Energy) et donc incompatible avec iOS. J'ai finalement choisi le module HM-10 compatible BLE pour assurer une meilleure compatibilité avec tous les smartphones.</p>
+            <p>Le Tracker GPS se distingue par son architecture complète, allant du dispositif embarqué jusqu'à l'interface web. Au cœur du système, un <a href="../competences/arduino.html">Arduino</a> connecté à un module GPS et à un module Bluetooth HM-10 assure la collecte et la transmission des coordonnées. J'ai ensuite développé une application mobile très simple, quasiment sans interface, qui me sert de passerelle : les données arrivent en Bluetooth à mon téléphone qui les transmet en 5G vers mon API Symfony où elles sont insérées en base de données. La visualisation est réalisée avec Symfony et Mercure pour un affichage en temps réel sur une carte interactive.</p>
+            <p>La réalisation de ce projet s'est appuyée sur une méthodologie itérative, améliorant progressivement chaque composant du système. J'ai assuré l'intégration des différentes technologies, depuis la programmation du microcontrôleur jusqu'à la mise en place de l'interface web. Cette expérience m'a permis de renforcer mes compétences en développement embarqué, en programmation mobile et en développement web, tout en relevant le défi de faire communiquer efficacement ces différentes technologies.</p>
+            <p>J'ai documenté ce projet avec des photos et vidéos du matériel, de l'affichage cartographique et de l'application mobile simple que j'ai développée. Ces éléments illustrent les différentes étapes de développement et le fonctionnement du système complet.</p>
+            
+            <div style="margin: 30px auto; max-width: 300px; text-align: center;">
+                <img src="../trackerGPS.png" alt="Logo Tracker GPS" style="width: 100%; height: auto;">
+                <p style="font-style: italic; color: #666;">Logo du projet Tracker GPS</p>
             </div>
-            <p style="font-style: italic; color: #666;">Architecture du système de tracking GPS</p>
         </div>
 
         <div class="realisation-section">
             <h2>Objectifs, contexte, enjeux et risques</h2>
-            <p>Le projet Tracker GPS s'inscrit dans un contexte personnel où la maîtrise des technologies embarquées et la géolocalisation précise sont devenues des domaines d'intérêt croissant. Face aux solutions commerciales souvent limitées ou onéreuses, j'ai identifié le besoin de développer un système personnalisé et modulaire. L'objectif fondamental était de créer un dispositif capable de collecter des données GPS avec précision, de les transmettre efficacement et de les visualiser de manière intuitive, tout en maîtrisant l'ensemble de la chaîne technologique.</p>
-            <p>Le projet impliquait l'intégration de plusieurs composants matériels et logiciels : un module GPS Grove 109020022 pour l'acquisition des coordonnées, un module Bluetooth HC-05 pour la transmission des données, un microcontrôleur <a href="../competences/arduino.html">Arduino</a> pour le traitement embarqué, une application mobile développée avec Flutter, une API RESTful en Symfony, et une base de données <a href="../competences/postgresql.html">PostgreSQL</a> avec l'extension PostGIS pour le stockage et l'analyse spatiale. Cette diversité technologique imposait une conception souple et modulaire, capable de garantir l'interopérabilité entre les différents éléments du système.</p>
+            <p>Le développement du Tracker GPS répond à plusieurs enjeux spécifiques dans le domaine de la géolocalisation. Face aux solutions commerciales souvent limitées en termes de personnalisation ou excessivement onéreuses, j'ai identifié l'opportunité de concevoir un système sur mesure répondant exactement à mes besoins. Ce projet s'inscrit également dans une démarche d'apprentissage continu et d'exploration des technologies émergentes dans le domaine de l'IoT (Internet des Objets).</p>
+            <p>Les principaux enjeux du projet étaient multiples. Sur le plan technique, il s'agissait d'intégrer harmonieusement des technologies hétérogènes (embarqué, mobile, web) dans un système cohérent et performant. L'enjeu énergétique était également crucial : il fallait optimiser la consommation d'énergie du dispositif embarqué pour maximiser son autonomie, un aspect essentiel pour un appareil mobile.</p>
+            <p>La fiabilité constituait un autre défi majeur, avec la nécessité d'assurer une transmission robuste des données GPS, même dans des conditions d'utilisation difficiles comme les zones urbaines denses ou les environnements naturels accidentés. Enfin, l'expérience utilisateur représentait un enjeu important : concevoir une interface intuitive pour la visualisation et l'analyse des données de géolocalisation, permettant une compréhension immédiate des informations collectées.</p>
+            <p>Les risques identifiés étaient nombreux, notamment les limitations de portée du Bluetooth, les problèmes potentiels de réception GPS dans certains environnements, et les défis d'interopérabilité entre les différentes couches technologiques. J'ai dû également faire face à des choix technologiques cruciaux, comme celui du protocole de transmission sans fil. Initialement, j'avais envisagé d'utiliser la technologie LoRaWAN pour sa longue portée et sa faible consommation énergétique, mais j'ai dû abandonner cette option en raison de la couverture insuffisante dans ma région. Ce choix m'a conduit à adopter une approche hybride utilisant le Bluetooth pour la connexion locale et la 4G/5G pour la transmission à distance.</p>
             <p>L'un des défis majeurs du projet reposait sur la fiabilité de la communication entre les différents composants. La transmission Bluetooth devait être optimisée pour minimiser la consommation d'énergie tout en garantissant l'intégrité des données. L'application mobile devait fonctionner de manière fluide, même en cas de perte temporaire de connexion avec le dispositif embarqué ou avec le serveur. L'API devait être capable de gérer efficacement un grand nombre de requêtes et de stocker les données de manière optimisée pour permettre des requêtes spatiales performantes.</p>
-            <p>La gestion des risques a constitué un axe de réflexion important. Sur le plan technique, il fallait prévenir les pertes de données, assurer la précision des coordonnées GPS même dans des conditions difficiles (zones urbaines denses, tunnels, etc.), et garantir la sécurité des communications. J'ai mis en place des mécanismes de cache et de synchronisation pour pallier les pertes de connexion, des filtres pour améliorer la précision des données GPS, et un système d'authentification sécurisé pour protéger l'accès à l'API.</p>
-            <p>Sur le plan personnel, ce projet représentait également un défi d'apprentissage et de montée en compétences. Il s'agissait de maîtriser simultanément plusieurs domaines techniques : le développement embarqué avec <a href="../competences/arduino.html">Arduino</a>, la programmation mobile avec Flutter, le développement back-end avec Symfony et <a href="../competences/postgresql.html">PostgreSQL</a>, et la visualisation de données cartographiques avec <a href="../competences/javascript.html">JavaScript</a> et Leaflet. Ce projet m'a permis de développer une vision globale et intégrée des systèmes de géolocalisation, tout en renforçant mes compétences techniques dans chacun de ces domaines.</p>
-            
-            <div class="tech-stack" style="margin-top: 30px;">
-                <div class="tech-item"><a href="../competences/arduino.html">Arduino</a></div>
-                <div class="tech-item">Module GPS Grove 109020022</div>
-                <div class="tech-item">Module Bluetooth HC-05</div>
-                <div class="tech-item">Flutter (Dart)</div>
-                <div class="tech-item"><a href="../competences/symfony.html">Symfony</a></div>
-                <div class="tech-item"><a href="../competences/javascript.html">JavaScript</a></div>
-                <div class="tech-item"><a href="../competences/postgresql.html">PostgreSQL</a></div>
-                <div class="tech-item">PostGIS</div>
-                <div class="tech-item">Leaflet</div>
-            </div>
+            <p>Sur le plan personnel, ce projet représentait un véritable défi d'apprentissage et de montée en compétences. Il m'a fallu acquérir rapidement des connaissances dans des domaines variés, depuis la programmation de microcontrôleurs jusqu'à la gestion de bases de données spatiales. Cette diversité de compétences requises a constitué à la fois un défi stimulant et une opportunité d'enrichissement professionnel considérable.</p>
         </div>
 
         <div class="realisation-section">
@@ -195,23 +216,22 @@
             <p>Le projet Tracker GPS repose sur plusieurs aspects principaux qui ont guidé sa conception et son développement. Plutôt que de dérouler une chronologie, j'ai choisi de mettre en avant les dimensions essentielles qui rendent ce projet unique et pertinent.</p>
             
             <h3>Architecture fonctionnelle et contexte d'utilisation</h3>
-            <p>L'architecture fonctionnelle du Tracker GPS a été conçue pour relever les défis de la géolocalisation en temps réel. J'ai imaginé un système modulaire capable d'acquérir, transmettre et visualiser des données GPS de manière fluide et efficace. Le contexte d'utilisation a été analysé avec soin pour m'assurer que la solution réponde à différents besoins : suivi de véhicules, activités sportives, ou autres applications nécessitant une localisation précise.</p>
-            
-            <p>L'architecture globale du système se compose de trois couches principales. La première couche est le dispositif embarqué, constitué d'un <a href="../competences/arduino.html">Arduino</a> connecté à un module GPS Grove 109020022 et à un module Bluetooth HC-05. Ce dispositif est responsable de l'acquisition des coordonnées GPS et de leur transmission via Bluetooth. La deuxième couche est l'application mobile développée en Flutter, qui reçoit les données du dispositif embarqué, les affiche en temps réel et les transmet à l'API. La troisième couche est le back-end, composé d'une API RESTful en Symfony et d'une base de données <a href="../competences/postgresql.html">PostgreSQL</a> avec l'extension PostGIS, qui stocke et traite les données pour les rendre accessibles via une interface web.</p>
-            
-            <p>Le flux de données commence par l'acquisition des coordonnées GPS par le module Grove. Ces données sont traitées par l'<a href="../competences/arduino.html">Arduino</a> pour extraire les informations pertinentes (latitude, longitude, altitude, vitesse, etc.) des trames NMEA. Elles sont ensuite transmises via Bluetooth à l'application mobile, qui les affiche en temps réel et les envoie à l'API Symfony. L'API valide, traite et stocke ces données dans la base <a href="../competences/postgresql.html">PostgreSQL</a>, où elles peuvent être consultées et analysées via l'interface web.</p>
+            <p>L'architecture fonctionnelle du Tracker GPS a évolué au fil du développement pour répondre aux défis spécifiques de la géolocalisation en temps réel. Le système se compose de trois grandes parties : le dispositif embarqué, l'application mobile et l'interface web. Cette architecture modulaire permet une grande flexibilité d'utilisation et facilite les évolutions futures.</p>
+            <p>Le dispositif embarqué est basé sur un <a href="../competences/arduino.html">Arduino</a> Nano, choisi pour sa taille compacte et sa faible consommation énergétique. Il est connecté à un module GPS qui assure la réception des signaux satellites et le calcul des coordonnées géographiques. Initialement, je devais connecter l'Arduino directement à mon ordinateur portable pour récupérer les données, ce qui limitait fortement la mobilité du système. Pour résoudre ce problème, j'ai d'abord intégré un module Bluetooth HC-05, mais j'ai rapidement constaté qu'il n'était pas compatible BLE (Bluetooth Low Energy) et donc inutilisable avec les appareils iOS. J'ai finalement opté pour un module HM-10 compatible BLE, ce qui a considérablement amélioré la compatibilité et la portée du système.</p>
+            <p>L'application mobile que j'ai développée est volontairement minimaliste, presque sans interface utilisateur. Elle joue un rôle essentiel de passerelle : elle reçoit les données GPS via Bluetooth depuis l'Arduino, puis les transmet immédiatement via le réseau 5G vers mon API Symfony où elles sont insérées en base de données. La visualisation est réalisée avec Symfony et Mercure pour un affichage en temps réel sur une carte interactive.</p>
             <div id="architecture-carousel" class="carousel-container" style="height: 400px;"></div>
             
             <h3>Acquisition et traitement des données GPS</h3>
-            <p>L'acquisition et le traitement des données GPS constituent le cœur du projet. Le module Grove GPS 109020022 reçoit les signaux des satellites GPS et génère des trames NMEA contenant diverses informations : position, altitude, vitesse, cap, nombre de satellites visibles, etc. L'<a href="../competences/arduino.html">Arduino</a> parse ces trames pour extraire les données pertinentes et les formater de manière à faciliter leur transmission et leur traitement ultérieur.</p>
-            <p>Pour améliorer la précision des données GPS, j'ai implémenté plusieurs algorithmes de filtrage et de validation. Par exemple, je vérifie le nombre de satellites utilisés pour le calcul de la position (plus il y a de satellites, plus la position est précise) et j'applique un filtre de Kalman pour lisser les variations de position et réduire le bruit. Ces traitements permettent d'obtenir des données GPS plus fiables, même dans des conditions difficiles comme les zones urbaines denses où les signaux GPS peuvent être perturbés.</p>
-            <p>La transmission des données via Bluetooth a également nécessité une attention particulière. J'ai optimisé le format des données pour réduire la taille des paquets transmis et minimiser la consommation d'énergie. J'ai également mis en place un protocole de communication robuste entre l'<a href="../competences/arduino.html">Arduino</a> et l'application mobile, avec des mécanismes de détection et de correction d'erreurs pour garantir l'intégrité des données.</p>
+            <p>L'acquisition et le traitement des données GPS constituent le cœur du projet. Le module GPS connecté à l'<a href="../competences/arduino.html">Arduino</a> reçoit les signaux des satellites et génère des trames NMEA contenant diverses informations : position, altitude, vitesse, cap, nombre de satellites visibles, etc. Au début du projet, je devais connecter physiquement l'Arduino à mon ordinateur portable pour récupérer ces données, ce qui limitait considérablement la mobilité et l'utilité du système.</p>
+            <p>Pour résoudre ce problème, j'ai mené des recherches approfondies sur différentes technologies de transmission sans fil. Je me suis d'abord renseigné sur le LoRaWAN, une technologie prometteuse pour l'IoT grâce à sa longue portée et sa faible consommation énergétique. Cependant, j'ai dû abandonner cette piste en raison du manque de couverture dans ma région, ce qui aurait limité l'utilité du dispositif. C'est pourquoi je me suis finalement orienté vers une solution hybride utilisant le Bluetooth pour la connexion locale et la 4G/5G pour la transmission à distance.</p>
+            <p>J'ai d'abord intégré un module Bluetooth HC-05 qui permettait de transmettre les données sans fil. Cependant, j'ai rapidement identifié une limitation majeure : ce module n'était pas compatible avec la technologie BLE (Bluetooth Low Energy) et ne fonctionnait donc pas avec les appareils iOS. Après des recherches, j'ai opté pour le module HM-10 compatible BLE, qui offre une meilleure compatibilité avec tous les smartphones et une consommation énergétique réduite, élément crucial pour un dispositif portable.</p>
+            <p>L'application mobile que j'ai développée joue un rôle de passerelle essentiel dans le traitement des données. Très simple et presque sans interface utilisateur, elle reçoit les données GPS via Bluetooth depuis l'Arduino et les transmet immédiatement via le réseau 5G vers mon API Symfony. Cette architecture en deux étapes permet de contourner les limitations de portée du Bluetooth tout en exploitant la puissance et la couverture des réseaux mobiles. Les données sont ensuite insérées dans une base de données PostgreSQL et visualisées en temps réel grâce à Mercure, une technologie qui permet des mises à jour instantanées de l'interface web sans rechargement de page.</p>
             <div id="gps-data-carousel" class="carousel-container" style="height: 400px;"></div>
             
             <h3>Application mobile et interface utilisateur</h3>
-            <p>L'application mobile développée en Flutter joue un rôle central dans le système. Elle sert d'interface entre le dispositif embarqué et le back-end, tout en offrant à l'utilisateur une visualisation en temps réel de sa position et de son parcours. J'ai conçu une interface intuitive et ergonomique, permettant de visualiser facilement les données GPS sur une carte interactive, de consulter les statistiques du trajet en cours (distance parcourue, vitesse moyenne, dénivelé, etc.) et de gérer les paramètres de l'application.</p>
-            <p>L'application intègre également un mécanisme de mise en cache des données, permettant de continuer à fonctionner même en cas de perte temporaire de la connexion Bluetooth avec le dispositif embarqué ou de la connexion internet avec le serveur. Les données sont stockées localement et synchronisées avec le serveur dès que la connexion est rétablie, garantissant ainsi la continuité du suivi.</p>
-            <p>L'interface web, développée en Symfony et <a href="../competences/javascript.html">JavaScript</a>, complète l'application mobile en offrant des fonctionnalités plus avancées pour l'analyse des trajets. Elle permet de visualiser l'historique des parcours sur une carte interactive, de consulter des statistiques détaillées (distance totale, durée, vitesse moyenne et maximale, dénivelé, etc.) et d'exporter les données dans différents formats (GPX, KML, CSV) pour une utilisation dans d'autres applications.</p>
+            <p>L'application mobile que j'ai développée pour ce projet est volontairement très simple, presque sans interface utilisateur. Contrairement aux applications GPS traditionnelles qui offrent une expérience utilisateur riche, j'ai opté pour une approche minimaliste où l'application joue essentiellement le rôle de passerelle entre le module Bluetooth HM-10 et mon API Symfony. Cette conception répond parfaitement à l'objectif du projet : transmettre efficacement les données GPS sans consommer inutilement les ressources du smartphone.</p>
+            <p>L'application se connecte automatiquement au module HM-10 dès son lancement, reçoit les données GPS en temps réel, et les transmet immédiatement via le réseau 5G vers mon API Symfony. Elle fonctionne principalement en arrière-plan, ne nécessitant aucune interaction de l'utilisateur une fois la connexion Bluetooth établie. Cette approche permet d'économiser la batterie du smartphone tout en assurant une transmission fiable des données.</p>
+            <p>La véritable expérience utilisateur se trouve sur l'interface web, développée avec Symfony et <a href="../competences/javascript.html">JavaScript</a>. C'est là que j'ai concentré mes efforts en termes d'ergonomie et de fonctionnalités. L'interface web affiche les données de géolocalisation en temps réel grâce à Mercure, une technologie qui permet des mises à jour instantanées sans rechargement de page. Elle propose une carte interactive montrant le parcours en cours, ainsi que des statistiques comme la vitesse, la distance parcourue et le temps écoulé. J'ai également implémenté des fonctionnalités d'historique permettant de consulter et d'analyser les trajets précédents.</p>
             <div id="interfaces-carousel" class="carousel-container" style="height: 400px;"></div>
             
             <h3>Stockage et analyse des données spatiales</h3>
@@ -223,47 +243,49 @@
 
         <div class="realisation-section">
             <h2>Les acteurs et les interactions</h2>
-            <p>Bien que le Tracker GPS soit un projet personnel, plusieurs acteurs ont contribué à sa réussite. Des amis passionnés d'électronique et d'informatique ont été des partenaires précieux, apportant leurs conseils et leur expertise sur certains aspects techniques. Leurs retours sur les premières versions du prototype ont permis d'identifier des points d'amélioration et d'affiner les fonctionnalités. Des utilisateurs volontaires ont également testé le système dans différentes conditions d'utilisation, fournissant des retours précieux sur l'ergonomie de l'application mobile et la fiabilité du dispositif embarqué.</p>
-            <p>La communauté des développeurs <a href="../competences/arduino.html">Arduino</a>, Flutter et Symfony a également joué un rôle important, bien qu'indirect. Les forums, tutoriels et bibliothèques open source ont été des ressources précieuses pour surmonter les difficultés techniques rencontrées tout au long du projet. J'ai également pu bénéficier des retours d'expérience d'autres développeurs ayant réalisé des projets similaires, ce qui m'a permis d'éviter certains écueils et d'adopter les meilleures pratiques.</p>
-            <p>Pour faciliter la communication et le suivi du projet, j'ai mis en place des outils de gestion de projet comme Trello pour organiser les tâches et GitHub pour le versionnement du code. J'ai également tenu un journal de développement détaillé, documentant les problèmes rencontrés et les solutions apportées. Cette approche méthodique a permis de maintenir une progression constante et de capitaliser sur les apprentissages réalisés à chaque étape du projet.</p>
+            <p>Bien que le Tracker GPS soit un projet personnel plusieurs acteurs ont aidé à sa réussite par exemple des amis passionnés d’électronique et d’informatique ont apporté leurs conseils et leur expertise sur certains aspects. Leurs retours sur les premières versions du prototype ont permis d’identifier des améliorations et d’affiner les fonctionnalités. Des utilisateurs volontaires ont testé le système en conditions réelles pour fournir des remarques pertinentes sur l’ergonomie de l’application mobile et la fiabilité du dispositif embarqué.</p>
+            <p>J’ai aussi pris l’initiative de contacter des professionnels du secteur via LinkedIn afin d’obtenir leurs avis sur certains points techniques précis. Ces échanges avec des experts en IoT en géolocalisation et en développement embarqué m’ont permis de recueillir des conseils, utiles et des perspectives variées sur mes choix technologiques et méthodologiques, cette démarche proactive a joué un rôle essentiel pour dépasser certains obstacles techniques et optimiser l’architecture du système.</p>
+            <p>La communauté des développeurs, Arduino Flutter et Symfony, a également joué un rôle indirect mais important car les forums tutoriels et bibliothèques open source m’ont aidé à résoudre les difficultés techniques rencontrées tout au long du projet. Les expérience d’autres développeurs sur des projets similaires m’ont évité certains pièges et grâce à eux et à leur partage, j'ai pu utiliser les meilleures pratiques.</p>
+            <p>Pour faciliter la communication et le suivi du projet je me suis mis en place des outils de gestion comme GitHub pour versionner le code, j'ai aussi pris des photos des branchements des capteurs à l'Arduino pour ne rien oublier. Cette approche méthodique a assuré une progression régulière et a permis de capitaliser sur chaque apprentissage réalisé tout au long du projet.</p>
         </div>
 
         <div class="realisation-section">
             <h2>Résultats et réflexion personnelle</h2>
-            <p>La réalisation du Tracker GPS a abouti à un système fonctionnel et performant, répondant aux objectifs initiaux. Le dispositif embarqué assure une acquisition fiable des données GPS et une transmission efficace vers l'application mobile. L'application Flutter offre une interface intuitive pour visualiser les données en temps réel et les transmettre au serveur. L'interface web permet une analyse détaillée des trajets et une gestion avancée des données de géolocalisation.</p>
-            <p>Les tests réalisés dans différentes conditions d'utilisation ont démontré la robustesse du système. Le dispositif embarqué fonctionne de manière fiable, même dans des environnements difficiles pour la réception GPS. L'application mobile maintient une connexion stable avec le dispositif embarqué et gère efficacement les pertes temporaires de connexion. L'API et la base de données traitent et stockent les données de manière optimale, permettant des requêtes spatiales performantes même sur de grands volumes de données.</p>
-            <p>Sur le plan personnel, ce projet a été une expérience extrêmement enrichissante. Il m'a permis de développer des compétences techniques avancées dans plusieurs domaines : programmation embarquée avec <a href="../competences/arduino.html">Arduino</a>, développement mobile avec Flutter, développement web avec Symfony et <a href="../competences/javascript.html">JavaScript</a>, et gestion de bases de données spatiales avec <a href="../competences/postgresql.html">PostgreSQL</a> et PostGIS. J'ai également renforcé mes compétences en gestion de projet, en résolution de problèmes complexes et en intégration de technologies hétérogènes.</p>
-            <p>Ce projet m'a confirmé l'importance d'une approche méthodique et structurée pour mener à bien un projet technique complexe. La décomposition du projet en modules indépendants mais interconnectés a facilité le développement et les tests, tout en permettant une évolution progressive du système. La documentation rigoureuse des choix techniques et des problèmes rencontrés a été précieuse pour capitaliser sur les apprentissages et faciliter les évolutions futures.</p>
+            <p>La bonne mise en place du Tracker GPS a permis d'avoir un système fiable et performant répondant pleinement aux objectifs définis, le module embarqué assure une acquisition fidèle des données GPS et un flux de transmission vers l'application mobile. Bien que minimaliste et surtout conçu pour servir de relais entre le module Bluetooth et l’API, l’application mobile remplit parfaitement son rôle de passerelle. C’est l’interface web qui offre une expérience utilisateur riche car elle est en mesure de permettre une analyse fine des trajets et une gestion fine des données géolocalisées.</p>
+            <p>Les essais menés dans différentes situations d'utilisation ont montré la robustesse du système. Le système embarqué est fiable même en environnements difficiles pour la réception GPS, tant que le GNSS GPS est disponible. L’application mobile assure une connexion fiable au module embarqué et gère efficacement les coupures momentanées de connexion, du côté de l’API et de la base de données, un traitement et un stockage optimal des données sont assurés, garantissant d'excellentes performances même avec des volumes élevés ou lors de requêtes spatiales complexes.</p>
+            <p>J'ai trouvé ce projet très enrichissant j'ai pu gagner des compétences techniques dans plusieurs domaines, comme la programmation embarquée sur Arduino puis le développement mobile avec Flutter, le développement web avec Symfony, JavaScript, et l'administration des bases de données spatiales avec PostgreSQL et PostGIS. J'ai également élargi mes compétences en gestion de projet et en résolution de problèmes.</p>
+            <p>Ce projet m'a confirmé l'utilité d'une approche méthodologique et pas à pas pour un développement technique complexe puis un découpage clair de l'ensemble du projet en modules indépendants mais liés les uns aux autres a permis un développement plus facile et les différentes étapes de test tout en permettant une évolution du système. Une documentation complète des options techniques et des problèmes rencontrés a également permis de conserver les connaissances acquises, les futures améliorations sont ainsi plus faciles à mettre en œuvre.</p>
         </div>
 
         <div class="realisation-section">
             <h2>Les lendemains du projet : dans un futur immédiat, à distance, aujourd'hui</h2>
-            <p>Le Tracker GPS, bien que déjà fonctionnel et performant, est un projet en constante évolution. Dans un futur immédiat, plusieurs améliorations sont envisagées pour enrichir ses fonctionnalités et améliorer son expérience utilisateur. L'ajout de notifications en temps réel pour signaler des anomalies (sortie d'une zone prédéfinie, vitesse excessive, etc.) est une priorité. L'amélioration de l'efficacité énergétique du dispositif embarqué pour prolonger son autonomie est également à l'étude, avec l'intégration de modes de veille intelligents et l'optimisation des communications Bluetooth.</p>
-            <p>À moyen terme, le projet pourrait s'enrichir de nouvelles fonctionnalités comme l'intégration de capteurs supplémentaires (accéléromètre, gyroscope, température, etc.) pour collecter des données complémentaires et offrir une analyse plus riche des déplacements. L'ajout d'algorithmes d'intelligence artificielle pour analyser les patterns de déplacement et prédire les trajets habituels est également envisagé. Une version plus compacte et autonome du dispositif embarqué, avec une batterie rechargeable et un boîtier étanche, pourrait être développée pour faciliter son utilisation dans différents contextes.</p>
-            <p>Sur le long terme, le Tracker GPS pourrait évoluer vers une plateforme plus complète de gestion de flotte, avec des fonctionnalités avancées pour le suivi de plusieurs véhicules ou objets, la gestion des maintenances prédictives basées sur les données collectées, et l'intégration avec d'autres systèmes (domotique, gestion d'énergie, etc.). L'utilisation de technologies de communication alternatives au Bluetooth, comme le LoRaWAN ou le NB-IoT, pourrait étendre la portée du système et réduire sa consommation énergétique.</p>
-            <p>Aujourd'hui, le Tracker GPS est déjà un outil précieux pour le suivi des déplacements et l'analyse des trajets. Il démontre la faisabilité d'un système de géolocalisation complet et personnalisé, combinant technologies embarquées, mobiles et web. Les apprentissages réalisés et les compétences développées à travers ce projet constituent un socle solide pour aborder de nouveaux défis techniques et continuer à innover dans le domaine de l'Internet des Objets et de la géolocalisation.</p>
+            <p>Le Tracker GPS est déjà fonctionnel et performant ; pourtant il continue d’évoluer. À court terme l’équipe prévoit d’ajouter des notifications instantanées quand un véhicule dépasse une zone prédéfinie ou roule trop vite. Elle cherche aussi à prolonger l’autonomie par des modes de veille intelligents et une communication Bluetooth optimisée.</p>
+            <p>Une autre piste consiste à remplacer le module actuel qui ne lit que le GPS américain. Un récepteur multi-GNSS compatible avec Galileo GLONASS et BeiDou apporterait plus de précision et une meilleure fiabilité du signal dans les rues denses ou sous un couvert végétal épais.</p>
+            <p>À moyen terme le dispositif pourrait intégrer de nouveaux capteurs : accéléromètre, gyroscope, température ou humidité. Des algorithmes d’apprentissage analyseraient les trajets et prédiraient les parcours habituels. Une version plus compacte et étanche dotée d’une batterie rechargeable simplifierait l’usage dans des environnements variés.</p>
+            <p>Sur la durée le Tracker a vocation à devenir une plate‑forme complète de gestion de flotte. Il suivrait plusieurs véhicules en même temps et proposerait une maintenance prédictive fondée sur les données collectées. Des réseaux bas débit comme LoRaWAN ou NB‑IoT remplaceraient le Bluetooth pour gagner en portée tout en réduisant la consommation.</p>
+            <p>Aujourd’hui cet outil prouve déjà qu’il est possible d’orchestrer un système de géolocalisation sur mesure en combinant électronique embarquée application mobile et interface web. Les compétences acquises forment une base solide pour explorer d’autres défis IoT comme l’énergie solaire embarquée ou la détection d’incident en temps réel par vision embarquée.</p>
         </div>
 
         <div class="realisation-section">
             <h2>Mon regard critique</h2>
-            <p>Porter le Tracker GPS de l'idée à la réalisation a été un défi stimulant et une occasion de progresser. J'ai découvert qu'un projet technique complexe nécessite non seulement des compétences techniques solides, mais aussi une vision claire, une planification rigoureuse et une capacité d'adaptation face aux imprévus. Cette expérience m'a offert une vision globale de l'intégration de technologies hétérogènes, des contraintes spécifiques à chaque domaine et des compromis nécessaires pour créer un système cohérent et performant.</p>
-            <p>Ma valeur ajoutée dans ce projet réside principalement dans ma capacité à maîtriser l'ensemble de la chaîne technologique, de l'embarqué au web, en passant par le mobile. Cette vision transversale m'a permis de concevoir une architecture cohérente, où chaque composant s'intègre harmonieusement avec les autres. J'ai également su adapter ma démarche aux contraintes spécifiques du projet, notamment en termes de consommation énergétique, de fiabilité des communications et de performance des requêtes spatiales.</p>
-            <p>Avec le recul, je constate que certains aspects du projet auraient pu être abordés différemment. La phase initiale de prototypage aurait gagné à être plus structurée, avec des tests plus systématiques des différents composants avant leur intégration. La gestion des versions du firmware de l'<a href="../competences/arduino.html">Arduino</a> et de l'application mobile aurait pu être plus rigoureuse pour faciliter le suivi des modifications et le débogage. Enfin, l'interface utilisateur de l'application mobile et du site web aurait mérité une attention plus poussée dès le début du projet, plutôt que d'être raffinée progressivement.</p>
-            <p>Ce projet m'a confirmé l'importance de l'apprentissage continu et de l'ouverture aux nouvelles technologies. Chaque défi technique rencontré a été une opportunité d'approfondir mes connaissances et de développer de nouvelles compétences. Cette expérience m'a donné confiance en ma capacité à mener à bien des projets techniques complexes et m'a inspiré pour de futures réalisations. Je garde de ce projet une grande fierté et l'envie de continuer à explorer les possibilités offertes par l'intégration de technologies diverses au service de solutions innovantes.</p>
+            <p>J'ai adoré me creuser la tête sur la conception ou sur le choix du matériel, ça a été un défi stimulant et une occasion de progresser, j’ai constaté qu’un projet technique complexe exige des compétences solides, mais aussi une vision claire puis une bonne planification et une vraie capacité d’adaptation face aux imprévus. Cette aventure m’a donné une vue d’ensemble sur l’intégration de technologies dont je n'avais pas beaucoup de compétence et sur les contraintes propres à chaque domaine et sur les compromis indispensables pour bâtir un système cohérent et performant.</p>
+            <p>Ma valeur ajoutée s’est surtout exprimée dans la maîtrise du web. J'ai la chance aussi d'avoir des bases en éléctronique lorsqu'il m'a fallu faire les branchements. Cette vision transverse m’a aidé à concevoir une architecture fluide où chaque composant s’imbrique naturellement avec les autres. J’ai su ajuster la démarche aux contraintes du projet, qu’il s’agisse de consommation énergétique, de fiabilité des communications ou de performances sur les requêtes spatiales.</p>
+            <p>En prenant du recul je vois qu'il y a eu des points qui auraient pu être abordés différemment comme  le prototypage initial aurait eu de la chance d'être plus structuré avec des tests rigoureux des composants avant leur intégration. La gestion des versions du firmware Arduino et de l’application mobile aurait dû l’être plus rigoureusement et j’aurais dû les documenter pour faciliter le suivi de modifications et de bugs et le développement dans un environnement de développement. L’interface utilisateur sur mobile et sur web aurait d’ailleurs bénéficié d’un soin plus important dès le départ et pas tellement d’être révisée petit à petit.</p>
+            <p>Ce projet illustre bien l’importance de l’apprentissage et de l’esprit d’ouverture aux nouvelles technologies, chaque problème rencontré a été un atout pour approfondir mes connaissances et m’ouvrir à de nouvelles compétences. Cette expérience confirme ma confiance pour réaliser d'autres projets techniques de ce niveau.</p>
         </div>
 
         <div class="realisation-section">
             <h2>Compétences mobilisées</h2>
-            <p>La réalisation du projet Tracker GPS m'a permis de mobiliser et de renforcer plusieurs compétences clés, notamment le développement embarqué avec <a href="../competences/arduino.html">Arduino</a>, la programmation mobile avec Flutter, le développement back-end avec <a href="../competences/symfony.html">Symfony</a>, la gestion de bases de données spatiales avec <a href="../competences/postgresql.html">PostgreSQL</a> et PostGIS, et la visualisation de données cartographiques avec <a href="../competences/javascript.html">JavaScript</a> et Leaflet.</p>
-            <p>J'ai également pu développer mes compétences transversales comme la <a href="../competences/communication.html">communication</a>, la <a href="../competences/gestion-projet.html">gestion de projet</a> et la <a href="../competences/resolution-problemes.html">résolution de problèmes</a>. La nature multidisciplinaire du projet m'a amené à intégrer des connaissances issues de différents domaines et à développer une vision globale des systèmes de géolocalisation.</p>
-            <p>Ces compétences ont été essentielles à chaque étape du projet, de la conception à la mise en production, et constituent aujourd'hui un socle solide pour aborder de nouveaux défis techniques et organisationnels. Pour en savoir plus sur ces domaines, vous pouvez consulter les pages dédiées à chaque compétence.</p>
+            <p>La réalisation du Tracker GPS, m'a permis de consolider plusieurs compétences clés. J'ai mené le développement embarqué sur <a href="../competences/arduino.html">Arduino</a>, créé l'application mobile sous Flutter puis j'ai bâti le front et back‑end avec <a href="../competences/symfony.html">Symfony</a>, j'ai aussi administré une base spatiale <a href="../competences/postgresql.html">PostgreSQL</a> PostGIS et mis en place la cartographie interactive avec <a href="../competences/javascript.html">JavaScript</a> Leaflet.</p>
+            <p>J'ai renforcé mes savoir‑faire transversaux en <a href="../competences/communication.html">communication</a> puis <a href="../competences/gestion-projet.html">gestion de projet</a> et <a href="../competences/resolution-problemes.html">résolution de problèmes</a>. Le caractère multidisciplinaire du projet m'a poussé à relier des connaissances variées et m'a donné une vue complète des systèmes de géolocalisation.</p>
+            <p>Ces atouts ont été décisifs de la conception jusqu'à la mise en production. Ils forment aujourd'hui un socle solide pour relever de nouveaux défis techniques ou organisationnels. Pour approfondir un domaine précis, vous pouvez consulter les pages dédiées.</p>
         </div>
 
         <div class="realisation-section">
             <h2>Conclusion</h2>
-            <p>En définitive, le Tracker GPS représente bien plus qu'un simple dispositif de géolocalisation : il incarne une véritable démarche d'intégration technologique et d'innovation personnelle. Ce projet a marqué une étape déterminante dans mon parcours, en me confrontant à des enjeux techniques complexes et en m'offrant l'opportunité de concevoir et développer un système complet de bout en bout. Il m'a permis de consolider mes compétences dans plusieurs domaines technologiques et de développer une vision globale des systèmes connectés.</p>
-            <p>Les prochaines évolutions du projet pourraient inclure l'ajout de notifications en temps réel pour signaler des anomalies, l'amélioration de l'efficacité énergétique du tracker pour une autonomie prolongée, et l'intégration de nouvelles fonctionnalités embarquées, comme la détection d'accélérations brutales ou la température.</p>
-            <p>Fort de cette expérience, je suis aujourd'hui prêt à relever de nouveaux défis, à poursuivre dans la voie de l'innovation et à continuer d'explorer les possibilités offertes par l'intégration de technologies diverses au service de solutions innovantes.</p>
+            <p>Tracker GPS est simplement un projet personnel pour le moment, mais il fait partie d'un long chemin que je commence à emprunter et qui a pour but d'ouvrir le monde du développement de systèmes embarqués. Cela permettrait de faire évoluer ma carrière professionnelle dans ce monde et notamment l'embarqué embarqué sur les voitures de course.</p>
+            <p>Les prochaines mises à jour pourraient ajouter des notifications en temps réel pour signaler les anomalies comme par exemple un accident et optimiser l’efficacité énergétique afin d’allonger l’autonomie et de commenter de nouvelles fonctions embarquées comme la détection d’accélérations violentes ou de la mesure de la température.</p>
+            <p>Avec ce projet j'ai encore plus envie de m'enfoncer dans les compétences Arduino et de trouver tout les systèmes embarqués pour faciliter mon futur projet professionnel.</p>
         </div>
     </div>
 
@@ -277,44 +299,35 @@
         document.addEventListener('DOMContentLoaded', function() {
             // Carrousel 1: Architecture fonctionnelle et contexte d'utilisation
             new Carousel('architecture-carousel', [
-                { src: 'images/tracker-gps/architecture_globale.png', alt: 'Architecture globale du système Tracker GPS' },
-                { src: 'images/tracker-gps/flux_donnees.png', alt: 'Flux de données du Tracker GPS' }
+                { src: 'images/Tracker-GPS/filaire.jpg', alt: 'Solution branchée au PC portable sans module Bluetooth' },
+                { src: 'images/Tracker-GPS/branchements.png', alt: 'Photo rapprochée des branchements sur l\'Arduino' }
             ], {
                 autoplay: true,
                 delay: 5000,
-                caption: 'Architecture fonctionnelle et contexte d\'utilisation du Tracker GPS'
+                caption: 'Architecture matérielle du Tracker GPS'
             });
             
             // Carrousel 2: Acquisition et traitement des données GPS
             new Carousel('gps-data-carousel', [
-                { src: 'images/tracker-gps/module_gps.png', alt: 'Module GPS et Arduino' },
-                { src: 'images/tracker-gps/traitement_donnees.png', alt: 'Traitement des données GPS' }
+                { src: 'images/Tracker-GPS/extrait_code.png', alt: 'Extrait du code Arduino' },
+                { src: 'images/Tracker-GPS/test_reception_donnees.png', alt: 'Test de réception des données en Bluetooth' }
             ], {
                 autoplay: true,
                 delay: 6000,
-                caption: 'Acquisition et traitement des données GPS'
+                caption: 'Développement et tests du Tracker GPS'
             });
             
             // Carrousel 3: Application mobile et interface utilisateur
             new Carousel('interfaces-carousel', [
-                { src: 'images/tracker-gps/app_mobile.png', alt: 'Application mobile Flutter' },
-                { src: 'images/tracker-gps/interface_web.png', alt: 'Interface web de visualisation' },
-                { src: 'images/tracker-gps/carte_interactive.png', alt: 'Carte interactive des trajets' }
+                { src: 'images/Tracker-GPS/application.jpg', alt: 'Application mobile Flutter' },
+                { src: 'images/Tracker-GPS/premiere_interface.png', alt: 'Première interface utilisateur' }
             ], {
                 autoplay: true,
                 delay: 4000,
                 caption: 'Interfaces utilisateur et visualisation des données'
             });
-            
-            // Carrousel 4: Stockage et analyse des données spatiales
-            new Carousel('database-carousel', [
-                { src: 'images/tracker-gps/modele_donnees.png', alt: 'Modèle de données PostgreSQL/PostGIS' },
-                { src: 'images/tracker-gps/api_endpoints.png', alt: 'API Symfony et endpoints' }
-            ], {
-                autoplay: false,
-                caption: 'Stockage et analyse des données spatiales'
-            });
         });
     </script>
 </body>
 </html>
+
